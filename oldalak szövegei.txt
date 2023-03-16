@@ -1,0 +1,32 @@
+
+-- Fõoldal --
+Üdvözöljük az oldalunk!
+Kilencedikben mikor elõször találkoztunk ezekkel a dokumentumokkal akkor még nagy fejfájást okoztak nekünk, ez motivált minket arra, hogy a leendõ kilencedikesek számára egy érthetõbb megfogalmazást is adjunk a témáról.
+
+
+-- Scrum oldal szöveg --
+//Mi is a Scrum?
+A Scrum egy agilis módszertan, amely együttmûködést és folyamatos fejlesztést támogat. 
+Az agilitás azt jelenti, hogy a projekt csapata folyamatosan javítja és finomítja a munkafolyamatot a visszajelzések alapján. 
+Ez a módszer hatékony lehet olyan projektekben, ahol a feladatok és a célok nem teljesen meghatározottak, és a változások gyakoriak, például a szoftvertervezésben vagy a termékfejlesztésben.
+//Milyen szerepek találhatóak a Scrum modellben?
+
+-- Vízesés oldal szöveg --
+//Mi is az a Vízesés modell?
+A Vízesés modell a hagyományos, lineáris projektmenedzsment módszertan, amely lépésrõl lépésre halad egy projekt teljes életciklusán. 
+A módszer azon alapul, hogy minden szükséges munkát elõre meghatározunk, majd a projekt elõrehaladtával haladunk elõre. 
+Ez a módszer hatékony lehet olyan projektekben, amelyek elõre jól meghatározott eredményeket követelnek, például az építõiparban vagy a szoftvertervezésben.
+//Milyen szerepek találhatóak a Vízesés modellben?
+
+-- Rólunk oldal szöveg --
+A szupercsapat:
+-Császár András:
+-Csóka András:
+-Kõvágó Levente:
+-Kulimák Máté:
+-Tátrai Dominik Oszkár:
+
+-- Scrum quiz oldal szöveg --
+
+
+-- Vízesés quiz oldal szöveg --
