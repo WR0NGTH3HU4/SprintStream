@@ -1,5 +1,22 @@
-# verseny_projekt
-A versenyre készített projektunk dokumentálása.
-csatlakozás- Dominik
-csatlakozás- Levente
-csatlakozás- Bandi
+# SprintStream
+
+- [A weboldalunk]()
+- [Jira projekt](https://wr0ngth3hu4.atlassian.net/jira/software/projects/SS/boards/1)
+- [Figma tervek](https://www.figma.com/file/MeIG0eD5ExpYHBeo378DRo/Oldalak?node-id=0-1&t=O2bWlnu9SkUBEeEg-0)
+
+## Növekmény
+### 2023.03.17:
+- Császár András: betegség miatt hiányzik
+- Csóka András: 
+- Kővágó Levente:
+- Kulimák Máté:
+- Tátrai Dominik Oszkár
+  
+
+### Git parancsok
+- `git add .`: Fileok hozzáadása a git projekthez, hogy a git tudja managelni őket.
+- `git commit -m <üzenet>`: Fileok commitolása egy üzenettel. (Ez push nélkül csak lokális.) Lehetőleg pontosan írjuk le a változtatásokat.
+- `git pull`: Felhőbeli commitok letöltése a lokális git repoba.
+- `git push`: Lokális commitok feltöltése a felhőbe (jelen esetben Github).
+- `git fetch`: Lokális repo szinkronizálása a felhőbeli repoval.
+- `git switch -c <branch neve>`: Uj branch letrehozasa es valtas arra 
