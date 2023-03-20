@@ -21,7 +21,7 @@
 
 ### 2023.03.20:
 - Császár András: betegség miatt hiányzik
-- Csóka András: Rólunk oldal grafikus tervének elkészítése figmában
+- Csóka András: Vízesés modell quiz oldal grafikus tervének elkészítése figmában
 - Kővágó Levente: ----
 - Kulimák Máté: Növekmény frissítése
 - Tátrai Dominik Oszkár: ----
