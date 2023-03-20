@@ -11,7 +11,20 @@
 - Kővágó Levente: Ikonok és képek keresése, scrum oldal elkészítése Fgimában
 - Kulimák Máté: logo megszerkesztése, readme elkészítése
 - Tátrai Dominik Oszkár: logo tervezése, termék backlog fejlesztése, vízesés oldal Figma tervének elkezdése
-  
+
+### 2023.03.19:
+- Császár András: betegség miatt hiányzik
+- Csóka András: ----
+- Kővágó Levente: ----
+- Kulimák Máté: ----
+- Tátrai Dominik Oszkár: Vízeses oldal grafikus terveinek elkészítése, Scrum, Vizeses oldal részletes leírása
+
+### 2023.03.20:
+- Császár András: betegség miatt hiányzik
+- Csóka András: Rólunk oldal grafikus tervének elkészítése figmában
+- Kővágó Levente: ----
+- Kulimák Máté: Növekmény frissítése
+- Tátrai Dominik Oszkár: ----
 
 ### Git parancsok
 - `git add .`: Fileok hozzáadása a git projekthez, hogy a git tudja managelni őket.
