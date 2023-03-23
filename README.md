@@ -32,8 +32,13 @@
 - Kővágó Levente: az oldalnak egy új design megtervezése
 - Kulimák Máté: az oldalnak egy új design megtervezése
 - Tátrai Dominik Oszkár: az oldalnak egy új design megtervezése
+
 ### 2023.03.23:
--Tátrai Dominik: NAV-BAR ötletek keresése/tervezése
+- Császár András: 
+- Csóka András: Ötletelés
+- Kővágó Levente: 
+- Kulimák Máté: Scrum oldal szövegének megírása
+- Tátrai Dominik: NAV-BAR ötletek keresése/tervezése
 ### Git parancsok
 - `git add .`: Fileok hozzáadása a git projekthez, hogy a git tudja managelni őket.
 - `git commit -m <üzenet>`: Fileok commitolása egy üzenettel. (Ez push nélkül csak lokális.) Lehetőleg pontosan írjuk le a változtatásokat.
