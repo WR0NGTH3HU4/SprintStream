@@ -5,21 +5,87 @@ Kilencedikben mikor elõször találkoztunk ezekkel a dokumentumokkal akkor még nag
 
 
 -- Scrum oldal szöveg --
-//Mi is a Scrum?
+//Mi a Scrum?
 A Scrum egy agilis módszertan, amely együttmûködést és folyamatos fejlesztést támogat. 
-Az agilitás azt jelenti, hogy a projekt csapata folyamatosan javítja és finomítja a munkafolyamatot a visszajelzések alapján. 
-Ez a módszer hatékony lehet olyan projektekben, ahol a feladatok és a célok nem teljesen meghatározottak, és a változások gyakoriak, például a szoftvertervezésben vagy a termékfejlesztésben.
+Az agilitás azt jelenti, hogy a projekt csapata folyamatosan javítja és finomítja a munkafolyamatot a visszajelzések(daily scrum) alapján. 
+Ez a módszer hatékony lehet olyan projektekben, ahol a feladatok és a célok nem teljesen meghatározottak, és a változások gyakoriak, például a szoftvertervezésben.
+
 //Milyen szerepek találhatóak a Scrum modellben?
+
+A Terméktulajdonos:
+-Az egyetlen személy, aki felelõs a Termék Backlog<ez egy link lesz> kezeléséért.
+-A terméktulajdonos is elvégezheti ezekez a feladatokat, de elvégeztettheti a fejlesztõcsapattal is.
+-A terméktulajdonos nem egy bizottság hanem egy személy.
+-Ahhoz, hogy a Terméktulajdonos sikeresen el tudja végezni a feladatát, a teljes szervezetnek tiszteletben
+kell tartania a döntéseit. A Terméktulajdonos döntései a Termék Backlog tartalmában és az elemek
+sorrendjében nyilvánulnak meg. Senki nincs felhatalmazva arra, hogy a Fejlesztõcsapattal a
+meghatározottól eltérõ követelmény-rendszer szerint dolgoztasson, és a Fejlesztõcsapat sem fogadhat el
+utasítást senki mástól.
+
+A Fejlesztõcsapat:
+-A Fejlesztõcsapat olyan szakemberekbõl áll, akik azon dolgoznak, hogy minden egyes Sprint végén
+leszállítható legyen a termék egy “Kész” potenciálisan kibocsátható verziója. 
+-A Fejlesztõcsapatokat úgy állítja össze és hatalmazza fel a szervezet, hogy õk maguk szervezzék és
+menedzseljék saját munkájukat. Az így létrejövõ szinergia optimalizálja a Fejlesztõcsapat hatékonyságát
+és termelékenységét.
+-A Fejlesztõcsapatok az alábbi tulajdonságokkal rendelkeznek:
+. Önszervezõdõek. Senki – még a Scrum Mester – sem mondja meg a Fejlesztõcsapatnak, hogy
+miként hozzanak létre a Termék Backlogból potenciálisan szállítható funkcionalitást tartalmazó
+Inkrementumokat;
+. A Fejlesztõcsapatok kereszt-funkcionálisak, és csapatként minden olyan ismerettel és készséggel
+rendelkeznek, ami szükséges a termék Inkrementumok elkészítéséhez;
+. A Scrum a „Fejlesztõ”-n kívül nem alkalmaz külön titulust a Fejlesztõcsapat egyes tagjaira,
+függetlenül attól, hogy egyénenként milyen tevékenységet végeznek. Ez alól a szabály alól nincs
+kivétel.
+. A Fejlesztõcsapatokban nincsenek alcsoportok egyes célfeladatok – pl. tesztelés vagy üzleti
+elemzés – elvégzésére; ez alól a szabály alól nincs kivétel; illetve,
+. A Fejlesztõcsapatban az egyes tagok speciális ismeretekkel, készségekkel és szakterületi tudással
+rendelkezhetnek, de a felelõsség az egész Fejlesztõcsapatra, mint egy egységre hárul.
+
+Scrum Mester:
+-A Scrum Mester a Scrum megértéséért és betartásáért felelõs. A Scrum Mesterek ezt az által érik el, hogy
+megbizonyosodnak a csapat Scrum elméleti-, gyakolati- és szabályismeretérõl, valamint meggyõzõdnek
+elkötelezettségükrõl is.
+-A Scrum Mester szolgáltatásai a Terméktulajdonos felé
+-A Scrum Mester többféle módon segíti a Terméktulajdonost, többek között azzal, hogy:
+. Módszereket alakít ki a Termék Backlog hatékony kezelésére;
+. Segít megérteni a Scrum Csapatnak, hogy miért szükséges, hogy a Termék Backlog elemei
+világosak, tömörek legyenek;
+. Megérti a terméktervezést empirikus környezetben;
+. Biztosítja, hogy a Terméktulajdonos tudja, hogy miként rendezze a Termék Backlogot az érték
+maximalizálása érdekében
+. Érti és gyakorolja az agilitást; valamint,
+. Kérés illetve szükség esetén elõmozdítja a Scrum események lebonyolítását.
+-A Scrum Mester szolgáltatásai a Fejlesztõcsapat felé
+-A Scrum Mester többféle módon segíti a Fejlesztõcsapatot, beleértve:
+. Felkészíti, támogatja a Fejlesztõcsapatot az önszervezõdésben és a kereszt-funkcionalitás
+kialakításában;
+. Segíti a Fejlesztõcsapatot magas színvonalú termékek elõállításában;
+. Eltávolítja a Fejlesztõcsapat útjába kerülõ akadályokat;
+. Kérés illetve szükség esetén elõmozdítja a Scrum események lebonyolítását; és,
+. Segíti a Fejlesztõcsapatot olyan szervezeti környezetben, ahol még nem teljes mértékben
+vezették be és értették meg a Scrumot.
+
+//Milyen események találhatóak a scrum modellben?
+
+//Scrum munkaanyagok
+
+//A "Kész" fogalma
+
+FORRÁS: https://scrumguides.org/docs/scrumguide/v1/Scrum-Guide-HU.pdf
 
 -- Vízesés oldal szöveg --
 //Mi is az a Vízesés modell?
 A Vízesés modell a hagyományos, lineáris projektmenedzsment módszertan, amely lépésrõl lépésre halad egy projekt teljes életciklusán. 
 A módszer azon alapul, hogy minden szükséges munkát elõre meghatározunk, majd a projekt elõrehaladtával haladunk elõre. 
 Ez a módszer hatékony lehet olyan projektekben, amelyek elõre jól meghatározott eredményeket követelnek, például az építõiparban vagy a szoftvertervezésben.
+
 //Milyen szerepek találhatóak a Vízesés modellben?
 
+
+
 -- Rólunk oldal szöveg --
-A szupercsapat:
+A csapat:
 -Császár András:
 -Csóka András:
 -Kõvágó Levente:
