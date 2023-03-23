@@ -7,10 +7,10 @@
 ## Növekmény
 ### 2023.03.17:
 - Császár András: betegség miatt hiányzik
-- Csóka András: 
-- Kővágó Levente:
-- Kulimák Máté:
-- Tátrai Dominik Oszkár
+- Csóka András: Rólunk oldal elkészítése Figmában, színek fül megtervezése Figmában
+- Kővágó Levente: Ikonok és képek keresése, scrum oldal elkészítése Fgimában
+- Kulimák Máté: logo megszerkesztése, readme elkészítése
+- Tátrai Dominik Oszkár: logo tervezése, termék backlog fejlesztése, vízesés oldal Figma tervének elkezdése
   
 
 ### Git parancsok
