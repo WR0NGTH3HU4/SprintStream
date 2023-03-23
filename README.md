@@ -36,7 +36,7 @@
 ### 2023.03.23:
 - Császár András: 
 - Csóka András: Ötletelés
-- Kővágó Levente: 
+- Kővágó Levente: Scrum oldal kinézet megtervezése
 - Kulimák Máté: Scrum oldal szövegének megírása
 - Tátrai Dominik: NAV-BAR ötletek keresése/tervezése
 ### Git parancsok
