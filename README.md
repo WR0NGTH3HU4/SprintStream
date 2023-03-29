@@ -39,6 +39,21 @@
 - Kővágó Levente: Scrum oldal kinézet megtervezése
 - Kulimák Máté: Scrum oldal szövegének megírása
 - Tátrai Dominik: NAV-BAR ötletek keresése/tervezése
+
+### 2023.03.27:
+- Császár András: scss telepítése, ts tesztelése
+- Csóka András: quiz oldal tervezése
+- Kővágó Levente: ----
+- Kulimák Máté: ----
+- Tátrai Dominik: Termék Backlog fejlesztése
+
+### 2023.03.29:
+- Császár András: 
+- Csóka András: quiz oldal és navbar tervének feltöltése
+- Kővágó Levente: scrumm oldal tervének feltöltése
+- Kulimák Máté: növekmény bővítése, scrum oldal szövegének megírása
+- Tátrai Dominik: Termék Backlog fejlesztés, vízesés és rólunk oldal grafikus tervének feltöltése,
+
 ### Git parancsok
 - `git add .`: Fileok hozzáadása a git projekthez, hogy a git tudja managelni őket.
 - `git commit -m <üzenet>`: Fileok commitolása egy üzenettel. (Ez push nélkül csak lokális.) Lehetőleg pontosan írjuk le a változtatásokat.
