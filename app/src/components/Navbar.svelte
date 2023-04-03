@@ -15,11 +15,12 @@
         <h3>Rólunk</h3>
         <img src="icons/downarrow.png" alt="down_arrow">
     </div>
-    <div onclick="szinvalaszto()" class="gomb">
-        <img src="icons/gear.png" alt="gear">
+    <div class="gomb">
+        <img onclick="szinvalaszto()" src="icons/gear.png" alt="gear">
         <div>
             <!--Ide kerül majd a színpaletta-->
             <img src="">
+
 
         </div>
     </div>
