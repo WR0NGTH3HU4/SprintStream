@@ -15,8 +15,13 @@
         <h3>Rólunk</h3>
         <img src="icons/downarrow.png" alt="down_arrow">
     </div>
-    <div class="gomb">
+    <div onclick="szinvalaszto()" class="gomb">
         <img src="icons/gear.png" alt="gear">
+        <div>
+            <!--Ide kerül majd a színpaletta-->
+            <img src="">
+
+        </div>
     </div>
 </main>
 <style>
@@ -25,14 +30,14 @@
         height: 40px;
     }
     main{
-        background-color: transparent;
+        
         display: flex;
         flex-direction: row;
         flex-wrap: nowrap;
         justify-content: space-between;
         align-items: center;
-        margin-right: 20px;
-        margin-left: 20px;
+        padding-right: 15px;
+        padding-left: 15px;
     }
     .modellek{
         display: flex;
@@ -40,8 +45,22 @@
         flex-wrap: nowrap;
         justify-content: space-between;
         align-items: center;
+        background-color: #E2E2E2;
+        padding: 10px;
+        height: 2rem;
+        width:9rem;
+        border-radius: 20px;
     }
     .modellek img{  
-        
+        width: 20px;
     }
 </style>
+<script>
+
+    let kapcsolas= false;
+    function szinvalaszto(){
+        if(kapcsolas== false){
+
+        }
+    }
+</script>
