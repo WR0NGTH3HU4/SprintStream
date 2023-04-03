@@ -5,15 +5,15 @@
     </div>
     <div class="modellek">
         <h3>Scrum</h3>
-        <img src="icons/down_arrow.png" alt="down_arrow">
+        <img src="icons/downarrow.png" alt="down_arrow">
     </div>
     <div class="modellek">
         <h3>Vízesés</h3>
-        <img src="icons/down_arrow.png" alt="down_arrow">
+        <img src="icons/downarrow.png" alt="down_arrow">
     </div>
     <div class="modellek">
         <h3>Rólunk</h3>
-        <img src="icons/down_arrow.png" alt="down_arrow">
+        <img src="icons/downarrow.png" alt="down_arrow">
     </div>
     <div class="gomb">
         <img src="icons/gear.png" alt="gear">
