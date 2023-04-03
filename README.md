@@ -61,6 +61,13 @@
 - Kulimák Máté: növekmény bővítése, scrum oldal szövegének írásának folytatása
 - Tátrai Dominik: Termék Backlog fejlesztés, figyelt és gyakorolt Andrással
 
+### 2023.04.03:
+- Császár András: 
+- Csóka András: 
+- Kővágó Levente: puzzle.png kitörlése
+- Kulimák Máté: növekmény bővítése, szín paletta befejezése
+- Tátrai Dominik: pull requestek mergelése, szín paletta elkezdése, bugfix
+
 ### Git parancsok
 - `git add .`: Fileok hozzáadása a git projekthez, hogy a git tudja managelni őket.
 - `git commit -m <üzenet>`: Fileok commitolása egy üzenettel. (Ez push nélkül csak lokális.) Lehetőleg pontosan írjuk le a változtatásokat.
