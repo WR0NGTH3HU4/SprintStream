@@ -42,6 +42,15 @@
 		<div class="paletta">
 			<!--Ide kerül majd a színpaletta-->
 			<img src="Színek/caribbean.png" >
+			<img src="Színek/cottonCandy.png" >
+			<img src="Színek/grass.png" >
+			<img src="Színek/navy.png" >
+			<img src="Színek/oceanNight.png" >
+			<img src="Színek/original.png" >
+			<img src="Színek/pine.png" >
+			<img src="Színek/pink.png" >
+			<img src="Színek/redWine.png" >
+			<img src="Színek/rose.png" >
 		</div>
 	</div>
 </main>
@@ -116,7 +125,15 @@
         z-index: 1;
     }
 	.paletta {
+		display: block;
+		flex-direction: column;
+		justify-content: center;
+		align-self: center;
+		padding: 10px;
+		align-items: center;
 		position: fixed;
+		background-color: #e2e2e2;
+		border-radius: 20px;
 		z-index: 1;
 	}
 
