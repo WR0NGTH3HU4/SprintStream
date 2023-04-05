@@ -1,29 +1,30 @@
 <main>
-    <!DOCTYPE html>
-    <html lang="hu">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Quiz</title>
-    </head>
-    <body>
-        <div class="kerdes">
-            <img src="wave_top.svg" alt="wave_top">
-            
-            <img src="wave_bottom.svg" alt="wave_bottom">
-        </div>
-        
-    </body>
-    </html>
-    
+    <div class="kerdes">
+        <img src="wave_top.svg" alt="wave_top">
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. A saepe optio nemo eos aperiam iusto id, deserunt magni praesentium accusamus unde quo laudantium placeat veniam tempore. Est laborum tempore fugiat.</p>
+        <img src="wave_bottom.svg" alt="wave_bottom">
+    </div>
+
+    <div class="kerdes">
+        <img src="wave_top.svg" alt="wave_top">
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. A saepe optio nemo eos aperiam iusto id, deserunt magni praesentium accusamus unde quo laudantium placeat veniam tempore. Est laborum tempore fugiat.</p>
+        <img src="wave_bottom.svg" alt="wave_bottom">
+    </div>
     
 </main>
 
 <style lang="scss">
-    body{
-        margin: 0px;
+    .kerdes img{
+        width: 100vw;
+        height: auto;
     }
+
+    .kerdes{
+        width: 100vw;
+        height: auto;
+        background-color: #E2E2E2;
+    }
+
 </style>
 
 <script lang="ts">
