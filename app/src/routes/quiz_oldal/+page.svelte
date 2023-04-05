@@ -20,6 +20,8 @@
     }
 
     .kerdes{
+        margin: 0px;
+        padding: 0px;
         width: 100vw;
         height: auto;
         background-color: #E2E2E2;
