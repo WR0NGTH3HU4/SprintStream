@@ -97,7 +97,7 @@
 		padding-right: 20px;
 		padding-left: 20px;
 		background-color: #e2e2e2;
-		position: fixed;
+		position: relative;
 		z-index: 1;
 		
 	}
