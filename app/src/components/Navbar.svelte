@@ -1,4 +1,5 @@
 <main>
+	
 	<div class="cim">
 		<h1>SprintStream</h1>
 	</div>
@@ -37,34 +38,46 @@
 
 		</li>
 	</ul>
-	<div class="gomb">
-		<img on:click={szinvalaszto} src="icons/gear.png" alt="gear" />
-		<div class="paletta">
-			<!--Ide kerül majd a színpaletta-->
-			<img src="Színek/caribbean.png" >
-			<img src="Színek/cottonCandy.png" >
-			<img src="Színek/grass.png" >
-			<img src="Színek/navy.png" >
-			<img src="Színek/oceanNight.png" >
-			<img src="Színek/original.png" >
-			<img src="Színek/pine.png" >
-			<img src="Színek/pink.png" >
-			<img src="Színek/redWine.png" >
-			<img src="Színek/rose.png" >
-		</div>
-	</div>
+	
+	<ul class="gomb">
+		
+		<li><img on:click={szinvalaszto} src="icons/gear.png" alt="gear" /></li>
+		<li>
+			<div class="paletta">
+				<img src="Színek/caribbean.png" >
+				<img src="Színek/cottonCandy.png" >
+				<img src="Színek/grass.png" >
+				<img src="Színek/navy.png" >
+				<img src="Színek/oceanNight.png" >
+				<img src="Színek/original.png" >
+				<img src="Színek/pine.png" >
+				<img src="Színek/pink.png" >
+				<img src="Színek/redWine.png" >
+				<img src="Színek/rose.png" >
+			</div>
+		</li>
+	</ul>
+	
+	
 </main>
 
 <style>
 	
     .gomb{
         position: relative;
+		display: flex;
+		flex-direction: column;
+		flex-wrap: nowrap;
+		justify-content: space-between;
+		align-content: space-between;
     }
 	.gomb img {
 		width: 40px;
 		height: 40px;
+		margin-top: 5px;
 	}
 	main {
+		z-index: 0;
 		display: flex;
 		flex-direction: row;
 		flex-wrap: nowrap;
@@ -86,6 +99,7 @@
 		background-color: #e2e2e2;
 		position: fixed;
 		z-index: 1;
+		
 	}
 
 	.modellek{
@@ -125,7 +139,7 @@
         z-index: 1;
     }
 	.paletta {
-		display: block;
+		display: flex;
 		flex-direction: column;
 		justify-content: center;
 		align-self: center;
@@ -135,6 +149,7 @@
 		background-color: #e2e2e2;
 		border-radius: 20px;
 		z-index: 1;
+		
 	}
 
 </style>
@@ -158,10 +173,13 @@
     function szinvalaszto() {
 		
         if (kapcsolas_g == false) {
-            paletta.style.display = 'none';
+            paletta.style.cssText='display: flex; align-content: space-evenly;'
+
+			
         }
         else if(kapcsolas_g==true){
-            paletta.style.display ='block';
+            
+			paletta.style.display = 'none';
         }
 
         kapcsolas_g=!kapcsolas_g;
@@ -175,14 +193,18 @@
 		alap_s=document.querySelector('.alap_s')
 		alap_v=document.querySelector('.alap_v')
 		alap_r=document.querySelector('.alap_r')
+		paletta.style.display='none';
+		lenyilas_r.style.display='none';
+		lenyilas_v.style.display='none';
+		lenyilas_s.style.display='none';
     });
 
 	function lenyit_r(){
-		if (kapcsolas_r == false) {
+		if (kapcsolas_r == true) {
             lenyilas_r.style.display = 'none';
 			alap_r.style.cssText=' border-radius: 20px ';
         }
-        else if(kapcsolas_r==true){
+        else if(kapcsolas_r==false){
             lenyilas_r.style.cssText = 'display: flex; border-radius: 0px 0px 20px 20px';
 			alap_r.style.cssText=' border-radius: 20px 20px 0px 0px';
         }
@@ -192,11 +214,11 @@
 
 
 	function lenyit_v(){
-		if (kapcsolas_v == false) {
+		if (kapcsolas_v == true) {
             lenyilas_v.style.display = 'none';
 			alap_v.style.cssText=' border-radius: 20px ';
         }
-        else if(kapcsolas_v==true){
+        else if(kapcsolas_v==false){
             lenyilas_v.style.cssText = 'display: flex; border-radius: 0px 0px 20px 20px';
 			alap_v.style.cssText=' border-radius: 20px 20px 0px 0px';
         }
@@ -206,11 +228,11 @@
 
 
 	function lenyit_s(){
-		if (kapcsolas_s == false) {
+		if (kapcsolas_s == true) {
             lenyilas_s.style.display = 'none';
 			alap_s.style.cssText=' border-radius: 20px ';
         }
-        else if(kapcsolas_s==true){
+        else if(kapcsolas_s==false){
             lenyilas_s.style.cssText = 'display: flex; border-radius: 0px 0px 20px 20px';
 			alap_s.style.cssText=' border-radius: 20px 20px 0px 0px';
         }
