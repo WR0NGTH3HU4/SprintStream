@@ -1,15 +1,31 @@
 <main>
     <section>
+        <div class="back">
+            <img src="gear.svg" alt="">
+        </div>
         <div class="front">
             <span class="title">Projektmenedzsment emészthető módon</span>
             <a href="#leirasok" class="button">Kezdjünk bele!</a>
         </div>
-        <div class="back">
-            
-        </div>
     </section>
     <section id="leirasok">
-        <div></div>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+            <path fill="#788BFF" fill-opacity="1" d="M0,0L30,42.7C60,85,120,171,180,192C240,213,300,171,360,144C420,117,480,107,540,112C600,117,660,139,720,160C780,181,840,203,900,224C960,245,1020,267,1080,234.7C1140,203,1200,117,1260,96C1320,75,1380,117,1410,138.7L1440,160L1440,0L1410,0C1380,0,1320,0,1260,0C1200,0,1140,0,1080,0C1020,0,960,0,900,0C840,0,780,0,720,0C660,0,600,0,540,0C480,0,420,0,360,0C300,0,240,0,180,0C120,0,60,0,30,0L0,0Z"></path>
+            <path fill="#5465FF" fill-opacity="1" d="M0,96L30,101.3C60,107,120,117,180,133.3C240,149,300,171,360,192C420,213,480,235,540,224C600,213,660,171,720,160C780,149,840,171,900,176C960,181,1020,171,1080,144C1140,117,1200,75,1260,53.3C1320,32,1380,32,1410,32L1440,32L1440,0L1410,0C1380,0,1320,0,1260,0C1200,0,1140,0,1080,0C1020,0,960,0,900,0C840,0,780,0,720,0C660,0,600,0,540,0C480,0,420,0,360,0C300,0,240,0,180,0C120,0,60,0,30,0L0,0Z"></path>
+        </svg>
+        <div>
+            <div>
+                <span>Olvass bele az egyszerű leírásainkba!</span>
+                <span>Gondosan átnéztünk számtalan hivatalos dokumentumot a Scrum és a Vízesés-modell specifikációiról, hogy azokat leegyszerűsítsük felhasználóink számára a zökkenőmentes tanulás érdekében.</span>
+            </div>
+            <div>
+                <a href="" class="button">Jól hangzik, vigyél oda!</a>
+            </div>
+        </div>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+            <path fill="#788BFF" fill-opacity="1" d="M0,256L30,218.7C60,181,120,107,180,117.3C240,128,300,224,360,266.7C420,309,480,299,540,245.3C600,192,660,96,720,85.3C780,75,840,149,900,149.3C960,149,1020,75,1080,48C1140,21,1200,43,1260,74.7C1320,107,1380,149,1410,170.7L1440,192L1440,320L1410,320C1380,320,1320,320,1260,320C1200,320,1140,320,1080,320C1020,320,960,320,900,320C840,320,780,320,720,320C660,320,600,320,540,320C480,320,420,320,360,320C300,320,240,320,180,320C120,320,60,320,30,320L0,320Z"></path>
+            <path fill="#5465FF" fill-opacity="1" d="M0,96L30,101.3C60,107,120,117,180,133.3C240,149,300,171,360,192C420,213,480,235,540,224C600,213,660,171,720,160C780,149,840,171,900,176C960,181,1020,171,1080,144C1140,117,1200,75,1260,53.3C1320,32,1380,32,1410,32L1440,32L1440,320L1410,320C1380,320,1320,320,1260,320C1200,320,1140,320,1080,320C1020,320,960,320,900,320C840,320,780,320,720,320C660,320,600,320,540,320C480,320,420,320,360,320C300,320,240,320,180,320C120,320,60,320,30,320L0,320Z"></path>
+        </svg>
     </section>
     <section>
         
@@ -22,6 +38,12 @@
 <style lang="scss">
     @import '../scss/palette.scss';
 
+    @keyframes spin {
+        to {
+            transform: rotate(360deg);
+        }
+    }
+
     section {
         display: flex;
         flex-direction: column;
@@ -31,6 +53,10 @@
     section:nth-child(odd) {
         background-color: $blue-0;
         color: white;
+    }
+
+    section:nth-child(even) {
+        justify-content: space-between;
     }
 
     section:nth-child(1) {
@@ -43,10 +69,47 @@
         }
     }
 
-    .front {
+    section:nth-child(2) {
+        & > div {
+            display: flex;
+            padding: 0 5rem;
+            
+            & > * {
+                flex-basis: 50%;
+            }
+            
+            & > div {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                span:nth-child(1) {
+                    font-size: 2rem;
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+
+    .center {
         display: flex;
         flex-direction: column;
         align-items: center;
+    }
+
+    .back {
+        @extend .center;
+        z-index: 0;
+
+        & > img {
+            animation: linear infinite spin 25s;
+        }
+    }
+
+    :global(.front) {
+        @extend .center;
+        z-index: 1;
 
         .title {
             width: 40%;
@@ -75,4 +138,7 @@
 </style>
 
 <script lang="ts">
+	import { fly } from "svelte/transition";
+	import NagyonMenoTransition from "../components/NagyonMenoTransition.svelte";
+
 </script>

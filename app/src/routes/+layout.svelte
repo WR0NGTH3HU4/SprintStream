@@ -10,7 +10,7 @@
         margin: 0;
     }
 
-    :global(html, body) {
+    :global(body) {
         width: 100vw;
         min-height: 100vh;
         box-sizing: border-box;
