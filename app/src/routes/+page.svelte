@@ -14,11 +14,11 @@
             <path fill="#5465FF" fill-opacity="1" d="M0,96L30,101.3C60,107,120,117,180,133.3C240,149,300,171,360,192C420,213,480,235,540,224C600,213,660,171,720,160C780,149,840,171,900,176C960,181,1020,171,1080,144C1140,117,1200,75,1260,53.3C1320,32,1380,32,1410,32L1440,32L1440,0L1410,0C1380,0,1320,0,1260,0C1200,0,1140,0,1080,0C1020,0,960,0,900,0C840,0,780,0,720,0C660,0,600,0,540,0C480,0,420,0,360,0C300,0,240,0,180,0C120,0,60,0,30,0L0,0Z"></path>
         </svg>
         <div>
-            <div>
+            <div class="feature">
                 <span>Olvass bele az egyszerű leírásainkba!</span>
                 <span>Gondosan átnéztünk számtalan hivatalos dokumentumot a Scrum és a Vízesés-modell specifikációiról, hogy azokat leegyszerűsítsük felhasználóink számára a zökkenőmentes tanulás érdekében.</span>
             </div>
-            <div>
+            <div class="feature">
                 <a href="" class="button">Jól hangzik, vigyél oda!</a>
             </div>
         </div>
@@ -28,10 +28,26 @@
         </svg>
     </section>
     <section>
-        
+        <div class="feature">
+            <span>Teszteld tudásod a kvízeinkkel!</span>
+            <span>Nem vagy biztos abban, hogy minden fontos részét megtanultad az anyagnak? Mérd fel tudásod a saját kvízeinkkel! Mi csak olyat kérdezünk, ami biztos fontos és le lett írva :)</span>
+        </div>
+        <div class="feature">
+            <img src="question.svg" alt="">
+        </div>
     </section>
     <section>
-        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+            <path fill="#788BFF" fill-opacity="1" d="M0,64L40,53.3C80,43,160,21,240,42.7C320,64,400,128,480,144C560,160,640,128,720,138.7C800,149,880,203,960,197.3C1040,192,1120,128,1200,117.3C1280,107,1360,149,1400,170.7L1440,192L1440,0L1400,0C1360,0,1280,0,1200,0C1120,0,1040,0,960,0C880,0,800,0,720,0C640,0,560,0,480,0C400,0,320,0,240,0C160,0,80,0,40,0L0,0Z"></path>
+            <path fill="#5465FF" fill-opacity="1" d="M0,160L40,149.3C80,139,160,117,240,117.3C320,117,400,139,480,128C560,117,640,75,720,69.3C800,64,880,96,960,122.7C1040,149,1120,171,1200,165.3C1280,160,1360,128,1400,112L1440,96L1440,0L1400,0C1360,0,1280,0,1200,0C1120,0,1040,0,960,0C880,0,800,0,720,0C640,0,560,0,480,0C400,0,320,0,240,0C160,0,80,0,40,0L0,0Z"></path>
+        </svg>
+        <div>
+            <div class="feature">
+                <span>Mindezt teljesen ingyen!</span>
+                <span>Az oldal teljesen nonprofit, nem kell regisztrálni a használatához. Emellett az egész projekt nyílt forráskódú és minden része elérhető a <a href="">GitHub</a> reponkban.</span>
+            </div>
+        </div>
+        <div></div>
     </section>
 </main>
 
@@ -69,26 +85,41 @@
         }
     }
 
-    section:nth-child(2) {
-        & > div {
-            display: flex;
-            padding: 0 5rem;
-            
-            & > * {
-                flex-basis: 50%;
-            }
-            
-            & > div {
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
+    .feature {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
 
-                span:nth-child(1) {
-                    font-size: 2rem;
-                    font-weight: 600;
-                }
+        span:nth-child(1) {
+            font-size: 2rem;
+            font-weight: 700;
+        }
+    }
+
+    section:nth-child(2) > div, section:nth-child(3) {
+        display: flex;
+        flex-direction: row;
+        padding: 0 5rem;
+
+        & > * {
+            flex-basis: 50%;
+        }
+        
+        & > div {
+            & > img { // csak hogy ne nezzen ki hulyen a kerdojel
+                width: 100%;
             }
+        }
+    }
+
+    section:nth-child(4) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        & > div {
+            width: 50%;
         }
     }
 
