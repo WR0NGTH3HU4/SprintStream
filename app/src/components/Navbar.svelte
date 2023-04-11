@@ -64,12 +64,13 @@
 <style>
 	
     .gomb{
-        position: relative;
+        
 		display: flex;
 		flex-direction: column;
 		flex-wrap: nowrap;
 		justify-content: space-between;
 		align-content: space-between;
+		z-index: 0;
     }
 	.gomb img {
 		width: 40px;
@@ -97,7 +98,7 @@
 		padding-right: 20px;
 		padding-left: 20px;
 		background-color: #e2e2e2;
-		position: relative;
+		position: absolute;
 		z-index: 1;
 		
 	}
@@ -137,6 +138,7 @@
 	}
     .paletta img{
         z-index: 1;
+		position: relative;
     }
 	.paletta {
 		display: flex;
