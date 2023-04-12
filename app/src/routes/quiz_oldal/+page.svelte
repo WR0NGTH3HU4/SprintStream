@@ -1,31 +1,31 @@
 <main>
-    <div class="card platina">
+    <div id="elso" class="card platina">
         <img src="wave_top.svg" alt="wave_top">
         <div class="kerdes">
             <p>Szereted a sajtot?</p>
             <ul>
-                <li on:click={kovi_kerdes}>ign</li>
-                <li on:click={kovi_kerdes}>nem</li>
-                <li on:click={kovi_kerdes}>néha</li>
+                <li on:click={kovi_kerdes(masodik)}>ign</li>
+                <li on:click={kovi_kerdes(masodik)}>nem</li>
+                <li on:click={kovi_kerdes(masodik)}>néha</li>
             </ul>
         </div>
         <img src="wave_bottom.svg" alt="wave_bottom">
     </div>
 
-    <div class="card kek">
+    <div id="masodik" class="card kek">
         
         <div class="kerdes">
             <p>Szereted a sajtot?</p>
             <ul>
-                <li on:click={kovi_kerdes}>ign</li>
-                <li on:click={kovi_kerdes}>nem</li>
-                <li on:click={kovi_kerdes}>néha</li>
+                <li on:click={kovi_kerdes()}>ign</li>
+                <li on:click={kovi_kerdes()}>nem</li>
+                <li on:click={kovi_kerdes()}>néha</li>
             </ul>
         </div>
         
     </div>
 
-    <div class="card platina">
+    <div id="harmadik" class="card platina">
         <img src="wave_top.svg" alt="wave_top">
         <div class="kerdes">
             <p>Szereted a sajtot?</p>
@@ -91,15 +91,8 @@
 </style>
 
 <script lang="ts">
-    function kovi_kerdes(){
-        let card_height = document.querySelector(".card");
-        console.log(card_height.offserHeight);
-        let pos = window.pageYOffset;
-        console.log(pos);
-        if (pos > 0){
-            window.scrollTo(0, pos - card_height);
-        }
-        
+    function kovi_kerdes(hanyadik){
+        window.scroll(0, window.scrollY + document.querySelector("").getBoundingClientRect().top);
     }
 
 
