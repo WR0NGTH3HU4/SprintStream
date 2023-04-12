@@ -4,12 +4,13 @@
         <div class="kerdes">
             <p>Szereted a sajtot?</p>
             <ul>
-                <li on:click={kovi_kerdes(masodik)}>ign</li>
-                <li on:click={kovi_kerdes(masodik)}>nem</li>
-                <li on:click={kovi_kerdes(masodik)}>néha</li>
+                <li ><button (click)="kovi_kerdes(`masodik`)>ign</button></li>
+                <!--<li on:click={kovi_kerdes}>nem</li>
+                <li on:click={kovi_kerdes}>néha</li>
+            -->
             </ul>
         </div>
-        <img src="wave_bottom.svg" alt="wave_bottom">
+        <img src="wave_bottom.svg" alt="wave_bottom"></button>
     </div>
 
     <div id="masodik" class="card kek">
@@ -17,9 +18,10 @@
         <div class="kerdes">
             <p>Szereted a sajtot?</p>
             <ul>
-                <li on:click={kovi_kerdes()}>ign</li>
-                <li on:click={kovi_kerdes()}>nem</li>
-                <li on:click={kovi_kerdes()}>néha</li>
+                <!--<li on:click={kovi_kerdes}>ign</li>
+                <li on:click={kovi_kerdes}>nem</li>
+                <li on:click={kovi_kerdes}>néha</li>
+            -->
             </ul>
         </div>
         
@@ -30,9 +32,10 @@
         <div class="kerdes">
             <p>Szereted a sajtot?</p>
             <ul>
-                <li on:click={kovi_kerdes}>ign</li>
+                <!--<li on:click={kovi_kerdes}>ign</li>
                 <li on:click={kovi_kerdes}>nem</li>
                 <li on:click={kovi_kerdes}>néha</li>
+            -->
             </ul>         
         </div>
         
@@ -91,9 +94,14 @@
 </style>
 
 <script lang="ts">
-    function kovi_kerdes(hanyadik){
-        window.scroll(0, window.scrollY + document.querySelector("").getBoundingClientRect().top);
+    function kovi_kerdes(hanyadik:string) : void{
+        //window.scroll(0, window.scrollY + document.querySelector(`#${hanyadik}`).getBoundingClientRect().top);
+        const elem = document.querySelector(hanyadik)!;
+        const y = elem.getBoundingClientRect().top + window.pageYOffset;
+
+        window.scrollTo({top: y,behavior: 'smooth'});
     }
+
 
 
 </script>
