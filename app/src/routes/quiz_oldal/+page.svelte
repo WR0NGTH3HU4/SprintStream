@@ -2,7 +2,12 @@
     <div class="card platina">
         <img src="wave_top.svg" alt="wave_top">
         <div class="kerdes">
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. A saepe optio nemo eos aperiam iusto id, deserunt magni praesentium accusamus unde quo laudantium placeat veniam tempore. Est laborum tempore fugiat.</p>
+            <p>Szereted a sajtot?</p>
+            <ul>
+                <li on:click={kovi_kerdes}>ign</li>
+                <li on:click={kovi_kerdes}>nem</li>
+                <li on:click={kovi_kerdes}>néha</li>
+            </ul>
         </div>
         <img src="wave_bottom.svg" alt="wave_bottom">
     </div>
@@ -10,7 +15,12 @@
     <div class="card kek">
         
         <div class="kerdes">
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. A saepe optio nemo eos aperiam iusto id, deserunt magni praesentium accusamus unde quo laudantium placeat veniam tempore. Est laborum tempore fugiat.</p>
+            <p>Szereted a sajtot?</p>
+            <ul>
+                <li on:click={kovi_kerdes}>ign</li>
+                <li on:click={kovi_kerdes}>nem</li>
+                <li on:click={kovi_kerdes}>néha</li>
+            </ul>
         </div>
         
     </div>
@@ -18,7 +28,12 @@
     <div class="card platina">
         <img src="wave_top.svg" alt="wave_top">
         <div class="kerdes">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, dignissimos? Atque, quibusdam odit ab perspiciatis temporibus ipsam ullam deleniti asperiores voluptas mollitia? Aspernatur, facere. Nulla, sapiente! Fugit delectus debitis inventore.</p>            
+            <p>Szereted a sajtot?</p>
+            <ul>
+                <li on:click={kovi_kerdes}>ign</li>
+                <li on:click={kovi_kerdes}>nem</li>
+                <li on:click={kovi_kerdes}>néha</li>
+            </ul>         
         </div>
         
         <img src="wave_bottom.svg" alt="wave_bottom">
@@ -64,10 +79,28 @@
     .kerdes{
         display: flex;
         flex-direction: row;
-        justify-content: center;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .kerdes ul{
+        list-style: none;
+        padding: 0%;
     }
 
 </style>
 
 <script lang="ts">
+    function kovi_kerdes(){
+        let card_height = document.querySelector(".card");
+        console.log(card_height.offserHeight);
+        let pos = window.pageYOffset;
+        console.log(pos);
+        if (pos > 0){
+            window.scrollTo(0, pos - card_height);
+        }
+        
+    }
+
+
 </script>
