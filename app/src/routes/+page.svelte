@@ -58,6 +58,36 @@
         }
     }
 
+    @media screen and (max-width: 700px) {
+        .front {
+            .title {
+                font-size: 1.5rem !important;
+                width: 90vw !important;
+            }
+
+            a {
+                width: 60vw !important;
+            }
+        }
+
+        #leirasok > div {
+            flex-direction: column !important;
+            gap: 1rem;
+
+            & > * {
+                flex-basis: auto !important;
+            }
+
+            .button {
+                max-width: 100% !important;
+                width: 100%;
+                max-height: 3rem !important;
+                height: 3rem;
+                line-height: 3rem;
+            }
+        }
+    }
+
     section {
         display: flex;
         flex-direction: column;
@@ -164,12 +194,13 @@
         }
     }
 
-    :global(.front) {
+    .front {
         @extend .center;
         z-index: 1;
+        gap: .5rem;
 
         .title {
-            width: 40%;
+            width: 50vw;
             font-size: 2rem;
             font-weight: bold;
             text-align: center;
@@ -185,6 +216,7 @@
         padding: 10px 20px;
         border-radius: 8px;
         text-decoration: none;
+        text-align: center;
         
         &:hover {
             background-color: $blue-1;
