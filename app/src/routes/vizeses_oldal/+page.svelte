@@ -43,15 +43,27 @@
             
                 <path fill="#5465FF" fill-opacity="1" d="M0,192L26.7,186.7C53.3,181,107,171,160,170.7C213.3,171,267,181,320,202.7C373.3,224,427,256,480,261.3C533.3,267,587,245,640,218.7C693.3,192,747,160,800,138.7C853.3,117,907,107,960,117.3C1013.3,128,1067,160,1120,154.7C1173.3,149,1227,107,1280,90.7C1333.3,75,1387,85,1413,90.7L1440,96L1440,0L1413.3,0C1386.7,0,1333,0,1280,0C1226.7,0,1173,0,1120,0C1066.7,0,1013,0,960,0C906.7,0,853,0,800,0C746.7,0,693,0,640,0C586.7,0,533,0,480,0C426.7,0,373,0,320,0C266.7,0,213,0,160,0C106.7,0,53,0,27,0L0,0Z"></path>
             </svg>
-            <div class="szoveg">
-                <div>
-                    <h1>Üdv az első lépésben</h1>
-                    <p>szovegs</p>
+
+            <div class="olvasas">
+                <div class="szoveg">
+                    <div>
+                        <h1>Üdv az első lépésben</h1>
+                        <p>szovegs</p>
+                    </div>
+                    
+                        <img src="icons/document.png" alt="kep">
                 </div>
-                
-                    <img src="icons/document.png" alt="kep">
-                
+                <div class="nyilak">
+                    <svg width="100" height="161" viewBox="0 0 100 161" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M75 136.588L29.0683 90.6568C23.6439 85.2324 23.6439 76.356 29.0683 70.9316L75 25" stroke="#788BFF" stroke-width="48.5835" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <svg width="100" height="161" viewBox="0 0 100 161" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M25 136.589L70.9316 90.6573C76.3561 85.2329 76.3561 76.3565 70.9316 70.932L25 25" stroke="#788BFF" stroke-width="48.5839" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                            
+                </div>
             </div>
+
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
 
                         <path fill="#BFD7FF" fill-opacity="1" d="M0,224L26.7,234.7C53.3,245,107,267,160,256C213.3,245,267,203,320,170.7C373.3,139,427,117,480,128C533.3,139,587,181,640,197.3C693.3,213,747,203,800,213.3C853.3,224,907,256,960,234.7C1013.3,213,1067,139,1120,122.7C1173.3,107,1227,149,1280,144C1333.3,139,1387,85,1413,58.7L1440,32L1440,320L1413.3,320C1386.7,320,1333,320,1280,320C1226.7,320,1173,320,1120,320C1066.7,320,1013,320,960,320C906.7,320,853,320,800,320C746.7,320,693,320,640,320C586.7,320,533,320,480,320C426.7,320,373,320,320,320C266.7,320,213,320,160,320C106.7,320,53,320,27,320L0,320Z"></path>
@@ -113,12 +125,12 @@
         flex-direction: column;
         justify-content: center;
         align-items: center ;
-
         position: absolute;
         border-radius: 100%;
         text-align: center;
         font-size: 150%;
     }
+
     .kor1{
         
         background-color:#BFD7FF ;
@@ -177,6 +189,7 @@
         justify-content: center;
         align-items: center;
         margin-left: 10%;
+        margin-bottom: 10%;
     }
     .ph svg{
         transform: translate(0%,-10%);
@@ -188,6 +201,25 @@
         justify-content: center;
         align-items: center;
         background-color: #E3E3E3;
+    }
+    .olvasas{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width:100%
+
+    }
+    .nyilak{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-self: center;
+        width:80%;
+        padding-top: 5%;
+        
+    }   
+    .nyilak:hover{
+        animation: kiemeles 4s infinite;
     }
     .elsohullam{
         display: block;
@@ -205,14 +237,16 @@
         justify-content: center;
         align-content: space-between;
 
-       
     }
+
     .szoveg div{
         align-self:flex-start ;
         flex-grow: 2;
+        padding-left: 10%;
     }
     .szoveg img{
         align-self:flex-end ;
+        padding-right: 10%;
        
     }
     .fill{
@@ -322,11 +356,13 @@
             transform: scale(.9) translate(15%,0%);
             
         }
+
     }
     @media screen and (max-width: 1580px){
         .kor{
             transform: scale(.8) translate(30%,0%);
         }
+        
     }
     @media screen and (max-width: 1420px){
         .kor{
@@ -383,6 +419,20 @@
             display: flex;
             flex-direction:row;
 
+        }
+    }
+    .kor:hover{
+        animation: kiemeles 4s infinite;
+    }
+    .ph:hover{
+        animation: kiemeles 4s infinite;
+    }
+    @keyframes kiemeles{
+
+        100%{
+
+            z-index: 100;
+            transform: scale(1.1);
         }
     }
 </style>
