@@ -6,25 +6,25 @@
             <h1>Vizeses</h1>
         </div>
         <div class="main">
-            <div class="kor kor1">
+            <div on:click={elso} class="kor kor1">
                 <h3>1.lépés</h3>
             </div>
-            <div class="kor kor2">
+            <div on:click={masodik} class="kor kor2">
                 <h3>2.lépés</h3>
             </div>
-            <div class="kor kor3">
+            <div on:click={harmadik} class="kor kor3">
                 <h3>3.lépés</h3>
             </div>
-            <div class="kor kor4">
+            <div on:click={negyedik} class="kor kor4">
                 <h3>4.lépés</h3>
             </div>
-            <div class="kor kor5">
+            <div on:click={otodik} class="kor kor5">
                 <h3>5.lépés</h3>
             </div>            
-            <div class="kor kor6">
+            <div on:click={hatodik} class="kor kor6">
                 <h3>6.lépés</h3>
             </div>            
-            <div class="kor kor7">
+            <div on:click={hetedik} class="kor kor7">
                 <h3>7.lépés</h3>
             </div>
 
@@ -47,19 +47,53 @@
             <div class="olvasas">
                 <div class="szoveg">
                     <div>
-                        <h1>Üdv az első lépésben</h1>
-                        <p>szovegs</p>
+                        <h1 class="jelenlegi_cim">{cim[cim_index]}</h1>
+                        <p class="jelenlegi_szoveg">{szoveg[index]}</p>
                     </div>
                     
                         <img src="icons/document.png" alt="kep">
                 </div>
                 <div class="nyilak">
-                    <svg width="100" height="161" viewBox="0 0 100 161" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg on:click={lapoz_hatra} class="hatra" width="100" height="161" viewBox="0 0 100 161" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M75 136.588L29.0683 90.6568C23.6439 85.2324 23.6439 76.356 29.0683 70.9316L75 25" stroke="#788BFF" stroke-width="48.5835" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
-                    <svg width="100" height="161" viewBox="0 0 100 161" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg on:click={lapoz_elore} class="elore" width="100" height="161" viewBox="0 0 100 161" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M25 136.589L70.9316 90.6573C76.3561 85.2329 76.3561 76.3565 70.9316 70.932L25 25" stroke="#788BFF" stroke-width="48.5839" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
+                            
+                </div>
+                <div class="projharomszog">
+                    <div class="skala">
+                        <h3>Pénz</h3>
+                        <div class="slidecontainer penz">
+                            <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+                          </div>
+                        
+                        <h3>Idő</h3>
+                        <div class="slidecontainer ido">
+                            <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+                          </div>
+                        
+                        <h3>Hatókör</h3>
+                        <div class="slidecontainer hatokor">
+                            <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+                          </div>
+                    </div>
+                    <svg class="haromszog" width="842" height="740" viewBox="0 0 842 740" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M386.359 20C401.755 -6.66665 440.245 -6.66667 455.641 20L836.359 679.423C851.755 706.089 832.51 739.423 801.718 739.423H40.2821C9.49004 739.423 -9.75499 706.09 5.64101 679.423L386.359 20Z" fill="#292D32"/>
+                        <path d="M453.562 291H384.521C363.808 291 350 301.356 350 325.521V373.85C350 398.014 363.808 408.371 384.521 408.371H453.562C474.275 408.371 488.083 398.014 488.083 373.85V325.521C488.083 301.356 474.275 291 453.562 291ZM362.082 325.521C362.082 313.162 372.162 303.082 384.521 303.082H394.877C397.708 303.082 400.055 305.43 400.055 308.26C400.055 311.091 397.708 313.439 394.877 313.439H384.521C377.893 313.439 372.439 318.893 372.439 325.521V335.877C372.439 338.708 370.091 341.055 367.26 341.055C364.43 341.055 362.082 338.708 362.082 335.877V325.521ZM394.877 396.288H384.521C372.162 396.288 362.082 386.208 362.082 373.85V363.494C362.082 360.663 364.43 358.316 367.26 358.316C370.091 358.316 372.439 360.663 372.439 363.494V373.85C372.439 380.478 377.893 385.932 384.521 385.932H394.877C397.708 385.932 400.055 388.28 400.055 391.11C400.055 393.941 397.708 396.288 394.877 396.288ZM419.042 370.398C407.581 370.398 398.329 361.146 398.329 349.685C398.329 338.224 407.581 328.973 419.042 328.973C430.503 328.973 439.754 338.224 439.754 349.685C439.754 361.146 430.503 370.398 419.042 370.398ZM476.001 373.85C476.001 386.208 465.921 396.288 453.562 396.288H443.206C440.375 396.288 438.028 393.941 438.028 391.11C438.028 388.28 440.375 385.932 443.206 385.932H453.562C460.19 385.932 465.645 380.478 465.645 373.85V363.494C465.645 360.663 467.992 358.316 470.823 358.316C473.654 358.316 476.001 360.663 476.001 363.494V373.85ZM476.001 335.877C476.001 338.708 473.654 341.055 470.823 341.055C467.992 341.055 465.645 338.708 465.645 335.877V325.521C465.645 318.893 460.19 313.439 453.562 313.439H443.206C440.375 313.439 438.028 311.091 438.028 308.26C438.028 305.43 440.375 303.082 443.206 303.082H453.562C465.921 303.082 476.001 313.162 476.001 325.521V335.877Z" fill="#E3E3E3"/>
+                        <path d="M321.042 471C283 471 252 502 252 540.042C252 578.084 283 609.083 321.042 609.083C359.084 609.083 390.083 578.084 390.083 540.042C390.083 502 359.084 471 321.042 471ZM351.075 564.689C350.108 566.346 348.382 567.244 346.587 567.244C345.689 567.244 344.792 567.037 343.963 566.485L322.561 553.712C317.244 550.536 313.309 543.563 313.309 537.418V509.111C313.309 506.28 315.656 503.933 318.487 503.933C321.318 503.933 323.665 506.28 323.665 509.111V537.418C323.665 539.904 325.736 543.563 327.877 544.805L349.28 557.578C351.765 559.028 352.594 562.204 351.075 564.689Z" fill="#E3E3E3"/>
+                        <path d="M576.922 539.752C574.352 539.752 572.199 537.773 571.921 535.158C570.254 519.612 562.057 505.621 549.416 496.717C547.123 495.091 546.568 491.912 548.165 489.58C549.763 487.248 552.889 486.682 555.181 488.308C570.254 498.978 579.978 515.655 581.992 534.099C582.27 536.925 580.256 539.469 577.477 539.752C577.269 539.752 577.13 539.752 576.922 539.752Z" fill="#E3E3E3"/>
+                        <path d="M461.482 540.103C461.343 540.103 461.135 540.103 460.996 540.103C458.217 539.82 456.203 537.276 456.481 534.45C458.356 516.006 467.942 499.329 482.875 488.588C485.098 486.962 488.293 487.528 489.891 489.789C491.489 492.121 490.933 495.301 488.71 496.926C476.207 505.971 468.08 519.963 466.552 535.439C466.275 538.124 464.052 540.103 461.482 540.103Z" fill="#E3E3E3"/>
+                        <path d="M546.577 598.89C538.034 603.059 528.865 605.179 519.279 605.179C509.277 605.179 499.761 602.918 490.87 598.325C488.37 597.124 487.397 594.014 488.648 591.47C489.828 588.926 492.885 587.937 495.385 589.138C499.761 591.4 504.415 592.954 509.138 593.873C515.529 595.145 522.058 595.216 528.448 594.085C533.171 593.237 537.825 591.753 542.132 589.633C544.702 588.432 547.758 589.421 548.869 592.036C550.12 594.58 549.147 597.689 546.577 598.89Z" fill="#E3E3E3"/>
+                        <path d="M519.209 464C508.443 464 499.621 472.904 499.621 483.928C499.621 494.951 508.373 503.855 519.209 503.855C530.045 503.855 538.797 494.951 538.797 483.928C538.797 472.904 530.045 464 519.209 464Z" fill="#E3E3E3"/>
+                        <path d="M470.588 547.805C459.821 547.805 451 556.709 451 567.732C451 578.756 459.752 587.66 470.588 587.66C481.423 587.66 490.175 578.756 490.175 567.732C490.175 556.709 481.354 547.805 470.588 547.805Z" fill="#E3E3E3"/>
+                        <path d="M567.14 547.805C556.374 547.805 547.553 556.709 547.553 567.732C547.553 578.756 556.305 587.66 567.14 587.66C577.976 587.66 586.728 578.756 586.728 567.732C586.728 556.709 577.976 547.805 567.14 547.805Z" fill="#E3E3E3"/>
+                        </svg>
+                        <svg class="pipa "width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M100 0C44.9 0 0 44.9 0 100C0 155.1 44.9 200 100 200C155.1 200 200 155.1 200 100C200 44.9 155.1 0 100 0ZM147.8 77L91.1 133.7C89.7 135.1 87.8 135.9 85.8 135.9C83.8 135.9 81.9 135.1 80.5 133.7L52.2 105.4C49.3 102.5 49.3 97.7 52.2 94.8C55.1 91.9 59.9 91.9 62.8 94.8L85.8 117.8L137.2 66.4C140.1 63.5 144.9 63.5 147.8 66.4C150.7 69.3 150.7 74 147.8 77Z" fill="#292D32"/>
+                            
+                        </svg>
                             
                 </div>
             </div>
@@ -83,6 +117,39 @@
 </main>
 
 <style lang="scss">
+    .skala{
+        display: flex;
+    }
+    .slider {
+        -webkit-appearance: none;
+        width: 250%;
+        height: 15px;
+        border-radius: 5px;  
+        background: #292D32;
+        outline: none;
+        
+        -webkit-transition: .2s;
+        transition: opacity .2s;
+    }
+
+    .slider::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 25px;
+        height: 25px;
+        border-radius: 50%; 
+        background: #04AA6D;
+        cursor: pointer;
+    }
+
+    .slider::-moz-range-thumb {
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+        background: #04AA6D;
+        cursor: pointer;
+    }
+
     .main{
         border-color: #5465FF;
         display: flex;
@@ -209,6 +276,7 @@
         width:100%
 
     }
+    
     .nyilak{
         display: flex;
         flex-direction: row;
@@ -221,6 +289,17 @@
     .nyilak:hover{
         animation: kiemeles 4s infinite;
     }
+    .projharomszog{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items:center;
+    }
+    .projharomszog svg{
+        transform: scale(0.6);
+       
+    }
+
     .elsohullam{
         display: block;
         z-index: 1;
@@ -243,6 +322,10 @@
         align-self:flex-start ;
         flex-grow: 2;
         padding-left: 10%;
+        padding-right: 10%;
+    }
+    .szoveg p{
+        white-space: pre-line;
     }
     .szoveg img{
         align-self:flex-end ;
@@ -439,6 +522,116 @@
 
 <script lang="ts">
 	import Navbar from "../../components/Navbar.svelte";
+    import { onMount } from 'svelte';
+    let hatra:any;
+    let elore:any;
+    let olvasas:any;
+    //let kapcsolas= false;
+    onMount(() => {
+        hatra= document.querySelector('.hatra');
+        elore= document.querySelector('.elore');
+        olvasas= document.querySelector('.olvasas');
+        //olvasas.style.display="none";
+    });
 
+    
+    let cim_index=0;
+    let index=0;
+    
+    
+    let cim=["A projekt menedzsment(1.)","Szervezet(2.)","Projektfolyamatok, fázisok(3.)","A projekt működési rendje(4.)","IT projekt megközelítés(5.)","Összegzés(6.)","Mellékletek(7.)"];
+    let szoveg=["Segítséget nyújt a szervezetek projektjeinek, hatékony menedzselésében, enélkül olyan lenne a projekt, mint egy Lego szett.  Megfelelő utasítás eljárás nélkül káosz lenne a vége. A mi útmutatónk tehát jelenesetben az eljárásrend, taglalja, hogy a költségvetés alapelveit típustól független, az egyes szakszavakat a projektmenedzsment témakörében(terminológia), és a folyamatok alkalmazását."
+    
+    ,"Ismét gondoljunk a Lego szettekre, vannak különlegesebb darabok, amelyek a konkrét instrukciók(lépések) mellett kisebb információval akár tájékoztatással vannak ellátva. Az esetünkben a különleges darabok az államigazgatási projektek főként és ezek jellemzőit bővítik a hazai sajátosságok, törvények.","A módszertan definíciója: \nA vízesés alapú, avagy szekvenciális modell, fix mérföldkövekhez kapcsolódik (itt gondolhatunk akár kedvenc játékunkra, hiszen ott is gyakran találkozhatunk ilyenekkel, mondjuk, ha egy nagyobb szintet érünk el, vagy hosszabb ideje játszunk)."
+    
+    ,"A projektháromszög\n Nagyon fontos, hogy ne ijedjünk meg rögtön a hallatán ez nem valami szekta jelképe!A menedzsment fő tényezőit és a köztük lévő összefüggést prezentálja nekünk. A következők tehát, az idő, a költség, a hatókör és a minőség. A fontosságuk esetenként változik, gondoljunk ezúttal egy autóra és azok kialakítására, ha változtatunk a motor pozícióján változtatni kell a vázon, ami esetenként nagyobb költségvetést igényel (mind ez attól függ, hogy milyen célra születik meg az autó). A lényeg ezúttal, hogy ha az egyik tényező változik akkor a többi is. Működését gyakorolhatjuk az oldalon hiszen külön szántunk neki egy lépést."
+    
+    ,"Általános felépítése\n Tegyük fel, hogy ismét egy Lego szettel van dolgunk méghozzá egy hatalmassal és összerakásához csapatokat szeretnénk kialakítani, hogy a szett megfelelően legyen kezelve és összerakva. A szervezetek egységeit és kulcspozícióit már a tervezés során össze kell raknunk. Két szintre tudunk kialakítani szervezeteket. "
+    
+    ,"Stratégai szint\n Ezen a szinten két nagy szervezeti egység található, az egyik a Magas Szintű Támogató Testület (MTT) más nevén Projekt Felügyelő Bizottság (PFB), és a Projekt Irányító Bizottság (PIB). "
+    
+    ,"MTT\n Ők azok, akik képesek a projekt környezetét befolyásolni, ők hozzák a legfontosabb döntéseket. (Legalább egy főből kell állnia)."
+    
+    ,"Projekt szponzor\n A példa kedvéért, mondjuk azt, hogy a Lego szett az ő kérésére, rendelésére készül, így ő biztosítja a forrásokat és a támogatásokat. Vezetői szerepe végett ő is képes a projektháromszög környezetét befolyásolni."
+    
+    ,"PIB\nA PIB gondoskodik arról, hogy a projekt kijelölt keretein belül (költség, idő, terjedelem) a szükséges döntések megszülessenek, a megfelelő erőforrások (akár a lego darabok) kiosztásra kerüljenek, illetve felügyeletet gyakorol a projekt operatív szintje felett."
+
+    ,"Operatív szint\n Ezen a szinten történik a projekt megvalósítása (lego összerakása)."
+    
+    ,"Tisztségiselők\nA projekt menedzseléséért felelősek. A következők tehát, a projektigazgatók, projektvezetők, szakmai vezetők, munkacsoport-vezetők, projekt-koordinátorok stb."    
+        
+    ,"Projekt munkatársai\nMunkaidejük nagyrészét a projekt lebonyolításával töltik (akik konkrétan összerakják a legot), ide tartoznak a munkacsoporttagok és a projektasszisztensek."
+        
+    ,"Támogató szakértők\nAzok a kollégák, akik esetenként szakértői feladatokat látnak el a projektben."
+        
+    ,"Üzleti partnerek\nAzok a külső szállítók, akik a projekt lebonyolításában segítenek. Méghozzá beszerzőként, tanácsadóként, minőségbiztosítóként, vannak leginkább jelen."
+    
+    ,"Projektszponzor\nA feladatot olyan személynek kell ellátnia, aki megfelelő szintű hatáskörrel bír, és támogatni tudja a megvalósítást. Tehát az ő feladata, hogy támogassa a projektet, összeállítsa a PIB tagjait, együttműködések fenntartása és a projektben való információáramlás biztosítása.  A PIB működését felügyeli."
+    
+    ,"Projekt Irányító Bizottság (PIB)\nAmi a projektirányítást illeti, az ő feladatuk dönteni a projekt céljairól, terjedelméről, ütemezéséről, illetve az ezeket befolyásoló tényezőkről ők döntenek. Ők határozzák meg a projekt szervezet működési elveit, és az ehhez szükséges erőforrásokat biztosítja. Ők felügyelik a projektvezetést."
+    
+    ,"Projektvezető\nŐ az, aki a meghatározott projektháromszög elvárásait korlátait betartatja. Tehet javaslatot a projektet érintő tervekre és változásokra, amiket később a PIB bírál majd. Térjünk vissza egy pillanatra a Lego-s példánkra, az egyszerűség kedvéért, tegyük fel, hogy már megvan melyik szettet választottuk, hogy milyen úton jutunk hozzá, és milyen feltételek szükségesek hozzá, kell egy ember, aki konkrétan összeállítja a szetten dolgozó csapatokat(projekttagokat) majd ellenőrzi a munkájukat, ahhoz, hogy minden jól menjen szükséges, hogy megfelelő dokumentációt vezessen munkát és költségvetést illetően. Illetve megkell teremtenie a megfelelő kommunikációt a csapatok közt és a csapatok és maga közt. Amennyiben ezek nem történnek meg az elkészítés közben olyan problémák merülhetnek fel, amelyek azt eredményezik, hogy a Legonk összeesik"
+
+    
+    ,"Szakmai vezető\n"
+
+    ,"\n"
+    
+    ,"\n"
+    
+    ,"\n"
+    
+    ,"A fejezetek végére értél, gratulálunk, reméljük segíthettünk!"];
+
+
+
+    function elso(){
+        index=0;
+        cim_index=0
+        olvasas.style.display="flex";
+    }
+    function masodik(){
+        index=4
+        cim_index=1;
+        olvasas.style.display="flex";
+    }
+    function harmadik(){
+        cim_index=2
+        olvasas.style.display="flex";
+    }
+    function negyedik(){
+        cim_index=3;
+        olvasas.style.display="flex";
+    }
+    function otodik(){
+        cim_index=4;
+        olvasas.style.display="flex";
+    }
+    function hatodik(){
+        cim_index=5;
+        olvasas.style.display="flex";
+    }
+    function hetedik(){
+        cim_index=6;
+        olvasas.style.display="flex";
+    }
+
+
+    function lapoz_elore(){
+        if (index != szoveg.length - 1){
+           index++;
+            
+        }
+        else{
+            index=szoveg.length-1;
+        }
+    }
+    function lapoz_hatra(){
+        if (index!=0){
+            index--;
+            
+        }
+
+    }
 
 </script>
