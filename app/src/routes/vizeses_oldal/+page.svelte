@@ -118,11 +118,20 @@
 
 <style lang="scss">
     .skala{
+        padding-left: 2%;
+        padding-bottom: 2%;
+        width: 25%;
+        height: 30%;
+        background-color: #788BFF;
         display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        border-radius: 20px;;
     }
     .slider {
         -webkit-appearance: none;
-        width: 250%;
+        width: 200%;
         height: 15px;
         border-radius: 5px;  
         background: #292D32;
@@ -138,7 +147,7 @@
         width: 25px;
         height: 25px;
         border-radius: 50%; 
-        background: #04AA6D;
+        background: #D7D7D7;
         cursor: pointer;
     }
 
@@ -146,8 +155,12 @@
         width: 25px;
         height: 25px;
         border-radius: 50%;
-        background: #04AA6D;
+        background: #D7D7D7;
         cursor: pointer;
+    }
+    .slider input::-moz-range-progress{
+        height: auto;
+        border-radius: 25px;
     }
 
     .main{
