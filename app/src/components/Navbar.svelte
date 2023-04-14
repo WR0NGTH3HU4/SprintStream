@@ -150,7 +150,7 @@
 		position: fixed;
 		background-color: #e2e2e2;
 		border-radius: 20px;
-		z-index: 1;
+		z-index: 40;
 		
 	}
 
