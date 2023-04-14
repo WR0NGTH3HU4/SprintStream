@@ -86,6 +86,10 @@
                 line-height: 3rem;
             }
         }
+
+        #veg > div {
+            width: auto;
+        }
     }
 
     section {
@@ -97,10 +101,15 @@
     section:nth-child(odd) {
         background-color: $blue-0;
         color: white;
+        padding: 1rem;
     }
 
     section:nth-child(even) {
         justify-content: space-between;
+
+        & > div {
+            padding: 1rem;
+        }
     }
 
     section:nth-child(1) {
@@ -212,7 +221,8 @@
         color: white;
         background-color: $blue-2;
         font-weight: 600;
-        transition: .3s;
+        transition-property: transform background-color;
+        transition-duration: .3s;
         padding: 10px 20px;
         border-radius: 8px;
         text-decoration: none;
@@ -220,7 +230,8 @@
         
         &:hover {
             background-color: $blue-1;
-            transition: .3s;
+            transition-property: transform background-color;
+            transition-duration: .3s;
             transform: scale(.95);
         }
     }
