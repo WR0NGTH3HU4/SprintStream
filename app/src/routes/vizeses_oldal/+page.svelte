@@ -66,7 +66,7 @@
                     <div class="skala">
                         <h3>Pénz</h3>
                         <div class="slidecontainer penz">
-                            <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+                            <input type="range" min="1" max="100" value="50" class="slider" >
                           </div>
                         
                         <h3>Idő</h3>
@@ -129,39 +129,22 @@
         align-items: flex-start;
         border-radius: 20px;;
     }
-    .slider {
-        -webkit-appearance: none;
-        width: 200%;
-        height: 15px;
-        border-radius: 5px;  
-        background: #292D32;
-        outline: none;
+    
+/*    .slider{
+        width: 15rem;
         
-        -webkit-transition: .2s;
-        transition: opacity .2s;
     }
+    .slider::-webkit-slider-thumb{
+        background-color: #d7d7d7;
 
-    .slider::-webkit-slider-thumb {
-        -webkit-appearance: none;
-        appearance: none;
-        width: 25px;
-        height: 25px;
-        border-radius: 50%; 
-        background: #D7D7D7;
-        cursor: pointer;
+	
     }
-
-    .slider::-moz-range-thumb {
-        width: 25px;
-        height: 25px;
-        border-radius: 50%;
-        background: #D7D7D7;
-        cursor: pointer;
+    .slider::-webkit-slider-runnable-track{
+        position: relative;
+        background-color: #292D32;
+        border-radius: 20px;
     }
-    .slider input::-moz-range-progress{
-        height: auto;
-        border-radius: 25px;
-    }
+    .slider::-webkit-slider*/
 
     .main{
         border-color: #5465FF;
