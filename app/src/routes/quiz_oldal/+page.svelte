@@ -1,146 +1,40 @@
 <main>
-    <div id="elso" class="card platina">
-        <img src="wave_top.svg" alt="wave_top">
-        <div class="kerdes">
-            <p>Szereted a sajtot?</p>
-            <ul>
-                <li on:click={() => kovi_kerdes('masodik')}>ign</li>
-                <li on:click={() => kovi_kerdes('masodik')}>nem</li>
-                <li on:click={() => kovi_kerdes('masodik')}>néha</li>
-            
-            </ul>
-        </div>
-        <img src="wave_bottom.svg" alt="wave_bottom">
-    </div>
+    <div id="quiz">
+        {#each kerdesek as kerdes_szovege, i}
+            <div class="card">
+                <img class="felso" src="../wave_top.svg" alt="wave_top">
+                <div id="{i}" class="tartalom">
+                    <div class="kerdes">
+                        <h1>{kerdes_szovege.kerdes_szovege}</h1>
+                        <div class="valasz">
+                            <p>{kerdes_szovege.a_valasz}</p>
+                            <p>{kerdes_szovege.b_valasz}</p>
+                            <p>{kerdes_szovege.c_valasz}</p>
+                        </div>
+                    </div>
+                    <ul>
+                        <button on:click={() => kovi_kerdes(i, "a")}>A</button>
+                        <button on:click={() => kovi_kerdes(i, "b")}>B</button>
+                        <button on:click={() => kovi_kerdes(i, "c")}>C</button>
+                    </ul>
+                </div>
+                <svg class="hulamok" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                    <path fill="#788BFF" fill-opacity="1" d="M0,128L48,154.7C96,181,192,235,288,224C384,213,480,139,576,122.7C672,107,768,149,864,186.7C960,224,1056,256,1152,234.7C1248,213,1344,139,1392,101.3L1440,64L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>    
+                    <path fill="#5465FF" fill-opacity="1" d="M0,288L48,245.3C96,203,192,117,288,106.7C384,96,480,160,576,208C672,256,768,288,864,266.7C960,245,1056,171,1152,165.3C1248,160,1344,224,1392,256L1440,288L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+                </svg>
+            </div>
+        {/each}
 
-    {#each kerdesek as kerdes, i}
-        <div id="{i + 1}" class="kerdes">
-            {kerdes.kerdes} {i}
-            <ul>
-                <li on:click={() => kovi_kerdes(i, "ign")}>ign</li>
-                <li on:click={() => kovi_kerdes(i, "nem")}>nem</li>
-                <li on:click={() => kovi_kerdes(i, "néha")}>néha</li>
-            </ul>  
-        </div>
-    {/each}
-
-    <!--
-    <div id="masodik" class="card kek">
-        
-        <div class="kerdes">
-            <p>Szereted a sajtot?</p>
-            <ul>
-                <li on:click={() => kovi_kerdes('harmadik')}>ign</li>
-                <li on:click={() => kovi_kerdes('harmadik')}>nem</li>
-                <li on:click={() => kovi_kerdes('harmadik')}>néha</li>
-            </ul>
+        <div id="{kerdesek.length}" class="vege card">
+            <img class="felso" src="../wave_top.svg" alt="wave_top">
+            <div id="ertekeles">
+                <h1>Végeztél a kérdésekkel.</h1>
+                <p>A jól megválaszolt kérdések száma: {jok}</p>
+                <button id="fel" on:click={tetejere}>🢁</button>
+            </div>
+            <img class="also" src="../wave_bottom.svg" alt="wave_bottom">
         </div>
     </div>
-
-    <div id="harmadik" class="card platina">
-        <img src="wave_top.svg" alt="wave_top">
-        <div class="kerdes">
-            <p>Szereted a sajtot?</p>
-            <ul>
-                <li on:click={() => kovi_kerdes('negyedik')}>ign</li>
-                <li on:click={() => kovi_kerdes('negyedik')}>nem</li>
-                <li on:click={() => kovi_kerdes('negyedik')}>néha</li>
-            </ul>         
-        </div>
-        
-        <img src="wave_bottom.svg" alt="wave_bottom">
-    </div>
-    
-    <div id="negyedik" class="card kek">
-        
-        <div class="kerdes">
-            <p>Szereted a sajtot?</p>
-            <ul>
-                <li on:click={() => kovi_kerdes('otodik')}>ign</li>
-                <li on:click={() => kovi_kerdes('otodik')}>nem</li>
-                <li on:click={() => kovi_kerdes('otodik')}>néha</li>
-            </ul>
-        </div>
-    </div>
-
-    <div id="otodik" class="card platina">
-        <img src="wave_top.svg" alt="wave_top">
-        <div class="kerdes">
-            <p>Szereted a sajtot?</p>
-            <ul>
-                <li on:click={() => kovi_kerdes('hatodik')}>ign</li>
-                <li on:click={() => kovi_kerdes('hatodik')}>nem</li>
-                <li on:click={() => kovi_kerdes('hatodik')}>néha</li>
-            </ul>         
-        </div>
-        
-        <img src="wave_bottom.svg" alt="wave_bottom">
-    </div>
-    
-    <div id="hatodik" class="card kek">
-        
-        <div class="kerdes">
-            <p>Szereted a sajtot?</p>
-            <ul>
-                <li on:click={() => kovi_kerdes('hetedik')}>ign</li>
-                <li on:click={() => kovi_kerdes('hetedik')}>nem</li>
-                <li on:click={() => kovi_kerdes('hetedik')}>néha</li>
-            </ul>
-        </div>
-    </div>
-
-    <div id="hetedik" class="card platina">
-        <img src="wave_top.svg" alt="wave_top">
-        <div class="kerdes">
-            <p>Szereted a sajtot?</p>
-            <ul>
-                <li on:click={() => kovi_kerdes('nyolcadik')}>ign</li>
-                <li on:click={() => kovi_kerdes('nyolcadik')}>nem</li>
-                <li on:click={() => kovi_kerdes('nyolcadik')}>néha</li>
-            </ul>         
-        </div>
-        
-        <img src="wave_bottom.svg" alt="wave_bottom">
-    </div>
-    
-    <div id="nyolcadik" class="card kek">
-        
-        <div class="kerdes">
-            <p>Szereted a sajtot?</p>
-            <ul>
-                <li on:click={() => kovi_kerdes('kilencedik')}>ign</li>
-                <li on:click={() => kovi_kerdes('kilencedik')}>nem</li>
-                <li on:click={() => kovi_kerdes('kilencedik')}>néha</li>
-            </ul>
-        </div>
-    </div>
-
-    <div id="kilencedik" class="card platina">
-        <img src="wave_top.svg" alt="wave_top">
-        <div class="kerdes">
-            <p>Szereted a sajtot?</p>
-            <ul>
-                <li on:click={() => kovi_kerdes('tizedik')}>ign</li>
-                <li on:click={() => kovi_kerdes('tizedik')}>nem</li>
-                <li on:click={() => kovi_kerdes('tizedik')}>néha</li>
-            </ul>         
-        </div>
-        
-        <img src="wave_bottom.svg" alt="wave_bottom">
-    </div>
-    
-    <div id="tizedik" class="card kek">
-        
-        <div class="kerdes">
-            <p>Szereted a sajtot?</p>
-            <ul>
-                <li>ign</li>
-                <li>nem</li>
-                <li>néha</li>
-            </ul>
-        </div>
-    </div>
-    -->
 </main>
 
 <style lang="scss">
@@ -153,91 +47,168 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-    }
 
-    .card img{
-        width: 100vw;
-        height: auto;
-    }
-
-    .card{
         margin: 0px;
         padding: 0px;
         width: 100vw;
         height: 100vh;
+
+        font-size: 32px;
     }
 
-    .platina{
+    .tartalom{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        
+        & > ul{
+            list-style: none;
+            padding: 0%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+
+            & > button{
+                padding: 20px;
+                margin: 5%;
+                background-color: #9BB1FF;
+                border-radius: 15px;
+                width: 200%;
+                font-size: 32px;
+                border: 0px;
+            }
+        }
+
+        & > .kerdes{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+    }
+
+    #quiz > .card:nth-child(odd) {
         background-color: #E2E2E2;
     }
 
-    .kek{
+    #quiz > .card:nth-child(even) {
         background-color: #5465FF;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
+        color: #E2E2E2;
+        & > svg{
+            visibility: hidden;
+        }
+    }
+    
+    #quiz > .vege:nth-child(odd){
+        background-color: #E2E2E2;
     }
 
-    .kerdes{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        align-items: center;
+    #quiz > .vege:nth-child(even) {
+        background-color: #5465FF;
+        & > svg{
+            visibility: hidden;
+        }
     }
 
-    .kerdes ul{
-        list-style: none;
-        padding: 0%;
+    #fel{
+        font-size: 50px;
+        padding: 20px;
+        background-color: #9BB1FF;
+        border-radius: 15px;
+        border: 0px;
+        color: #E2E2E2;
     }
-
 </style>
 
 <script lang="ts">
+	import { each, element } from "svelte/internal";
+
     const kerdesek = [
+        // válasz lehetőségek a,b,c
         {
-            kerdes: "áű",
-            valasz: "ign"
+            kerdes_szovege: "Mi a scrum?",
+            a_valasz: "A) egy sajtfajta",
+            b_valasz: "B) egy projekt megvalósítási keretrendszer",
+            c_valasz: "C) egy francia ételkülönlegesség",
+            valasz: "b"
         },
         {
-            kerdes: "asd23trwevf",
-            valasz: "nem"
+            kerdes_szovege: "2",
+            a_valasz: "a",
+            b_valasz: "b",
+            c_valasz: "c",
+            valasz: "a"
         },
         {
-            kerdes: "asd23trwevf",
-            valasz: "nem"
+            kerdes_szovege: "3",
+            a_valasz: "a",
+            b_valasz: "b",
+            c_valasz: "c",
+            valasz: "a"
         },
         {
-            kerdes: "asd23trwevf",
-            valasz: "nem"
+            kerdes_szovege: "4",
+            a_valasz: "a",
+            b_valasz: "b",
+            c_valasz: "c",
+            valasz: "a"
         },
         {
-            kerdes: "asd23trwevf",
-            valasz: "nem"
+            kerdes_szovege: "5",
+            a_valasz: "a",
+            b_valasz: "b",
+            c_valasz: "c",
+            valasz: "a"
         },
         {
-            kerdes: "asd23trwevf",
-            valasz: "nem"
+            kerdes_szovege: "6",
+            a_valasz: "a",
+            b_valasz: "b",
+            c_valasz: "c",
+            valasz: "a"
         },
         {
-            kerdes: "asd23trwevf",
-            valasz: "nem"
+            kerdes_szovege: "7",
+            a_valasz: "a",
+            b_valasz: "b",
+            c_valasz: "c",
+            valasz: "a"
         },
         {
-            kerdes: "asd23trwevf",
-            valasz: "nem"
+            kerdes_szovege: "8",
+            a_valasz: "a",
+            b_valasz: "b",
+            c_valasz: "c",
+            valasz: "a"
+        },
+        {
+            kerdes_szovege: "9",
+            a_valasz: "a",
+            b_valasz: "b",
+            c_valasz: "c",
+            valasz: "a"
+        },
+        {
+            kerdes_szovege: "10",
+            a_valasz: "a",
+            b_valasz: "b",
+            c_valasz: "c",
+            valasz: "a"
         },
     ];
 
     let jok = 0;
 
-    function kovi_kerdes(jelenlegi_index, valasz) {
-        document.getElementById(++jelenlegi_index).scrollIntoView({ behavior: 'smooth', block: 'center' });
+    function kovi_kerdes(jelenlegi_index : number, valasz : string) {
+        let uj_index = jelenlegi_index +1;
+        document.getElementById(uj_index)?.scrollIntoView({behavior: 'smooth', block: 'center'})
 
         if (kerdesek[jelenlegi_index].valasz == valasz) jok++;
-        alert(jok);
+   
     }
 
-    
-
-
+    function tetejere(){
+        window.scrollTo({behavior: 'smooth', top:0});
+    }
 </script>
