@@ -22,15 +22,15 @@ export const quizQuestions: {[fasz: string]: QuizQuestion[]} = {
             valasz: "a"
         },
         {
-            kerdes: "3",
-            a: "a",
-            b: "b",
-            c: "c",
+            kerdes: "Melyik nem jellemző a scrumra?",
+            a: "A) A projekt csapata folyamatosan javítja és finomítja a munkafolyamatot a visszajelzések.",
+            b: "B) Együttműködést és folyamatos fejlesztést támogat.",
+            c: "C) Ha nincsenek meghatározva pontosan a célok akkor semmiképp sem fog jól működni a megvalósítás.",
             valasz: "a"
         },
         {
-            kerdes: "homoszexualis vagy?",
-            a: "gugi",
+            kerdes: "sajt vagy?",
+            a: "blub",
             b: "asked",
             c: "szia",
             valasz: "a"
