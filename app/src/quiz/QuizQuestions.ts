@@ -15,10 +15,10 @@ export const quizQuestions: {[fasz: string]: QuizQuestion[]} = {
             c: "C) egy francia ételkülönlegesség",
             valasz: "b"
         },{
-            kerdes: "mi a fasz",
+            kerdes: "mi a fene",
             a: "igen",
             b: "nem",
-            c: "akkora  kurva anyad",
+            c: "nemtom",
             valasz: "a"
         },
         {
@@ -29,10 +29,10 @@ export const quizQuestions: {[fasz: string]: QuizQuestion[]} = {
             valasz: "a"
         },
         {
-            kerdes: "Buzi vagy?",
+            kerdes: "homoszexualis vagy?",
             a: "gugi",
             b: "asked",
-            c: "geci",
+            c: "szia",
             valasz: "a"
         },
         {

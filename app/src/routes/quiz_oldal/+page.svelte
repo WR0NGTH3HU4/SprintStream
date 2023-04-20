@@ -139,11 +139,7 @@
     import { QuestionManager } from "../../quiz/QuizManager";
     import { onMount } from "svelte";
 
-    let qm: QuestionManager;
-
-    onMount(() => {
-        qm = new QuestionManager('scrum');
-    });
+    let qm: QuestionManager = new QuestionManager('scrum');
     let jok = 0;
 
     function kovi_kerdes(kerdesek: any, jelenlegi_index: number, valasz: string) {
