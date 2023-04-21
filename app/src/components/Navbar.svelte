@@ -1,5 +1,4 @@
-<main>
-	
+<nav>
 	<div class="cim">
 		<h1>SprintStream</h1>
 	</div>
@@ -57,14 +56,11 @@
 			</div>
 		</li>
 	</ul>
-	
-	
-</main>
+</nav>
 
-<style>
+<style lang="scss">
 	
     .gomb{
-        
 		display: flex;
 		flex-direction: column;
 		flex-wrap: nowrap;
@@ -77,8 +73,7 @@
 		height: 40px;
 		margin-top: 5px;
 	}
-	main {
-		z-index: 0;
+	nav {
 		display: flex;
 		flex-direction: row;
 		flex-wrap: nowrap;
@@ -86,7 +81,7 @@
 		align-items: center;
 		padding-right: 15px;
 		padding-left: 15px;
-		
+		color: white;
 	}
 	.lenyilo{
 		display: flex;
@@ -151,7 +146,6 @@
 		background-color: #e2e2e2;
 		border-radius: 20px;
 		z-index: 40;
-		
 	}
 
 </style>

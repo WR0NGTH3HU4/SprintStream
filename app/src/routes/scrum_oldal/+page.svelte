@@ -1,112 +1,109 @@
 <main>
-    <div class="egesz">
-        <Navbar></Navbar>
-        <div class="body">
-            <div class="fejlec">
-                <img src="./scrum.png" alt="scrum kép">
-                <p>Scrum</p>
+    <div class="body">
+        <div class="fejlec">
+            <img src="./scrum.png" alt="scrum kép">
+            <p>Scrum</p>
+        </div>
+        <div class="lepesvalaszto">
+            <div class="gomb1 gomb">
+                <p>1.lépés</p>
             </div>
-            <div class="lepesvalaszto">
-                <div class="gomb1 gomb">
-                    <p>1.lépés</p>
-                </div>
-                <div class=" gomb2 gomb">
-                    <p>2.lépés</p>
-                </div>
-                <div class=" gomb3 gomb">
-                    <p>3.lépés</p>
-                </div>
-                <div class=" gomb4 gomb">
-                    <p>4.lépés</p>
-                </div>
-                <div class=" gomb5 gomb">
-                    <p>5.lépés</p>
-                </div>
-                <div class=" gomb6 gomb">
-                    <p>6.lépés</p>
-                </div>
-                <div class=" gomb7 gomb">
-                    <p>7.lépés</p>
-                </div>
+            <div class=" gomb2 gomb">
+                <p>2.lépés</p>
             </div>
-            <div class="container">
-                <div class="indicator">
-                    <spam class="btn active"></spam>
-                    <spam class="btn"></spam>
-                    <spam class="btn"></spam>
-                    <spam class="btn"></spam>
-                    <spam class="btn"></spam>
-                    <spam class="btn"></spam>
-                    <spam class="btn"></spam>
+            <div class=" gomb3 gomb">
+                <p>3.lépés</p>
+            </div>
+            <div class=" gomb4 gomb">
+                <p>4.lépés</p>
+            </div>
+            <div class=" gomb5 gomb">
+                <p>5.lépés</p>
+            </div>
+            <div class=" gomb6 gomb">
+                <p>6.lépés</p>
+            </div>
+            <div class=" gomb7 gomb">
+                <p>7.lépés</p>
+            </div>
+        </div>
+        <div class="container">
+            <div class="indicator">
+                <spam class="btn active"></spam>
+                <spam class="btn"></spam>
+                <spam class="btn"></spam>
+                <spam class="btn"></spam>
+                <spam class="btn"></spam>
+                <spam class="btn"></spam>
+                <spam class="btn"></spam>
 
-                </div>
-                <div class="testimonial">
-                    <div class="slide-row" id="slide">
-                        <div class="slide-col">
-                            <div class="lepes-text">
-                                <h3>1. lépés</h3>
-                                <p>ide kell a szöveg</p> 
-                            </div>
-                            <div class="lepes-img">
-                                <img src="" alt="kép">
-                            </div>
-                        </div>  
-                        <div class="slide-col">
-                            <div class="lepes-text">
-                                <h3>2. lépés</h3>
-                                <p>ide kell a szöveg</p> 
-                            </div>
-                            <div class="lepes-kep">
-                                <img src="" alt="kép">
-                            </div>
+            </div>
+            <div class="testimonial">
+                <div class="slide-row" id="slide">
+                    <div class="slide-col">
+                        <div class="lepes-text">
+                            <h3>1. lépés</h3>
+                            <p>ide kell a szöveg</p> 
                         </div>
-                        <div class="slide-col">
-                            <div class="lepes-text">
-                                <h3>3. lépés</h3>
-                                <p>ide kell a szöveg</p> 
-                            </div>
-                            <div class="lepes-kep">
-                                <img src="" alt="kép">
-                            </div>
+                        <div class="lepes-img">
+                            <img src="" alt="kép">
                         </div>
-                        <div class="slide-col">
-                            <div class="lepes-text">
-                                <h3>4. lépés</h3>
-                                <p>ide kell a szöveg</p> 
-                            </div>
-                            <div class="lepes-kep">
-                                <img src="" alt="kép">
-                            </div>
+                    </div>  
+                    <div class="slide-col">
+                        <div class="lepes-text">
+                            <h3>2. lépés</h3>
+                            <p>ide kell a szöveg</p> 
                         </div>
-                        <div class="slide-col">
-                            <div class="lepes-text">
-                                <h3>5. lépés</h3>
-                                <p>ide kell a szöveg</p> 
-                            </div>
-                            <div class="lepes-kep">
-                                <img src="" alt="kép">
-                            </div>
+                        <div class="lepes-kep">
+                            <img src="" alt="kép">
                         </div>
-                        <div class="slide-col">
-                            <div class="lepes-text">
-                                <h3>6. lépés</h3>
-                                <p>ide kell a szöveg</p> 
-                            </div>
-                            <div class="lepes-kep">
-                                <img src="" alt="kép">
-                            </div>
-                        </div>
-                        <div class="slide-col">
-                            <div class="lepes-text">
-                                <h3>7. lépés</h3>
-                                <p>ide kell a szöveg</p> 
-                            </div>
-                            <div class="lepes-kep">
-                                <img src="" alt="kép">
-                            </div>
-                        </div>
-                        
                     </div>
+                    <div class="slide-col">
+                        <div class="lepes-text">
+                            <h3>3. lépés</h3>
+                            <p>ide kell a szöveg</p> 
+                        </div>
+                        <div class="lepes-kep">
+                            <img src="" alt="kép">
+                        </div>
+                    </div>
+                    <div class="slide-col">
+                        <div class="lepes-text">
+                            <h3>4. lépés</h3>
+                            <p>ide kell a szöveg</p> 
+                        </div>
+                        <div class="lepes-kep">
+                            <img src="" alt="kép">
+                        </div>
+                    </div>
+                    <div class="slide-col">
+                        <div class="lepes-text">
+                            <h3>5. lépés</h3>
+                            <p>ide kell a szöveg</p> 
+                        </div>
+                        <div class="lepes-kep">
+                            <img src="" alt="kép">
+                        </div>
+                    </div>
+                    <div class="slide-col">
+                        <div class="lepes-text">
+                            <h3>6. lépés</h3>
+                            <p>ide kell a szöveg</p> 
+                        </div>
+                        <div class="lepes-kep">
+                            <img src="" alt="kép">
+                        </div>
+                    </div>
+                    <div class="slide-col">
+                        <div class="lepes-text">
+                            <h3>7. lépés</h3>
+                            <p>ide kell a szöveg</p> 
+                        </div>
+                        <div class="lepes-kep">
+                            <img src="" alt="kép">
+                        </div>
+                    </div>
+                    
                 </div>
             </div>
         </div>
