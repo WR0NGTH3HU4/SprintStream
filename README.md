@@ -63,14 +63,14 @@
 
 ### 2023.04.03:
 - Császár András: 
-- Csóka András: 
+- Csóka András: hullám képek elhelyezése az oldalon
 - Kővágó Levente: puzzle.png kitörlése
 - Kulimák Máté: növekmény bővítése, szín paletta befejezése
 - Tátrai Dominik: pull requestek mergelése, szín paletta elkezdése, bugfix
 
 ### 2023.04.05:
 - Császár András: 
-- Csóka András: 
+- Csóka András: kérdés kártyák elkészítése, kérdés plate elkezdése
 - Kővágó Levente: 
 - Kulimák Máté: szín paletták átméretezése
 - Tátrai Dominik: lenyilo menük hozzáadása, színek mappa áthelyezése
@@ -83,11 +83,53 @@
 - Tátrai Dominik: kisebb hibajavítások
 
 ### 2023.04.10:
-- Császár András: 
-- Csóka András: 
-- Kővágó Levente: 
+- Császár András: ---
+- Csóka András: ---
+- Kővágó Levente: ---
 - Kulimák Máté: növekmény frissítése, scrum oldal szövegének befejezése
-- Tátrai Dominik: 
+- Tátrai Dominik: vízesés oldal reszponzivitásának javítása, 
+
+### 2023.04.11:
+- Császár András: ---
+- Csóka András: ---
+- Kővágó Levente: gombok létrehozása
+- Kulimák Máté: növekmény frissítése, scrum oldal szövegének befejezése
+- Tátrai Dominik: vízesés oldal reszponzivitásának javítása
+
+### 2023.04.12:
+- Császár András: főoldal reszponzivitásának elkészítése
+- Csóka András: oldalon belüli lapozás javítása
+- Kővágó Levente: ----
+- Kulimák Máté: ---
+- Tátrai Dominik: körök pozíciónálása, szöveg box elkészítése, nézetek elkezdése
+
+### 2023.04.13:
+- Császár András: ---
+- Csóka András: ---
+- Kővágó Levente: verseny miatt hiányzott
+- Kulimák Máté: ---
+- Tátrai Dominik: animáció elkészítése a körökre, rangebar fejlesztésének elkezdése
+
+### 2023.04.14:
+- Császár András: ---
+- Csóka András: ---
+- Kővágó Levente: verseny miatt hiányzott
+- Kulimák Máté: ---
+- Tátrai Dominik: animáció elkészítése a körökre, rangebar fejlesztésének elkezdése
+
+### 2023.04.16:
+- Császár András: reszponzivitási javítások
+- Csóka András: ---
+- Kővágó Levente: ---
+- Kulimák Máté: ---
+- Tátrai Dominik: ---
+
+### 2023.04.17:
+- Császár András: ---
+- Csóka András: következő kérdés mutatásának elkészítése
+- Kővágó Levente: verseny miatt hiányzott
+- Kulimák Máté: rólunk oldal elkezdése
+- Tátrai Dominik: pull requestek mergelése
 
 ### Git parancsok
 - `git add .`: Fileok hozzáadása a git projekthez, hogy a git tudja managelni őket.
