@@ -69,18 +69,21 @@
                     <div class="skala">
                         <h3>Pénz</h3>
                         <div class="slidecontainer penz">
-                            <input type="range" min="1" max="100" value="0" class="slider" >
-                          </div>
+                            <input type="range" min="0" max="100" value="0" class="slider" >
+                            <h3 class="ertek">0</h3>
+                        </div>
                         
                         <h3>Idő</h3>
                         <div class="slidecontainer ido">
-                            <input type="range" min="1" max="100" value="0" class="slider" id="myRange">
-                          </div>
+                            <input type="range" min="0" max="100" value="0" class="slider" >
+                            <h3 class="ertek">0</h3>
+                        </div>
                         
                         <h3>Hatókör</h3>
                         <div class="slidecontainer hatokor">
-                            <input type="range" min="1" max="100" value="0" class="slider" id="myRange">
-                          </div>
+                            <input type="range" min="0" max="100" value="0" class="slider">
+                            <h3 class="ertek">0</h3>
+                        </div>
                     </div>
                     
                     <svg class="haromszog" width="842" height="740" viewBox="0 0 842 740" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -549,6 +552,7 @@
 </style>
 
 <script lang="ts">
+	import { set_data } from "svelte/internal";
 	import Navbar from "../../components/Navbar.svelte";
     import { onMount } from 'svelte';
     let hatra:any;
@@ -557,6 +561,11 @@
     let projharomszog:any;
     let szovegek: any;
     let nyilak:any;
+    let slider: any;
+    let ertek: any;
+    let penz: any;
+    let ido: any;
+    let hatokor: any;
     //let kapcsolas= false;
     onMount(() => {
         hatra= document.querySelector('.hatra');
@@ -564,9 +573,16 @@
         olvasas= document.querySelector('.olvasas');
         projharomszog = document.querySelector('.projharomszog');
         szovegek = document.querySelector('.szoveg');
-        nyilak = document.querySelector('niylak');
+        nyilak = document.querySelector('.nyilak');
+        slider= document.querySelector('.slider') as HTMLInputElement;
+        ertek= document.querySelector('.ertek') as HTMLElement;
+        penz= document.querySelector('.penz input');
+        ido= document.querySelector('.ido input');
+        hatokor= document.querySelector('.hatokor input');
         olvasas.style.display="none";
         projharomszog.style.display="none";
+        
+        
     });
 
     
@@ -659,10 +675,14 @@
     }
     function haromszog(){
         
+        olvasas.style.display="flex";
         szovegek.style.display="none";
-        nyilak.style.display='none';
+        nyilak.style.display="none";
         projharomszog.style.display='flex';
+        
+        
     }
+    
 
 
     function lapoz_elore(){
