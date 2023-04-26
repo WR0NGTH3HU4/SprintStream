@@ -649,10 +649,13 @@
             index=0;
             cim_index=0
             olvasas.style.display="flex";
+            szovegek.style.display="flex";
+            nyilak.style.display="flex";
             projharomszog.style.display="none";
         }
         else if(kapcsolas_1==true){
             olvasas.style.display="none";
+
         }
         kapcsolas_1=!kapcsolas_1;
     }
@@ -661,6 +664,8 @@
             index=4
             cim_index=1;
             olvasas.style.display="flex";
+            szovegek.style.display="flex";
+            nyilak.style.display="flex";
             projharomszog.style.display="none";
         }
         else if(kapcsolas_2==true){
@@ -673,6 +678,8 @@
         if(kapcsolas_3==false){
             cim_index=2
             olvasas.style.display="flex";
+            szovegek.style.display="flex";
+            nyilak.style.display="flex";
             projharomszog.style.display="none";
         }
 
@@ -685,11 +692,14 @@
         if(kapcsolas_4==false){
             cim_index=3;
             olvasas.style.display="flex";
+            szovegek.style.display="flex";
+            nyilak.style.display="flex";
             projharomszog.style.display="none";
         }
 
         else if(kapcsolas_4==true){
             olvasas.style.display="none";
+
         }
         kapcsolas_4=!kapcsolas_4;
     }
@@ -697,6 +707,8 @@
         if(kapcsolas_5==false){
             cim_index=4;
             olvasas.style.display="flex";
+            szovegek.style.display="flex";
+            nyilak.style.display="flex";
             projharomszog.style.display="none";
         }
 
@@ -709,6 +721,8 @@
         if(kapcsolas_6==false){        
             cim_index=5;
             olvasas.style.display="flex";
+            szovegek.style.display="flex";
+            nyilak.style.display="flex";
             projharomszog.style.display="none";
         }
 
@@ -721,6 +735,8 @@
         if(kapcsolas_7==false){
             cim_index=6;
             olvasas.style.display="flex";
+            szovegek.style.display="flex";
+            nyilak.style.display="flex";
             projharomszog.style.display="none";
         }
 
@@ -738,6 +754,8 @@
             }
             else if(kapcsolas_H==true){
                 olvasas.style.display="none";
+                szovegek.style.display="flex";
+                nyilak.style.display="flex";
             }
             kapcsolas_H=!kapcsolas_H;
   
