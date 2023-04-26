@@ -566,7 +566,15 @@
     let penz: any;
     let ido: any;
     let hatokor: any;
-    //let kapcsolas= false;
+    let kapcsolas_1= false;
+    let kapcsolas_2= false;
+    let kapcsolas_3= false;
+    let kapcsolas_4= false;
+    let kapcsolas_5= false;
+    let kapcsolas_6= false;
+    let kapcsolas_7= false;
+    let kapcsolas_H= false;
+
     onMount(() => {
         hatra= document.querySelector('.hatra');
         elore= document.querySelector('.elore');
@@ -637,48 +645,102 @@
 
 
     function elso(){
-        index=0;
-        cim_index=0
-        olvasas.style.display="flex";
-        projharomszog.style.display="none";
+        if(kapcsolas_1==false){
+            index=0;
+            cim_index=0
+            olvasas.style.display="flex";
+            projharomszog.style.display="none";
+        }
+        else if(kapcsolas_1==true){
+            olvasas.style.display="none";
+        }
+        kapcsolas_1=!kapcsolas_1;
     }
     function masodik(){
-        index=4
-        cim_index=1;
-        olvasas.style.display="flex";
-        projharomszog.style.display="none";
+        if(kapcsolas_2==false){
+            index=4
+            cim_index=1;
+            olvasas.style.display="flex";
+            projharomszog.style.display="none";
+        }
+        else if(kapcsolas_2==true){
+            olvasas.style.display="none";
+        }
+        kapcsolas_2=!kapcsolas_2;
+
     }
     function harmadik(){
-        cim_index=2
-        olvasas.style.display="flex";
-        projharomszog.style.display="none";
+        if(kapcsolas_3==false){
+            cim_index=2
+            olvasas.style.display="flex";
+            projharomszog.style.display="none";
+        }
+
+        else if(kapcsolas_3==true){
+            olvasas.style.display="none";
+        }
+        kapcsolas_3=!kapcsolas_3;
     }
     function negyedik(){
-        cim_index=3;
-        olvasas.style.display="flex";
-        projharomszog.style.display="none";
+        if(kapcsolas_4==false){
+            cim_index=3;
+            olvasas.style.display="flex";
+            projharomszog.style.display="none";
+        }
+
+        else if(kapcsolas_4==true){
+            olvasas.style.display="none";
+        }
+        kapcsolas_4=!kapcsolas_4;
     }
     function otodik(){
-        cim_index=4;
-        olvasas.style.display="flex";
-        projharomszog.style.display="none";
+        if(kapcsolas_5==false){
+            cim_index=4;
+            olvasas.style.display="flex";
+            projharomszog.style.display="none";
+        }
+
+        else if(kapcsolas_5==true){
+            olvasas.style.display="none";
+        }
+        kapcsolas_5=!kapcsolas_5;
     }
     function hatodik(){
-        cim_index=5;
-        olvasas.style.display="flex";
-        projharomszog.style.display="none";
+        if(kapcsolas_6==false){        
+            cim_index=5;
+            olvasas.style.display="flex";
+            projharomszog.style.display="none";
+        }
+
+        else if(kapcsolas_6==true){
+            olvasas.style.display="none";
+        }
+        kapcsolas_6=!kapcsolas_6;
     }
     function hetedik(){
-        cim_index=6;
-        olvasas.style.display="flex";
-        projharomszog.style.display="none";
+        if(kapcsolas_7==false){
+            cim_index=6;
+            olvasas.style.display="flex";
+            projharomszog.style.display="none";
+        }
+
+        else if(kapcsolas_7==true){
+            olvasas.style.display="none";
+        }
+        kapcsolas_7=!kapcsolas_7;
     }
     function haromszog(){
-        
-        olvasas.style.display="flex";
-        szovegek.style.display="none";
-        nyilak.style.display="none";
-        projharomszog.style.display='flex';
+            if(kapcsolas_H==false){
+                olvasas.style.display="flex";
+                szovegek.style.display="none";
+                nyilak.style.display="none";
+                projharomszog.style.display='flex';
+            }
+            else if(kapcsolas_H==true){
+                olvasas.style.display="none";
+            }
+            kapcsolas_H=!kapcsolas_H;
+  
         
         
     }
