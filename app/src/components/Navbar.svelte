@@ -1,47 +1,10 @@
 <nav>
-	<div class="cim">
-		<h1>SprintStream</h1>
-	</div>
-	<ul class="modellek">
-		<li>
-			<ul class="alap alap_s">
-				<li>Scrum</li>
-				<li><img on:click={lenyit_s} src="icons/downarrow.png" alt="dropdown"></li>
-			</ul>
-			<div class="lenyilo lenyilo-s">
-				<h3>Modell</h3>
-				<h3>Quiz</h3>
-			</div>
-		</li>
-
-		<li>			
-			<ul class="alap alap_v">
-				<li>Vízesés</li>
-				<li><img on:click={lenyit_v} src="icons/downarrow.png" alt="dropdown"></li>
-			</ul>
-			<div class="lenyilo lenyilo-v">
-				<h3>Modell</h3>
-				<h3>Quiz</h3>
-			</div>
-
-		</li>
-		<li>
-			<ul class="alap alap_r">
-				<li>Rólunk</li>
-				<li><img on:click={lenyit_r} src="icons/downarrow.png" alt="dropdown"></li>
-			</ul>
-			<div class="lenyilo lenyilo-r">
-				<h3>Termék Backlog</h3>
-				<h3>Sprint Backlog</h3>
-			</div>
-
-		</li>
-	</ul>
-	
-	<ul class="gomb">
-		
-		<li><img on:click={szinvalaszto} src="icons/gear.png" alt="gear" /></li>
-		<li>
+	<span class="cim">SprintStream</span>
+	<NavbarCombo name="Scrum" options={[{name: "Modell"}, {name: "Quiz"}]} />
+	<NavbarCombo name="Vizeses" options={[{name: "Modell"}, {name: "Quiz"}]} />
+		<img on:click={szinvalaszto} src="icons/gear.png" alt="gear" />
+		<!--
+			<li>
 			<div class="paletta">
 				<img src="Színek/caribbean.png" >
 				<img src="Színek/cottonCandy.png" >
@@ -55,7 +18,7 @@
 				<img src="Színek/rose.png" >
 			</div>
 		</li>
-	</ul>
+		-->
 </nav>
 
 <style lang="scss">
@@ -68,7 +31,7 @@
 		align-content: space-between;
 		z-index: 0;
     }
-	.gomb img {
+	img {
 		width: 40px;
 		height: 40px;
 		margin-top: 5px;
@@ -78,9 +41,10 @@
 		flex-direction: row;
 		flex-wrap: nowrap;
 		justify-content: space-between;
-		align-items: center;
+		align-items: flex-start;
 		padding-right: 15px;
 		padding-left: 15px;
+		max-height: 40px;
 		color: white;
 	}
 	.lenyilo{
@@ -152,6 +116,7 @@
 
 <script lang="ts">
     import { onMount } from 'svelte';
+	import NavbarCombo from './NavbarCombo.svelte';
 
 	let alap_s: any;
 	let alap_v: any;
