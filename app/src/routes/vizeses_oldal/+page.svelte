@@ -7,10 +7,10 @@
         </div>
         <div class="main">
             <div on:click={elso} class="kor kor1">
-                <h3>1.lépés</h3>
+                <h3>2.lépés</h3>
             </div>
             <div on:click={masodik} class="kor kor2">
-                <h3>2.lépés</h3>
+                <h3>1.lépés</h3>
             </div>
             <div on:click={harmadik} class="kor kor3">
                 <h3>3.lépés</h3>
@@ -29,7 +29,7 @@
             </div>
 
         </div>
-        <div class="ph">
+        <div on:click={haromszog} class="ph">
             <svg width="274" height="243" viewBox="0 0 274 243" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M119.68 9.99995C127.378 -3.33338 146.622 -3.33334 154.321 10L271.234 212.5C278.932 225.833 269.309 242.5 253.913 242.5H20.0865C4.69051 242.5 -4.93194 225.833 2.76606 212.5L119.68 9.99995Z" fill="#BFD7FF"/>
                 <path d="M138 88C102.185 88 73 117.185 73 153C73 188.815 102.185 218 138 218C173.815 218 203 188.815 203 153C203 117.185 173.815 88 138 88ZM169.07 138.05L132.215 174.905C131.305 175.815 130.07 176.335 128.77 176.335C127.47 176.335 126.235 175.815 125.325 174.905L106.93 156.51C105.045 154.625 105.045 151.505 106.93 149.62C108.815 147.735 111.935 147.735 113.82 149.62L128.77 164.57L162.18 131.16C164.065 129.275 167.185 129.275 169.07 131.16C170.955 133.045 170.955 136.1 169.07 138.05Z" fill="#5465FF"/>
@@ -45,40 +45,47 @@
             </svg>
 
             <div class="olvasas">
-                <div class="szoveg">
-                    <div>
-                        <h1 class="jelenlegi_cim">{cim[cim_index]}</h1>
-                        <p class="jelenlegi_szoveg">{szoveg[index]}</p>
+                
+                    <div class="szoveg">
+                        <div>
+                            <h1 class="jelenlegi_cim">{cim[cim_index]}</h1>
+                            <p class="jelenlegi_szoveg">{szoveg[index]}</p>
+                        </div>
+                        
+                            <img src="icons/document.png" alt="kep">
                     </div>
-                    
-                        <img src="icons/document.png" alt="kep">
-                </div>
-                <div class="nyilak">
-                    <svg on:click={lapoz_hatra} class="hatra" width="100" height="161" viewBox="0 0 100 161" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M75 136.588L29.0683 90.6568C23.6439 85.2324 23.6439 76.356 29.0683 70.9316L75 25" stroke="#788BFF" stroke-width="48.5835" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                    <svg on:click={lapoz_elore} class="elore" width="100" height="161" viewBox="0 0 100 161" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M25 136.589L70.9316 90.6573C76.3561 85.2329 76.3561 76.3565 70.9316 70.932L25 25" stroke="#788BFF" stroke-width="48.5839" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                            
-                </div>
+                    <div class="nyilak">
+                        <svg on:click={lapoz_hatra} class="hatra" width="100" height="161" viewBox="0 0 100 161" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M75 136.588L29.0683 90.6568C23.6439 85.2324 23.6439 76.356 29.0683 70.9316L75 25" stroke="#788BFF" stroke-width="48.5835" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <svg on:click={lapoz_elore} class="elore" width="100" height="161" viewBox="0 0 100 161" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M25 136.589L70.9316 90.6573C76.3561 85.2329 76.3561 76.3565 70.9316 70.932L25 25" stroke="#788BFF" stroke-width="48.5839" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                                
+                    </div>
+                
                 <div class="projharomszog">
+                    
                     <div class="skala">
                         <h3>Pénz</h3>
                         <div class="slidecontainer penz">
-                            <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
-                          </div>
+                            <input type="range" min="0" max="100" value="0" class="slider" >
+                            <h3 class="p_ertek">0</h3>
+                        </div>
                         
                         <h3>Idő</h3>
                         <div class="slidecontainer ido">
-                            <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
-                          </div>
+                            <input type="range" min="0" max="100" value="0" class="slider" >
+                            <h3 class="i_ertek">0</h3>
+                        </div>
                         
                         <h3>Hatókör</h3>
                         <div class="slidecontainer hatokor">
-                            <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
-                          </div>
+                            <input type="range" min="0" max="100" value="0" class="slider">
+                            <h3 class="h_ertek">0</h3>
+                        </div>
                     </div>
+                    
                     <svg class="haromszog" width="842" height="740" viewBox="0 0 842 740" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M386.359 20C401.755 -6.66665 440.245 -6.66667 455.641 20L836.359 679.423C851.755 706.089 832.51 739.423 801.718 739.423H40.2821C9.49004 739.423 -9.75499 706.09 5.64101 679.423L386.359 20Z" fill="#292D32"/>
                         <path d="M453.562 291H384.521C363.808 291 350 301.356 350 325.521V373.85C350 398.014 363.808 408.371 384.521 408.371H453.562C474.275 408.371 488.083 398.014 488.083 373.85V325.521C488.083 301.356 474.275 291 453.562 291ZM362.082 325.521C362.082 313.162 372.162 303.082 384.521 303.082H394.877C397.708 303.082 400.055 305.43 400.055 308.26C400.055 311.091 397.708 313.439 394.877 313.439H384.521C377.893 313.439 372.439 318.893 372.439 325.521V335.877C372.439 338.708 370.091 341.055 367.26 341.055C364.43 341.055 362.082 338.708 362.082 335.877V325.521ZM394.877 396.288H384.521C372.162 396.288 362.082 386.208 362.082 373.85V363.494C362.082 360.663 364.43 358.316 367.26 358.316C370.091 358.316 372.439 360.663 372.439 363.494V373.85C372.439 380.478 377.893 385.932 384.521 385.932H394.877C397.708 385.932 400.055 388.28 400.055 391.11C400.055 393.941 397.708 396.288 394.877 396.288ZM419.042 370.398C407.581 370.398 398.329 361.146 398.329 349.685C398.329 338.224 407.581 328.973 419.042 328.973C430.503 328.973 439.754 338.224 439.754 349.685C439.754 361.146 430.503 370.398 419.042 370.398ZM476.001 373.85C476.001 386.208 465.921 396.288 453.562 396.288H443.206C440.375 396.288 438.028 393.941 438.028 391.11C438.028 388.28 440.375 385.932 443.206 385.932H453.562C460.19 385.932 465.645 380.478 465.645 373.85V363.494C465.645 360.663 467.992 358.316 470.823 358.316C473.654 358.316 476.001 360.663 476.001 363.494V373.85ZM476.001 335.877C476.001 338.708 473.654 341.055 470.823 341.055C467.992 341.055 465.645 338.708 465.645 335.877V325.521C465.645 318.893 460.19 313.439 453.562 313.439H443.206C440.375 313.439 438.028 311.091 438.028 308.26C438.028 305.43 440.375 303.082 443.206 303.082H453.562C465.921 303.082 476.001 313.162 476.001 325.521V335.877Z" fill="#E3E3E3"/>
@@ -129,51 +136,65 @@
         align-items: flex-start;
         border-radius: 20px;;
     }
-    .slider {
-        -webkit-appearance: none;
-        width: 200%;
-        height: 15px;
-        border-radius: 5px;  
-        background: #292D32;
-        outline: none;
-        
-        -webkit-transition: .2s;
-        transition: opacity .2s;
-    }
 
-    .slider::-webkit-slider-thumb {
-        -webkit-appearance: none;
-        appearance: none;
-        width: 25px;
-        height: 25px;
-        border-radius: 50%; 
-        background: #D7D7D7;
-        cursor: pointer;
-    }
+.slidecontainer{
+    width: 80%;
+}
+.slider {
+  -webkit-appearance: none;
+  appearance: none; 
+  width:100%;
+  cursor: pointer;
+  outline: none;
+  overflow: hidden;
+  border-radius: 16px;
+}
 
-    .slider::-moz-range-thumb {
-        width: 25px;
-        height: 25px;
-        border-radius: 50%;
-        background: #D7D7D7;
-        cursor: pointer;
-    }
-    .slider input::-moz-range-progress{
-        height: auto;
-        border-radius: 25px;
-    }
+.slider::-webkit-slider-runnable-track {
+  height: 15px;
+  background: #292D32;
+  border-radius: 20px;
+}
 
+.slider::-moz-range-track {
+  height: 15px;
+  background: #292D32;
+  border-radius: 20px;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none; 
+  height: 1rem;
+  width: 1rem;
+  background-color: #E3E3E3;
+  border-radius: 50%;
+  border: 2px solid #E3E3E3;
+  box-shadow: -407px 0 0 400px #E3E3E3;
+}
+
+.slider::-moz-range-thumb {
+  height: 15px;
+  width: 15px;
+  background-color: #E3E3E3;
+  border-radius: 50%;
+  border: 1px solid #E3E3E3;
+  box-shadow: -407px 0 0 400px #E3E3E3;
+}
     .main{
+
         border-color: #5465FF;
         display: flex;
         flex-direction: row;
         justify-content: center;
         align-items: center;
+        flex-wrap: wrap;
     }
 
     .egesz{
         width: 100%;
         background-color:#5465FF ;
+        
     }
     .main{
         
@@ -184,7 +205,7 @@
         justify-content:center;
         align-items: center;
         align-content: space-between;
-        position:relative;
+        
         
     }
     .cim{
@@ -196,6 +217,7 @@
         align-items: center;
         padding-bottom: 20%;
         padding-top: 10%;
+        flex-wrap: wrap;
     }
     .cim h1{
         font-size: 15rem;
@@ -209,10 +231,11 @@
         border-radius: 100%;
         text-align: center;
         font-size: 150%;
+    
     }
 
     .kor1{
-        
+
         background-color:#BFD7FF ;
         width: 30rem;
         height: 30rem;
@@ -289,7 +312,7 @@
         width:100%
 
     }
-    
+  
     .nyilak{
         display: flex;
         flex-direction: row;
@@ -328,6 +351,7 @@
         flex-direction: row;
         justify-content: center;
         align-content: space-between;
+        flex-wrap: wrap;
 
     }
 
@@ -359,7 +383,7 @@
         display: block;
 
     }
-    @media screen and (min-width: 750px){
+    @media screen and (min-width: 300px){
         .main{
         
         height: 70rem;
@@ -476,11 +500,17 @@
             transform: scale(.55) translate(45%,0%);
             font-size: 200%;
         }
+        .cim h1{
+            font-size: 13rem;
+        }
     }
     @media screen and (max-width: 950px){
         .kor{
             transform: scale(.55) translate(55%,0%);
             font-size: 200%;
+        }
+        .cim h1{
+            font-size: 12rem;
         }
     }
     @media screen and (max-width: 825px){
@@ -491,8 +521,11 @@
     }
     @media screen and (max-width: 810px){
         .kor{
-            transform: scale(.50) translate(63%,0%);
+            transform: scale(.48) translate(63%,0%);
             font-size: 200%;
+        }
+        .cim h1{
+            font-size: 10rem;
         }
     }
     @media screen and (max-width: 760px){
@@ -501,22 +534,39 @@
             font-size: 200%;
         }
     }
-    @media screen and (max-width: 750px){
+    @media screen and (max-width: 690px){
         .kor{
-            font-size: 200%;
-            top:none;
-            right: none;
-            bottom: none;
-            left:none;
-            
+            transform: scale(.44) translate(70%,0%);
         }
-        .main{
-            position: relative;
-            display: flex;
-            flex-direction:row;
-
+        
+    }
+    @media screen and (max-width: 660px){
+        .kor{
+            transform: scale(.430) translate(74%,0%);
+        }
+        
+    }
+    @media screen and (max-width: 630px){
+        .kor{
+            transform: scale(.420) translate(78%,0%);
+        }
+        
+    }
+    @media screen and (max-width: 610px){
+        .kor{
+            transform: scale(.410) translate(80%,0%);
+        }
+        
+    }
+    @media screen and (max-width: 590px){
+        .kor{
+            top:auto;
+            right: auto;
+            bottom: auto;
+            left: auto;
         }
     }
+    
     .kor:hover{
         animation: kiemeles 4s infinite;
     }
@@ -534,17 +584,66 @@
 </style>
 
 <script lang="ts">
+	import { set_data } from "svelte/internal";
 	import Navbar from "../../components/Navbar.svelte";
     import { onMount } from 'svelte';
     let hatra:any;
     let elore:any;
     let olvasas:any;
-    //let kapcsolas= false;
+    let projharomszog:any;
+    let szovegek: any;
+    let nyilak:any;
+    let slider: any;
+    let p_ertek;
+    let i_ertek;
+    let h_ertek;
+    let pipa: any;
+    let penz: any;
+    let ido: any;
+    let hatokor: any;
+    let kapcsolas_1= false;
+    let kapcsolas_2= false;
+    let kapcsolas_3= false;
+    let kapcsolas_4= false;
+    let kapcsolas_5= false;
+    let kapcsolas_6= false;
+    let kapcsolas_7= false;
+    let kapcsolas_H= false;
+
     onMount(() => {
         hatra= document.querySelector('.hatra');
         elore= document.querySelector('.elore');
         olvasas= document.querySelector('.olvasas');
-        //olvasas.style.display="none";
+        projharomszog = document.querySelector('.projharomszog');
+        szovegek = document.querySelector('.szoveg');
+        nyilak = document.querySelector('.nyilak');
+        slider= document.querySelector('.slider')  ;
+        penz= document.querySelector('.penz input');
+        ido= document.querySelector('.ido input');
+        hatokor= document.querySelector('.hatokor input');
+        p_ertek= document.querySelector('.p_ertek');
+        i_ertek=  document.querySelector('.i_ertek');
+        h_ertek=  document.querySelector('.h_ertek');
+        pipa= document.querySelector('pipa');
+        penz.oninput =(() =>{
+            let ujertek= penz.value;
+            p_ertek.textContent = ujertek;
+        })
+
+        ido.oninput =(() =>{
+            let ujertek= ido.value;
+            i_ertek.textContent = ujertek;
+        })
+
+        hatokor.oninput =(() =>{
+            let ujertek= hatokor.value;
+            h_ertek.textContent = ujertek;
+        })
+        
+        olvasas.style.display="none";
+        projharomszog.style.display="none";
+        
+        
     });
 
     
@@ -599,35 +698,124 @@
 
 
     function elso(){
-        index=0;
-        cim_index=0
-        olvasas.style.display="flex";
+        if(kapcsolas_1==false){
+            index=4;
+            cim_index=1;
+            olvasas.style.display="flex";
+            szovegek.style.display="flex";
+            nyilak.style.display="flex";
+            projharomszog.style.display="none";
+        }
+        else if(kapcsolas_1==true){
+            olvasas.style.display="none";
+
+        }
+        kapcsolas_1=!kapcsolas_1;
     }
     function masodik(){
-        index=4
-        cim_index=1;
-        olvasas.style.display="flex";
+        if(kapcsolas_2==false){
+            index=0;
+            cim_index=0;
+            olvasas.style.display="flex";
+            szovegek.style.display="flex";
+            nyilak.style.display="flex";
+            projharomszog.style.display="none";
+        }
+        else if(kapcsolas_2==true){
+            olvasas.style.display="none";
+        }
+        kapcsolas_2=!kapcsolas_2;
+
     }
     function harmadik(){
-        cim_index=2
-        olvasas.style.display="flex";
+        if(kapcsolas_3==false){
+            cim_index=2
+            olvasas.style.display="flex";
+            szovegek.style.display="flex";
+            nyilak.style.display="flex";
+            projharomszog.style.display="none";
+        }
+
+        else if(kapcsolas_3==true){
+            olvasas.style.display="none";
+        }
+        kapcsolas_3=!kapcsolas_3;
     }
     function negyedik(){
-        cim_index=3;
-        olvasas.style.display="flex";
+        if(kapcsolas_4==false){
+            cim_index=3;
+            olvasas.style.display="flex";
+            szovegek.style.display="flex";
+            nyilak.style.display="flex";
+            projharomszog.style.display="none";
+        }
+
+        else if(kapcsolas_4==true){
+            olvasas.style.display="none";
+
+        }
+        kapcsolas_4=!kapcsolas_4;
     }
     function otodik(){
-        cim_index=4;
-        olvasas.style.display="flex";
+        if(kapcsolas_5==false){
+            cim_index=4;
+            olvasas.style.display="flex";
+            szovegek.style.display="flex";
+            nyilak.style.display="flex";
+            projharomszog.style.display="none";
+        }
+
+        else if(kapcsolas_5==true){
+            olvasas.style.display="none";
+        }
+        kapcsolas_5=!kapcsolas_5;
     }
     function hatodik(){
-        cim_index=5;
-        olvasas.style.display="flex";
+        if(kapcsolas_6==false){        
+            cim_index=5;
+            olvasas.style.display="flex";
+            szovegek.style.display="flex";
+            nyilak.style.display="flex";
+            projharomszog.style.display="none";
+        }
+
+        else if(kapcsolas_6==true){
+            olvasas.style.display="none";
+        }
+        kapcsolas_6=!kapcsolas_6;
     }
     function hetedik(){
-        cim_index=6;
-        olvasas.style.display="flex";
+        if(kapcsolas_7==false){
+            cim_index=6;
+            olvasas.style.display="flex";
+            szovegek.style.display="flex";
+            nyilak.style.display="flex";
+            projharomszog.style.display="none";
+        }
+
+        else if(kapcsolas_7==true){
+            olvasas.style.display="none";
+        }
+        kapcsolas_7=!kapcsolas_7;
     }
+    function haromszog(){
+            if(kapcsolas_H==false){
+                olvasas.style.display="flex";
+                szovegek.style.display="none";
+                nyilak.style.display="none";
+                projharomszog.style.display='flex';
+            }
+            else if(kapcsolas_H==true){
+                olvasas.style.display="none";
+                szovegek.style.display="flex";
+                nyilak.style.display="flex";
+            }
+            kapcsolas_H=!kapcsolas_H;
+        
+        
+        
+    }
+    
 
 
     function lapoz_elore(){
