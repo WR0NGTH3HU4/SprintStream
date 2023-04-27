@@ -1,21 +1,24 @@
 <main>
     <div class="egesz">
     <Navbar></Navbar>
+<!--    <div class= "cim">
+        <h1>Rólunk</h1>
+    </div>-->
         <div class="main">
             <div on:click={elso} class="kor kor1">
-                <h3>1.lépés</h3>
+                <h3>2.név</h3>
             </div>
             <div on:click={masodik} class="kor kor2">
-                <h3>2.lépés</h3>
+                <h3>1.név</h3>
             </div>
             <div on:click={harmadik} class="kor kor3">
-                <h3>3.lépés</h3>
+                <h3>3.név</h3>
             </div>
             <div on:click={negyedik} class="kor kor4">
-                <h3>4.lépés</h3>
+                <h3>4.név</h3>
             </div>
             <div on:click={otodik} class="kor kor5">
-                <h3>5.lépés</h3>
+                <h3>5.név</h3>
             </div>            
         </div>
         <div class="tartalom">
@@ -102,6 +105,7 @@
     }
 
     .egesz{
+        height: 10%;
         width: 100%;
         background-color:#5465FF ;
     }
@@ -139,53 +143,8 @@
         border-radius: 100%;
         text-align: center;
         font-size: 150%;
-    }
-
-    .kor1{
-        
-        background-color:#BFD7FF ;
         width: 30rem;
         height: 30rem;
-
-    }
-    .kor2{
-        background-color:#788BFF ;
-        width: 25rem;
-        height: 25rem;
-
-    }
-    .kor3{
-        
-        background-color:#9BB1FF ;
-        width: 32rem;
-        height: 32rem;
-
-    }
-    .kor4{
-        background-color:#E3E3E3 ;
-        width: 25rem;
-        height: 25rem;
-    }
-    .kor5{
-        background-color:#BFD7FF ;
-        width: 32rem;
-        height: 32rem;
-    }
-    .ph{
-        background-color: #788BFF;
-        width: 23rem;
-        height: 23rem;
-        border-radius: 100%;
-        display: flex;
-        flex-direction: column;
-        flex-wrap: nowrap;
-        justify-content: center;
-        align-items: center;
-        margin-left: 10%;
-        margin-bottom: 10%;
-    }
-    .ph svg{
-        transform: translate(0%,-10%);
     }
     .tartalom{
         display: flex;
@@ -201,29 +160,6 @@
         justify-content: center;
         width:100%
 
-    }
-    
-    .nyilak{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-self: center;
-        width:80%;
-        padding-top: 5%;
-        
-    }   
-    .nyilak:hover{
-        animation: kiemeles 4s infinite;
-    }
-    .projharomszog{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-evenly;
-        align-items:center;
-    }
-    .projharomszog svg{
-        transform: scale(0.6);
-       
     }
 
     .elsohullam{
@@ -297,68 +233,46 @@
     .kor1{
         
         background-color:#BFD7FF ;
-        width: 30rem;
-        height: 30rem;
-        top:5%;
-        right: 70%;
+        width: 35rem;
+        height: 35rem;
+        top: 25%;
+        right: 65%;
         z-index: 4;
         
     }
     .kor2{
         background-color:#788BFF ;
-        width: 25rem;
-        height: 25rem;
-        top:-3%;
-        right: 52%;
+        width: 35rem;
+        height: 35rem;
+        top: 2%;
+        right: 37%;
         z-index: 5;
     }
     .kor3{
         
         background-color:#9BB1FF ;
-        width: 32rem;
-        height: 32rem;
-        top:18%;
-        right: 47%;
+        width: 35rem;
+        height: 35rem;
+        top: 65%;
+        right: 65%;
         z-index: 3;
     }
     .kor4{
         background-color:#E3E3E3 ;
-        width: 25rem;
-        height: 25rem;
-        top:18%;
-        right: 31%;
-        
-        
+        width: 35rem;
+        height: 35rem;
+        top: 40%;
+        right: 35%;
         z-index: 2;
     }
     .kor5{
         background-color:#BFD7FF ;
-        width: 32rem;
-        height: 32rem;
-        top:3%;
-        right: 9%;
-        
-        z-index: 2;
-    }
-    .kor6{
-        background-color:#788BFF ;
         width: 35rem;
         height: 35rem;
-        top:35%;
-        right: 12%;
-        
-        z-index: 1;
+        top:15%;
+        right: 5%;       
+        z-index: 2;
     }
-    .kor7{
-        background-color:#BFD7FF ;
-        width: 25rem;
-        height: 25rem;
-        top:52%;
-        right: 40%;
-        
-        z-index: 0;
-    }
-
     }
     @media screen and (max-width: 1840px){
         .kor{
@@ -430,18 +344,14 @@
 
         }
     }
-    .kor:hover{
+    .kor3:hover{
         animation: kiemeles 4s infinite;
     }
-    .ph:hover{
-        animation: kiemeles 4s infinite;
-    }
+
     @keyframes kiemeles{
-
         100%{
-
             z-index: 100;
-            transform: scale(1.1);
+            transform: scale(0.7);
         }
     }
 </style>
@@ -465,7 +375,7 @@
     let index=0;
     
     
-    let cim=["Név(1)","Név(2)","Név(3)", "Név(4)","Név(5.)"];
+    let cim=["Név(2)","Név(1)","Név(3)", "Név(4)","Név(5.)"];
     let szoveg=["------------------------------------------."
     
     ,"------------------------------------------."
