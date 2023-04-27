@@ -131,6 +131,48 @@
 - Kulimák Máté: rólunk oldal elkezdése
 - Tátrai Dominik: pull requestek mergelése
 
+### 2023.04.19:
+- Császár András: ---
+- Csóka András: a quiznél a válasz gombra kattintva a követkető kérdés mutatása, válaszok kiértékelése
+- Kővágó Levente: ---
+- Kulimák Máté: ---
+- Tátrai Dominik: ---
+
+### 2023.04.20:
+- Császár András: ---
+- Csóka András: quiz oldal reszponzivitásának javítása, quiz manager elkészítése
+- Kővágó Levente: ---
+- Kulimák Máté: ---
+- Tátrai Dominik: rangebar elkészítése és gombok aktiválása
+
+### 2023.04.21:
+- Császár András: navbar globalizálása
+- Csóka András: quiz oldal reszponzivitásának javítása, quiz manager elkészítése
+- Kővágó Levente: ---
+- Kulimák Máté: rólunk oldal elkezdése
+- Tátrai Dominik: ---
+
+### 2023.04.25:
+- Császár András: --
+- Csóka András: ---
+- Kővágó Levente: ---
+- Kulimák Máté: rólunk oldal elkezdése
+- Tátrai Dominik: projekt háromszög gomb helyes aktiválása, kész termék backlog feltöltése
+
+### 2023.04.26:
+- Császár András: ---
+- Csóka András: ---
+- Kővágó Levente: ---
+- Kulimák Máté: ---
+- Tátrai Dominik: media queryk elkészítése, gombok ki-be kapcsolásának elkészítése
+
+### 2023.04.27:
+- Császár András: ---
+- Csóka András: ---
+- Kővágó Levente: ---
+- Kulimák Máté: növekmény frissítése
+- Tátrai Dominik: ---
+
 ### Git parancsok
 - `git add .`: Fileok hozzáadása a git projekthez, hogy a git tudja managelni őket.
 - `git commit -m <üzenet>`: Fileok commitolása egy üzenettel. (Ez push nélkül csak lokális.) Lehetőleg pontosan írjuk le a változtatásokat.
