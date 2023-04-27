@@ -3,41 +3,41 @@
         <Navbar></Navbar>
         <div class="body">
             <div class="fejlec">
-                <img src="./scrum.png" alt="scrum kép">
+                <img src="icons/scrum.png" alt="scrum kép">
                 <p>Scrum</p>
             </div>
             <div class="lepesvalaszto">
-                <div class="gomb1 gomb">
+                <div class="gomb1 gomb btn">
                     <p>1.lépés</p>
                 </div>
-                <div class=" gomb2 gomb">
+                <div class=" gomb2 gomb btn">
                     <p>2.lépés</p>
                 </div>
-                <div class=" gomb3 gomb">
+                <div class=" gomb3 gomb btn">
                     <p>3.lépés</p>
                 </div>
-                <div class=" gomb4 gomb">
+                <div class=" gomb4 gomb btn">
                     <p>4.lépés</p>
                 </div>
-                <div class=" gomb5 gomb">
+                <div class=" gomb5 gomb btn">
                     <p>5.lépés</p>
                 </div>
-                <div class=" gomb6 gomb">
+                <div class=" gomb6 gomb btn">
                     <p>6.lépés</p>
                 </div>
-                <div class=" gomb7 gomb">
+                <div class=" gomb7 gomb btn">
                     <p>7.lépés</p>
                 </div>
             </div>
             <div class="container">
                 <div class="indicator">
-                    <spam class="btn active"></spam>
-                    <spam class="btn"></spam>
-                    <spam class="btn"></spam>
-                    <spam class="btn"></spam>
-                    <spam class="btn"></spam>
-                    <spam class="btn"></spam>
-                    <spam class="btn"></spam>
+                    <spam class="btn active btn2"></spam>
+                    <spam class="btn btn2"></spam>
+                    <spam class="btn btn2"></spam>
+                    <spam class="btn btn2"></spam>
+                    <spam class="btn btn2"></spam>
+                    <spam class="btn btn2"></spam>
+                    <spam class="btn btn2"></spam>
 
                 </div>
                 <div class="testimonial">
@@ -110,64 +110,7 @@
                 </div>
             </div>
         </div>
-    </div>
-
-
-    <script>
-        onMount(() => {
-            var btn = document.getElementsByClassName("btn");
-            var slide = document.getElementById("slide");
-            btn[0].onclick = function(){
-                slide.style.transform= "translateX(0px)";
-                for(i=0;i<7;i++){
-                    btn[i].classList.remove("active");
-                } 
-                this.classList.add("active");
-            }
-            btn[1].onclick = function(){
-                slide.style.transform= "translateX(-800px)";
-                for(i=0;i<7;i++){
-                    btn[i].classList.remove("active");
-                } 
-                this.classList.add("active");
-            }
-            btn[2].onclick = function(){
-                slide.style.transform= "translateX(-1600px)";
-                for(i=0;i<7;i++){
-                    btn[i].classList.remove("active");
-                } 
-                this.classList.add("active");
-            }
-            btn[3].onclick = function(){
-                slide.style.transform= "translateX(-2400px)";
-                for(i=0;i<7;i++){
-                    btn[i].classList.remove("active");
-                } 
-                this.classList.add("active");
-            }
-            btn[4].onclick = function(){
-                slide.style.transform= "translateX(-3200px)";
-                for(i=0;i<7;i++){
-                    btn[i].classList.remove("active");
-                } 
-                this.classList.add("active");
-            }
-            btn[5].onclick = function(){
-                slide.style.transform= "translateX(-4000px)";
-                for(i=0;i<7;i++){
-                    btn[i].classList.remove("active");
-                } 
-                this.classList.add("active");
-            }
-            btn[6].onclick = function(){
-                slide.style.transform= "translateX(-4800px)";
-                for(i=0;i<7;i++){
-                    btn[i].classList.remove("active");
-                } 
-                this.classList.add("active");
-            }
-        });
-    </script>
+    </div>  
 </main>
 
 <style lang="scss">
@@ -193,7 +136,7 @@
     .fejlec img {
         width: 300px;
         height: 300px;
-        background-color: red;//a kép helyének meghatározására 
+        
         border-radius: 6%;
     }
     .fejlec p {
@@ -348,17 +291,19 @@
         left: 50%;
         transform: translateX(-50%);
         bottom: 20px;
+        z-index: 100;
     }
-    .btn{
+    .btn2{
         display: inline-block;
         height: 15px;
         width: 15px;
         margin: 4px;
         border-radius: 15px;
-        background: #000000;
-        cursor: pointer;
         transition: 0.5s;
+        cursor: pointer;
+        background: #000000;
     }
+    
     .active{
         width: 45px;
     }
@@ -372,6 +317,126 @@
 <script lang="ts">
 	//import { slide } from "svelte/types/runtime/transition";
 	import Navbar from "../../components/Navbar.svelte";
+    import { onMount } from 'svelte';
+    
+        onMount(() => {
+            let i ;
+            var btn: any = document.getElementsByClassName("btn");
+            var slide = document.getElementById("slide");
 
-
+            btn[0].onclick = function(){
+                slide.style.transform= "translateX(0px)";
+                for(i=7;i<14;i++){
+                    btn[i].classList.remove("active");
+                    if(i == 7){
+                        btn[i].classList.add("active");    
+                    }
+                }
+            }
+            btn[1].onclick = function(){
+                slide.style.transform= "translateX(-800px)";
+                for(i=7;i<14;i++){
+                    btn[i].classList.remove("active");
+                    if(i == 8){
+                        btn[i].classList.add("active");    
+                    }
+                }
+            }
+            btn[2].onclick = function(){
+                slide.style.transform= "translateX(-1600px)";
+                for(i=7;i<14;i++){
+                    btn[i].classList.remove("active");
+                    if(i == 9){
+                        btn[i].classList.add("active");    
+                    }
+                }
+            }
+            btn[3].onclick = function(){
+                slide.style.transform= "translateX(-2400px)";
+                for(i=7;i<14;i++){
+                    btn[i].classList.remove("active");
+                    if(i == 10){
+                        btn[i].classList.add("active");    
+                    }
+                }
+            }
+            btn[4].onclick = function(){
+                slide.style.transform= "translateX(-3200px)";
+                for(i=7;i<14;i++){
+                    btn[i].classList.remove("active");
+                    if(i == 11){
+                        btn[i].classList.add("active");    
+                    }
+                }
+            }
+            btn[5].onclick = function(){
+                slide.style.transform= "translateX(-4000px)";
+                for(i=7;i<14;i++){
+                    btn[i].classList.remove("active");
+                    if(i == 12){
+                        btn[i].classList.add("active");    
+                    }
+                }
+            }
+            btn[6].onclick = function(){
+                slide.style.transform= "translateX(-4800px)";
+                for(i=7;i<14;i++){
+                    btn[i].classList.remove("active");
+                    if(i == 13){
+                        btn[i].classList.add("active");    
+                    }
+                }
+                
+            }
+            btn[7].onclick = function(){
+                slide.style.transform= "translateX(0px)";
+                for(i=7;i<14;i++){
+                    btn[i].classList.remove("active");
+                } 
+                this.classList.add("active");
+            }
+            btn[8].onclick = function(){
+                slide.style.transform= "translateX(-800px)";
+                for(i=7;i<14;i++){
+                    btn[i].classList.remove("active");
+                } 
+                this.classList.add("active");
+            }
+            btn[9].onclick = function(){
+                slide.style.transform= "translateX(-1600px)";
+                for(i=7;i<14;i++){
+                    btn[i].classList.remove("active");
+                } 
+                this.classList.add("active");
+            }
+            btn[10].onclick = function(){
+                slide.style.transform= "translateX(-2400px)";
+                for(i=7;i<14;i++){
+                    btn[i].classList.remove("active");
+                } 
+                this.classList.add("active");
+            }
+            btn[11].onclick = function(){
+                slide.style.transform= "translateX(-3200px)";
+                for(i=7;i<14;i++){
+                    btn[i].classList.remove("active");
+                } 
+                this.classList.add("active");
+            }
+            btn[12].onclick = function(){
+                slide.style.transform= "translateX(-4000px)";
+                for(i=7;i<14;i++){
+                    btn[i].classList.remove("active");
+                } 
+                this.classList.add("active");
+            }
+            btn[13].onclick = function(){
+                slide.style.transform= "translateX(-4800px)";
+                for(i=7;i<14;i++){
+                    btn[i].classList.remove("active");
+                } 
+                this.classList.add("active");
+            }
+        });
+    
 </script>
