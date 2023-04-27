@@ -31,14 +31,14 @@
                             <h2>{kerdes.kerdes}</h2>
                             <div class="valasz">
                                 <div>
-                                    <p>{kerdes.a} </p>
-                                    <p>{kerdes.b} </p>
-                                    <p>{kerdes.c} </p>   
+                                    {#if !!kerdes.a}<p>{kerdes.a} </p>{/if}
+                                    {#if !!kerdes.b}<p>{kerdes.b} </p>{/if}
+                                    {#if !!kerdes.c}<p>{kerdes.c} </p>{/if}
                                 </div>
                                 <div>
-                                    <button on:click={() => kovi_kerdes(kerdesek, i, "a")}>A</button>
-                                    <button on:click={() => kovi_kerdes(kerdesek, i, "b")}>B</button>
-                                    <button on:click={() => kovi_kerdes(kerdesek, i, "c")}>C</button>
+                                    {#if !!kerdes.a}<button on:click={() => kovi_kerdes(kerdesek, i, "a")}>A</button>{/if}
+                                    {#if !!kerdes.b}<button on:click={() => kovi_kerdes(kerdesek, i, "b")}>B</button>{/if}
+                                    {#if !!kerdes.c}<button on:click={() => kovi_kerdes(kerdesek, i, "c")}>C</button>{/if}
                                 </div>                            
                             </div>
                         </div>
