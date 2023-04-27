@@ -70,19 +70,19 @@
                         <h3>Pénz</h3>
                         <div class="slidecontainer penz">
                             <input type="range" min="0" max="100" value="0" class="slider" >
-                            <h3 class="ertek">0</h3>
+                            <h3 class="p_ertek">0</h3>
                         </div>
                         
                         <h3>Idő</h3>
                         <div class="slidecontainer ido">
                             <input type="range" min="0" max="100" value="0" class="slider" >
-                            <h3 class="ertek">0</h3>
+                            <h3 class="i_ertek">0</h3>
                         </div>
                         
                         <h3>Hatókör</h3>
                         <div class="slidecontainer hatokor">
                             <input type="range" min="0" max="100" value="0" class="slider">
-                            <h3 class="ertek">0</h3>
+                            <h3 class="h_ertek">0</h3>
                         </div>
                     </div>
                     
@@ -182,8 +182,7 @@
   box-shadow: -407px 0 0 400px #E3E3E3;
 }
     .main{
-        top: none;
-        right: none;
+
         border-color: #5465FF;
         display: flex;
         flex-direction: row;
@@ -195,6 +194,7 @@
     .egesz{
         width: 100%;
         background-color:#5465FF ;
+        
     }
     .main{
         
@@ -383,7 +383,7 @@
         display: block;
 
     }
-    @media screen and (min-width: 700px){
+    @media screen and (min-width: 300px){
         .main{
         
         height: 70rem;
@@ -521,7 +521,7 @@
     }
     @media screen and (max-width: 810px){
         .kor{
-            transform: scale(.50) translate(63%,0%);
+            transform: scale(.48) translate(63%,0%);
             font-size: 200%;
         }
         .cim h1{
@@ -532,6 +532,38 @@
         .kor{
             transform: scale(.450) translate(66%,0%);
             font-size: 200%;
+        }
+    }
+    @media screen and (max-width: 690px){
+        .kor{
+            transform: scale(.44) translate(70%,0%);
+        }
+        
+    }
+    @media screen and (max-width: 660px){
+        .kor{
+            transform: scale(.430) translate(74%,0%);
+        }
+        
+    }
+    @media screen and (max-width: 630px){
+        .kor{
+            transform: scale(.420) translate(78%,0%);
+        }
+        
+    }
+    @media screen and (max-width: 610px){
+        .kor{
+            transform: scale(.410) translate(80%,0%);
+        }
+        
+    }
+    @media screen and (max-width: 590px){
+        .kor{
+            top:auto;
+            right: auto;
+            bottom: auto;
+            left: auto;
         }
     }
     
@@ -562,7 +594,10 @@
     let szovegek: any;
     let nyilak:any;
     let slider: any;
-    let ertek: any;
+    let p_ertek;
+    let i_ertek;
+    let h_ertek;
+    let pipa: any;
     let penz: any;
     let ido: any;
     let hatokor: any;
@@ -582,11 +617,29 @@
         projharomszog = document.querySelector('.projharomszog');
         szovegek = document.querySelector('.szoveg');
         nyilak = document.querySelector('.nyilak');
-        slider= document.querySelector('.slider') as HTMLInputElement;
-        ertek= document.querySelector('.ertek') as HTMLElement;
+        slider= document.querySelector('.slider')  ;
         penz= document.querySelector('.penz input');
         ido= document.querySelector('.ido input');
         hatokor= document.querySelector('.hatokor input');
+        p_ertek= document.querySelector('.p_ertek');
+        i_ertek=  document.querySelector('.i_ertek');
+        h_ertek=  document.querySelector('.h_ertek');
+        pipa= document.querySelector('pipa');
+        penz.oninput =(() =>{
+            let ujertek= penz.value;
+            p_ertek.textContent = ujertek;
+        })
+
+        ido.oninput =(() =>{
+            let ujertek= ido.value;
+            i_ertek.textContent = ujertek;
+        })
+
+        hatokor.oninput =(() =>{
+            let ujertek= hatokor.value;
+            h_ertek.textContent = ujertek;
+        })
+        
         olvasas.style.display="none";
         projharomszog.style.display="none";
         
@@ -758,7 +811,7 @@
                 nyilak.style.display="flex";
             }
             kapcsolas_H=!kapcsolas_H;
-  
+        
         
         
     }
