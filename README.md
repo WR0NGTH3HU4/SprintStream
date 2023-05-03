@@ -167,11 +167,11 @@
 - Tátrai Dominik: media queryk elkészítése, gombok ki-be kapcsolásának elkészítése
 
 ### 2023.04.27:
-- Császár András: ---
-- Csóka András: ---
-- Kővágó Levente: ---
-- Kulimák Máté: növekmény frissítése
-- Tátrai Dominik: ---
+- Császár András: navbar frissítése
+- Csóka András: kérdések írása a quizhez
+- Kővágó Levente: javascript kód javítása, gombok összelinkelése
+- Kulimák Máté: növekmény frissítése, rólunk oldal fejlesztése
+- Tátrai Dominik: rangebar értékek monitorolása
 
 ### Git parancsok
 - `git add .`: Fileok hozzáadása a git projekthez, hogy a git tudja managelni őket.
