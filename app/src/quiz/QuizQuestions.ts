@@ -10,15 +10,15 @@ export const quizQuestions: {[fasz: string]: QuizQuestion[]} = {
     scrum: [
         {
             kerdes: "Mi a scrum?",
-            a: "A) ",
+            a: "A) egy programnyelv",
             b: "B) egy projekt megvalósítási keretrendszer",
-            c: "C) ",
+            c: "C) egy szakma",
             valasz: "b"
         },{
             kerdes: "Sprint retrospektív alkalmával milyen kérdésekre keressük a választ?",
-            a: "A) ",
-            b: "B) ",
-            c: "C) ",
+            a: "A) mivel haladtunk",
+            b: "B) milyen problémák adódtak",
+            c: "C) mennyi a költség",
             valasz: "a"
         },
         {
@@ -30,10 +30,10 @@ export const quizQuestions: {[fasz: string]: QuizQuestion[]} = {
         },
         {
             kerdes: "Melyik nem Scrum esemény?",
-            a: "A) Sprint Áttekintés (Sprint Review / Demó)",
+            a: "A) Sprint Áttekintés",
             b: "B) Napi Scrum-megbeszélés",
-            c: "C) ",
-            valasz: "b"
+            c: "C) Scrum Master választás",
+            valasz: "c"
         },
         {
             kerdes: "A napi Scrum egy 45 perces esemény a Scrum csapat fejlesztői számára.",
@@ -161,7 +161,7 @@ export const quizQuestions: {[fasz: string]: QuizQuestion[]} = {
         },
 		{
             kerdes: "Mit jelent a transzparencia?",
-            a: "A) nyomonkövethetőség",
+            a: "A) átláthatóság",
             b: "B) változtathatóság",
             c: "C) plakáton bemutatható",
             valasz: "a"
