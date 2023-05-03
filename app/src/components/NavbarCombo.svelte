@@ -1,5 +1,5 @@
-<div class="combo">
-    <span class="name" on:click={ () => { openCombo() } }>
+<div class="combo"on:mouseenter={ () => { openCombo() } } on:mouseleave={ () => { openCombo() } }>
+    <span class="name">
         { name }
         <span class="material-symbols-rounded">
             arrow_drop_down
@@ -16,20 +16,11 @@
 
 <style lang="scss">
     .combo {
-        background-color: #e2e2e2;
         color: black;
-        border: black 2px solid;
-        border-radius: 8px;
-        padding: .5rem;
-    }
-
-    hr {
-        color: black;
-        background-color: black;
     }
 
     .name {
-        color: blue;
+        color: white;
         cursor: pointer;
         display: flex;
         align-items: center;
@@ -39,6 +30,9 @@
         position: relative;
         display: flex;
         flex-direction: column;
+        background-color: #e2e2e2;
+        border-radius: 8px;
+        padding: .5rem;
     }
 
     .options::before {
