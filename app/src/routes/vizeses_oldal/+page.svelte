@@ -70,19 +70,19 @@
                         <h3>Pénz</h3>
                         <div class="slidecontainer penz">
                             <input type="range" min="0" max="100" value="0" class="slider" >
-                            <h3 class="p_ertek">0</h3>
+                            <h3 class="p_ertek ertek">0</h3>
                         </div>
                         
                         <h3>Idő</h3>
                         <div class="slidecontainer ido">
                             <input type="range" min="0" max="100" value="0" class="slider" >
-                            <h3 class="i_ertek">0</h3>
+                            <h3 class="i_ertek ertek">0</h3>
                         </div>
                         
                         <h3>Hatókör</h3>
                         <div class="slidecontainer hatokor">
                             <input type="range" min="0" max="100" value="0" class="slider">
-                            <h3 class="h_ertek">0</h3>
+                            <h3 class="h_ertek ertek">0</h3>
                         </div>
                     </div>
                     
@@ -124,6 +124,20 @@
 </main>
 
 <style lang="scss">
+
+    .ertek{
+        background-color:#E3E3E3 ;
+        margin-left: 5%;
+        width: 5rem;
+        height: 2rem;
+        border-radius: 20px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        align-self: flex-end;
+
+    }
     .skala{
         padding-left: 2%;
         padding-bottom: 2%;
@@ -135,19 +149,27 @@
         justify-content: center;
         align-items: flex-start;
         border-radius: 20px;;
+        margin-left: 5%;
     }
 
 .slidecontainer{
+    
     width: 80%;
+    display: flex;
+    flex-direction: row;
+
+    align-content: space-between;
+    align-items: center ;
 }
 .slider {
   -webkit-appearance: none;
   appearance: none; 
   width:100%;
-  cursor: pointer;
+  cursor: grab;
   outline: none;
   overflow: hidden;
   border-radius: 16px;
+
 }
 
 .slider::-webkit-slider-runnable-track {
@@ -598,6 +620,7 @@
     let i_ertek;
     let h_ertek;
     let pipa: any;
+    let pipa_szine: any;
     let penz: any;
     let ido: any;
     let hatokor: any;
@@ -625,6 +648,7 @@
         i_ertek=  document.querySelector('.i_ertek');
         h_ertek=  document.querySelector('.h_ertek');
         pipa= document.querySelector('pipa');
+        pipa_szine=document.querySelector('.pipa path');
         penz.oninput =(() =>{
             let ujertek= penz.value;
             p_ertek.textContent = ujertek;
@@ -812,7 +836,12 @@
             }
             kapcsolas_H=!kapcsolas_H;
         
-        
+            if(p_ertek.value = h_ertek.value){
+                pipa_szine.style.fill="white";
+            }
+            
+            
+            
         
     }
     
