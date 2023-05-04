@@ -1,14 +1,17 @@
-<div class="combo"on:mouseenter={ () => { openCombo() } } on:mouseleave={ () => { openCombo() } }>
+<div class="combo" on:mouseenter={ () => { openCombo() } } on:mouseleave={ () => { openCombo() } }>
     <span class="name">
-        { name }
-        <span class="material-symbols-rounded">
-            arrow_drop_down
-        </span>
+        {@html name}
+        {#if !noarrow}
+            <span class="material-symbols-rounded">
+                arrow_drop_down
+            </span>
+        {/if}
     </span>
     {#if opened}
         <div transition:slide={{ easing:elasticOut, duration: 1000 }} class="options">
             {#each options as option}
-                <span on:click={ option.onClick }>{ option.name }</span>
+                <!-- svelte-ignore a11y-click-events-have-key-events -->
+                <span on:click={ option.onClick }>{@html option.name }</span>
             {/each}
         </div>
     {/if}
@@ -16,7 +19,10 @@
 
 <style lang="scss">
     .combo {
-        color: black;
+        color: black !important;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     .name {
@@ -46,6 +52,7 @@
     import { elasticOut } from "svelte/easing";
 
     export let name: string;
+    export let noarrow: boolean = false;
     export let options: { name: string; onClick?: () => void }[];
     let opened: boolean = false;
 

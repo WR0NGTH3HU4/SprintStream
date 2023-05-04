@@ -1,10 +1,26 @@
 <nav>
-	<span class="cim">SprintStream</span>
-	<NavbarCombo name="Scrum" options={[{name: "Modell"}, {name: "Quiz"}]} />
-	<NavbarCombo name="Vizeses" options={[{name: "Modell"}, {name: "Quiz"}]} />
-	<span class="material-symbols-rounded" on:click={szinvalaszto}>
-		settings
-	</span>
+	<span class="cim"><a href="/" class="noadeco">SprintStream</a></span>
+	<NavbarCombo
+		name="Scrum"
+		options={[
+			{ name: '<a href="scrum_oldal">Modell</a>' },
+			{ name: '<a href="quiz_oldal">Quiz</a> '},
+		]}
+	/>
+	<NavbarCombo
+		name="Vizeses"
+		options={[
+			{ name: '<a href="vizeses_oldal">Modell</a>' },
+			{ name: '<a href="quiz_oldal">Quiz</a> '},
+		]}
+	/>
+	<NavbarCombo
+		name={'<span class="material-symbols-rounded">settings</span>'}
+		options={[
+			{ name: '<img src="Színek/caribbean.png" >' },
+		]}
+		noarrow
+	/>
 	<!--
 		<li>
 		<div class="paletta">
@@ -25,6 +41,15 @@
 
 <style lang="scss">
 	
+	:global(nav .options a) {
+		color: black;
+		text-decoration: none;
+	}
+
+	:global(nav .options img) {
+		width: 2rem;
+	}
+
 	nav {
 		display: flex;
 		flex-direction: row;
@@ -38,10 +63,10 @@
 		color: white;
 		padding: 1rem;
 		gap: 1rem;
-	}
 
-	nav > * {
-		cursor: pointer;
+		& > * {
+			cursor: pointer;
+		}
 	}
 
 	.cim {
@@ -49,6 +74,11 @@
 		justify-self: flex-start;
 		margin-right: auto;
 		font-weight: 600;
+		
+		a {
+			color: white;
+			text-decoration: none;
+		}
 	}
 
 	img {
@@ -73,7 +103,6 @@
 	let lenyilas_v: any;
 	let lenyilas_s: any;
 
-	
     function szinvalaszto() {
 		
         if (kapcsolas_g == false) {
