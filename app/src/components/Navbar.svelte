@@ -17,10 +17,11 @@
 	<NavbarCombo
 		name={'<span class="material-symbols-rounded">settings</span>'}
 		options={[
-			{ name: '<img src="Színek/caribbean.png" >' },
+			{ name: '<ThemeBubble theme="caribbean" color="#000" />' },
 		]}
 		noarrow
 	/>
+	<!-- TODO: slot for NavbarCombo -->
 	<!--
 		<li>
 		<div class="paletta">
@@ -90,89 +91,5 @@
 <script lang="ts">
     import { onMount } from 'svelte';
 	import NavbarCombo from './NavbarCombo.svelte';
-
-	let alap_s: any;
-	let alap_v: any;
-	let alap_r: any;
-    let paletta: any;
-    let kapcsolas_g = false;
-	let kapcsolas_r = false;
-	let kapcsolas_v = false;
-	let kapcsolas_s = false;
-	let lenyilas_r: any;
-	let lenyilas_v: any;
-	let lenyilas_s: any;
-
-    function szinvalaszto() {
-		
-        if (kapcsolas_g == false) {
-            paletta.style.cssText='display: flex; align-content: space-evenly;'
-
-			
-        }
-        else if(kapcsolas_g==true){
-            
-			paletta.style.display = 'none';
-        }
-
-        kapcsolas_g=!kapcsolas_g;
-    }
-
-	onMount(() => {
-		paletta = document.querySelector('.paletta');
-		lenyilas_r =document.querySelector('.lenyilo-r')
-		lenyilas_v =document.querySelector('.lenyilo-v')
-		lenyilas_s =document.querySelector('.lenyilo-s')
-		alap_s=document.querySelector('.alap_s')
-		alap_v=document.querySelector('.alap_v')
-		alap_r=document.querySelector('.alap_r')
-		paletta.style.display='none';
-		lenyilas_r.style.display='none';
-		lenyilas_v.style.display='none';
-		lenyilas_s.style.display='none';
-    });
-
-	function lenyit_r(){
-		if (kapcsolas_r == true) {
-            lenyilas_r.style.display = 'none';
-			alap_r.style.cssText=' border-radius: 20px ';
-        }
-        else if(kapcsolas_r==false){
-            lenyilas_r.style.cssText = 'display: flex; border-radius: 0px 0px 20px 20px';
-			alap_r.style.cssText=' border-radius: 20px 20px 0px 0px';
-        }
-
-        kapcsolas_r=!kapcsolas_r;
-	}
-
-
-	function lenyit_v(){
-		if (kapcsolas_v == true) {
-            lenyilas_v.style.display = 'none';
-			alap_v.style.cssText=' border-radius: 20px ';
-        }
-        else if(kapcsolas_v==false){
-            lenyilas_v.style.cssText = 'display: flex; border-radius: 0px 0px 20px 20px';
-			alap_v.style.cssText=' border-radius: 20px 20px 0px 0px';
-        }
-
-        kapcsolas_v=!kapcsolas_v;
-	}
-
-
-	function lenyit_s(){
-		if (kapcsolas_s == true) {
-            lenyilas_s.style.display = 'none';
-			alap_s.style.cssText=' border-radius: 20px ';
-        }
-        else if(kapcsolas_s==false){
-            lenyilas_s.style.cssText = 'display: flex; border-radius: 0px 0px 20px 20px';
-			alap_s.style.cssText=' border-radius: 20px 20px 0px 0px';
-        }
-
-        kapcsolas_s=!kapcsolas_s;
-	}
-
-
-	
+	import ThemeBubble from './ThemeBubble.svelte';
 </script>
