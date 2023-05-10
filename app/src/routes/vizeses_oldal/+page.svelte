@@ -3,7 +3,7 @@
     <Navbar></Navbar>
         <div class= "cim">
             <img src="icons/waterfall-chart.png">
-            <h1>Vizeses</h1>
+            <h1>Vízesés</h1>
         </div>
         <div class="main">
             <div on:click={elso} class="kor kor1">
@@ -98,7 +98,7 @@
                         <path d="M567.14 547.805C556.374 547.805 547.553 556.709 547.553 567.732C547.553 578.756 556.305 587.66 567.14 587.66C577.976 587.66 586.728 578.756 586.728 567.732C586.728 556.709 577.976 547.805 567.14 547.805Z" fill="#E3E3E3"/>
                         </svg>
                         <svg class="pipa "width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M100 0C44.9 0 0 44.9 0 100C0 155.1 44.9 200 100 200C155.1 200 200 155.1 200 100C200 44.9 155.1 0 100 0ZM147.8 77L91.1 133.7C89.7 135.1 87.8 135.9 85.8 135.9C83.8 135.9 81.9 135.1 80.5 133.7L52.2 105.4C49.3 102.5 49.3 97.7 52.2 94.8C55.1 91.9 59.9 91.9 62.8 94.8L85.8 117.8L137.2 66.4C140.1 63.5 144.9 63.5 147.8 66.4C150.7 69.3 150.7 74 147.8 77Z" fill="#292D32"/>
+                            <path class="szine" d="M100 0C44.9 0 0 44.9 0 100C0 155.1 44.9 200 100 200C155.1 200 200 155.1 200 100C200 44.9 155.1 0 100 0ZM147.8 77L91.1 133.7C89.7 135.1 87.8 135.9 85.8 135.9C83.8 135.9 81.9 135.1 80.5 133.7L52.2 105.4C49.3 102.5 49.3 97.7 52.2 94.8C55.1 91.9 59.9 91.9 62.8 94.8L85.8 117.8L137.2 66.4C140.1 63.5 144.9 63.5 147.8 66.4C150.7 69.3 150.7 74 147.8 77Z" fill="#292D32"/>
                             
                         </svg>
                             
@@ -620,7 +620,7 @@
     let i_ertek;
     let h_ertek;
     let pipa: any;
-    let pipa_szine: any;
+    let szine: any;
     let penz: any;
     let ido: any;
     let hatokor: any;
@@ -632,6 +632,9 @@
     let kapcsolas_6= false;
     let kapcsolas_7= false;
     let kapcsolas_H= false;
+    let p: any;
+    let i:any;
+    let h: any;
 
     onMount(() => {
         hatra= document.querySelector('.hatra');
@@ -647,11 +650,15 @@
         p_ertek= document.querySelector('.p_ertek');
         i_ertek=  document.querySelector('.i_ertek');
         h_ertek=  document.querySelector('.h_ertek');
+        p= (document.querySelector('.p_ertek')as any).value;
+        i= (document.querySelector('.i_ertek')as any).value;
+        h= (document.querySelector('.h_ertek')as any).value;
         pipa= document.querySelector('pipa');
-        pipa_szine=document.querySelector('.pipa path');
+        szine=document.querySelector('.szine');
         penz.oninput =(() =>{
             let ujertek= penz.value;
             p_ertek.textContent = ujertek;
+            
         })
 
         ido.oninput =(() =>{
@@ -836,9 +843,15 @@
             }
             kapcsolas_H=!kapcsolas_H;
         
-            if(p_ertek.value = h_ertek.value){
-                pipa_szine.style.fill="white";
+            
+            if(p == i){
+                szine.style.fill="white";
             }
+            else{
+                szine.style.fill="#292D32";
+            }
+            
+
             
             
             
