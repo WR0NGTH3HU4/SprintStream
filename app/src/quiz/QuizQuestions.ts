@@ -6,7 +6,7 @@ export type QuizQuestion = {
     valasz: string
 };
 
-export const quizQuestions: {[fasz: string]: QuizQuestion[]} = {
+export const quizQuestions: {[keretrendszer: string]: QuizQuestion[]} = {
     scrum: [
         {
             kerdes: "Mi a scrum?",
@@ -190,3 +190,13 @@ export const quizQuestions: {[fasz: string]: QuizQuestion[]} = {
         },
     ],
 };
+
+/*
+{
+    kerdes: " ",
+    a: "A) ",
+    b: "B) ",
+    c: "C) ",
+    valasz: "a"
+},
+*/
