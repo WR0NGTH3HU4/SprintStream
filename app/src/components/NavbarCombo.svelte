@@ -9,10 +9,7 @@
     </span>
     {#if opened}
         <div transition:slide={{ easing:elasticOut, duration: 1000 }} class="options">
-            {#each options as option}
-                <!-- svelte-ignore a11y-click-events-have-key-events -->
-                <span on:click={ option.onClick }>{@html option.name }</span>
-            {/each}
+            <slot></slot>
         </div>
     {/if}
 </div>
@@ -39,6 +36,11 @@
         background-color: #e2e2e2;
         border-radius: 8px;
         padding: .5rem;
+        gap: .5rem;
+    }
+
+    .options > * {
+        position: relative;
     }
 
     .options::before {
@@ -53,7 +55,7 @@
 
     export let name: string;
     export let noarrow: boolean = false;
-    export let options: { name: string; onClick?: () => void }[];
+    //export let childrenClass: string | undefined;
     let opened: boolean = false;
 
     function openCombo(): void { opened = !opened }

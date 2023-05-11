@@ -1,26 +1,32 @@
+<script lang="ts">
+	import { onMount } from 'svelte';
+	import NavbarCombo from './NavbarCombo.svelte';
+	import ThemeBubble from './ThemeBubble.svelte';
+</script>
+
 <nav>
 	<span class="cim"><a href="/" class="noadeco">SprintStream</a></span>
-	<NavbarCombo
-		name="Scrum"
-		options={[
-			{ name: '<a href="scrum_oldal">Modell</a>' },
-			{ name: '<a href="quiz_oldal">Quiz</a> '},
-		]}
-	/>
-	<NavbarCombo
-		name="Vizeses"
-		options={[
-			{ name: '<a href="vizeses_oldal">Modell</a>' },
-			{ name: '<a href="quiz_oldal">Quiz</a> '},
-		]}
-	/>
-	<NavbarCombo
-		name={'<span class="material-symbols-rounded">settings</span>'}
-		options={[
-			{ name: '<ThemeBubble theme="caribbean" color="#000" />' },
-		]}
-		noarrow
-	/>
+	<NavbarCombo name="Scrum">
+		<a href="scrum_oldal">Modell</a>
+		<a href="quiz_oldal">Quiz</a>
+	</NavbarCombo>
+	<NavbarCombo name="Vizeses">
+		<a href="vizeses_oldal">Modell</a>
+		<a href="quiz_oldal">Quiz</a>
+	</NavbarCombo>
+
+	<NavbarCombo name={'<span class="material-symbols-rounded">settings</span>'} noarrow>
+		<ThemeBubble theme="original" color="blue" />
+		<ThemeBubble theme="caribbean" color="blue" />
+		<ThemeBubble theme="cottonCandy" color="blue" />
+		<ThemeBubble theme="grass" color="blue" />
+		<ThemeBubble theme="navy" color="blue" />
+		<ThemeBubble theme="oceanNight" color="blue" />
+		<ThemeBubble theme="pine" color="blue" />
+		<ThemeBubble theme="pink" color="blue" />
+		<ThemeBubble theme="redwine" color="blue" />
+		<ThemeBubble theme="rose" color="blue" />
+	</NavbarCombo>
 	<!-- TODO: slot for NavbarCombo -->
 	<!--
 		<li>
@@ -41,7 +47,6 @@
 </nav>
 
 <style lang="scss">
-	
 	:global(nav .options a) {
 		color: black;
 		text-decoration: none;
@@ -56,7 +61,7 @@
 		flex-direction: row;
 		flex-wrap: nowrap;
 		justify-content: flex-end;
-		
+
 		align-items: flex-start;
 		padding-right: 15px;
 		padding-left: 15px;
@@ -75,7 +80,7 @@
 		justify-self: flex-start;
 		margin-right: auto;
 		font-weight: 600;
-		
+
 		a {
 			color: white;
 			text-decoration: none;
@@ -85,11 +90,4 @@
 	img {
 		height: 2rem;
 	}
-
 </style>
-
-<script lang="ts">
-    import { onMount } from 'svelte';
-	import NavbarCombo from './NavbarCombo.svelte';
-	import ThemeBubble from './ThemeBubble.svelte';
-</script>
