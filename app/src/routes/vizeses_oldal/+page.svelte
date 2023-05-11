@@ -84,7 +84,11 @@
                             <input type="range" min="0" max="100" value="0" class="slider">
                             <h3 class="h_ertek ertek">0</h3>
                         </div>
+                        <div on:click={ellenorzes} class="ellenorzes">
+                            <h3>Ellenőrzés</h3>
+                        </div>
                     </div>
+                    
                     
                     <svg class="haromszog" width="842" height="740" viewBox="0 0 842 740" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M386.359 20C401.755 -6.66665 440.245 -6.66667 455.641 20L836.359 679.423C851.755 706.089 832.51 739.423 801.718 739.423H40.2821C9.49004 739.423 -9.75499 706.09 5.64101 679.423L386.359 20Z" fill="#292D32"/>
@@ -125,6 +129,30 @@
 
 <style lang="scss">
 
+    .ellenorzes{
+        background-color: #BFD7FF;
+        margin-top:2rem;
+        padding: 5% 10% 5% 10%;
+        border-radius: 20px;
+        box-shadow: #5465FF 5px 5px 5px ;
+
+
+    }
+    .ellenorzes:hover{
+        animation: ellenorzes 1s ease 0s 1 normal forwards;
+    }
+    @keyframes ellenorzes{
+        0%{
+            transform: scale(1);
+            
+
+        }
+        100%{
+            transform: scale(0.9);
+            
+
+        }
+    }
     .ertek{
         background-color:#E3E3E3 ;
         margin-left: 5%;
@@ -139,6 +167,7 @@
 
     }
     .skala{
+        padding-top:2% ;
         padding-left: 2%;
         padding-bottom: 2%;
         width: 25%;
@@ -635,6 +664,7 @@
     let p: any;
     let i:any;
     let h: any;
+    
 
     onMount(() => {
         hatra= document.querySelector('.hatra');
@@ -650,15 +680,13 @@
         p_ertek= document.querySelector('.p_ertek');
         i_ertek=  document.querySelector('.i_ertek');
         h_ertek=  document.querySelector('.h_ertek');
-        p= (document.querySelector('.p_ertek')as any).value;
-        i= (document.querySelector('.i_ertek')as any).value;
-        h= (document.querySelector('.h_ertek')as any).value;
+
         pipa= document.querySelector('pipa');
         szine=document.querySelector('.szine');
         penz.oninput =(() =>{
             let ujertek= penz.value;
             p_ertek.textContent = ujertek;
-            
+
         })
 
         ido.oninput =(() =>{
@@ -835,6 +863,7 @@
                 szovegek.style.display="none";
                 nyilak.style.display="none";
                 projharomszog.style.display='flex';
+                
             }
             else if(kapcsolas_H==true){
                 olvasas.style.display="none";
@@ -842,22 +871,40 @@
                 nyilak.style.display="flex";
             }
             kapcsolas_H=!kapcsolas_H;
-        
-            
-            if(p == i){
-                szine.style.fill="white";
-            }
-            else{
-                szine.style.fill="#292D32";
-            }
-            
 
-            
-            
-            
-        
+
     }
-    
+    function ellenorzes(){
+        
+        i= (document.querySelector('.i_ertek')as any).innerHTML;
+        h= (document.querySelector('.h_ertek')as any).innerHTML;
+        p=(document.querySelector('.p_ertek')as any).innerHTML;
+
+        if(p==0|| i==0 || h==0){
+            szine.style.fill="red";
+        }
+        else if((p-h)>=40)
+        {
+            szine.style.fill="orange";
+        }
+        else if((p-h)>=20){
+            szine.style.fill="yellow";
+        }
+        else if((h-p)>=5){
+            szine.style.fill="green";
+        }
+        else if((p-i)>=15){
+            szine.style.fill="orange";
+        }
+        else if(p==i && p==h && h==i){
+            szine.style.fill="green";
+        }
+        else{
+            szine.style.fill="yellow";
+        }
+        
+
+    }
 
 
     function lapoz_elore(){
