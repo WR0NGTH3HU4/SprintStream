@@ -31,11 +31,14 @@
 
 
             <div class="olvasas">
-                <div class="szoveg">                  
-                        <img src="" alt="">
+                <div class="szoveg">
+                    <div class="kepek">
+                        <!--<img src="kepekazoldalhoz/csoka_andras.jpg" alt="xd">-->
+                    </div>
                     <div>
                         <h1 class="jelenlegi_cim">{cim[cim_index]}</h1>
                         <p class="jelenlegi_szoveg">{szoveg[index]}</p>
+                        <p class="jelenlegi_kep">{@html kep[kep_index]}</p>
                     </div>
 
                 </div>
@@ -343,6 +346,7 @@
     
     let cim_index=0;
     let index=0;
+    let kep_index = 0;
     
     
     let cim=["Csóka András", "Császár András", "Kővágó Levente", "Kulimák Máté","Tátrai Dominik Oszkár"];
@@ -356,7 +360,17 @@
     
     ,"------------------------------------------."];
 
+    let kep = [
+    ]
 
+    onMount(() => {
+        let kep1 = document.createElement('img');
+        kep1.style.backgroundColor = 'black';
+        kep1.src = 'kepekazoldalhoz/csoka_andras.jpg';
+        kep1.alt = "aasdasd";
+        alert(kep1.outerHTML)
+        kep.push(kep1.outerHTML);
+    })
 
     function elso(){
         index=0;
