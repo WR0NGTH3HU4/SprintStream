@@ -1,6 +1,6 @@
 <main>
     <div id="quiz">
-        {#await qm.randomQuestions(kerdesek_szama)}
+        {#await kerdesekPromise}
             loding van tes
         {:then kerdesek}
             <div class="vege card">
@@ -59,8 +59,8 @@
                 <div id="ertekeles">
                     <div>
                         <h2>Végeztél a kérdésekkel.</h2>
-                        <p>A jól megválaszolt kérdések száma: {jok}/{kerdesek_szama}</p>
-                        <button class="btn" >Ellenőrzés</button>
+                        <!-- <p>A jól megválaszolt kérdések száma: {jok}/{kerdesek_szama}</p> -->
+                        <button class="btn" on:click={ellenorzes}>Ellenőrzés</button>
                     </div>
                     
                     <button class="btn" on:click={tetejere}><!--🢁-->Reset</button>
@@ -286,15 +286,18 @@
 </style>
 
 <script lang="ts">
-	import { each, element } from "svelte/internal";
+    import { each, element } from "svelte/internal";
     import { QuestionManager } from "../../quiz/QuizManager";
     import { ToggleManager } from "../../util/ToggleManager";
     import { onMount } from "svelte";
-
+    
     let qm: QuestionManager = new QuestionManager('scrum');
-    let jok = 0;
+    // let jok = 0;
     let kerdesek_szama = 10;
-
+    let kerdesekPromise = qm.randomQuestions(kerdesek_szama);
+    let toggles: ToggleManager[] = [];
+    
+    
     function toggleSzar(i: number, valasz: string) {
         let a: any = document.getElementById(`${i}_a`);
         let b: any = document.getElementById(`${i}_b`);
@@ -311,8 +314,8 @@
 
         toggles[jelenlegi_index].toggle(valasz);
         toggleSzar(jelenlegi_index, valasz);
-        if (kerdesek[jelenlegi_index].valasz == valasz) jok++;
-   
+        // if (kerdesek[jelenlegi_index].valasz == valasz) jok++;
+
     };
 
     function tetejere(){
@@ -326,11 +329,17 @@
 
 
     function ellenorzes(){
-        
+        kerdesekPromise.then(kerdesek => {
+            for (let i = 0; i < kerdesek_szama; i++) {
+                if (kerdesek[i].valasz == toggles[i].getToggled()) {
+                    let helyes: any = document.getElementById(`${i}_${kerdesek[i].valasz}`);
+                    helyes.style.backgroundColor = "green";
+                }
+            }
+        });
     }
 
     //
-    let toggles: ToggleManager[] = [];
     for (let i = 0; i < kerdesek_szama; i++) {
         toggles.push(new ToggleManager(["a", "b", "c"]));
     }

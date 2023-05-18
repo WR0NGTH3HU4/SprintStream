@@ -20,4 +20,12 @@ export class ToggleManager {
     public get(key: string) {
         return this.toggles[key];
     }
+
+    public getToggled(): string | null {
+        for (let key in this.toggles) {
+            if (this.toggles[key] == true) return key;
+        }
+
+        return null;
+    }
 }
