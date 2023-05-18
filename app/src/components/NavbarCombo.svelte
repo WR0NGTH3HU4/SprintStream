@@ -27,6 +27,7 @@
         cursor: pointer;
         display: flex;
         align-items: center;
+        padding: 0 .5rem;
     }
 
     .options {
@@ -35,6 +36,7 @@
         flex-direction: column;
         background-color: #e2e2e2;
         border-radius: 8px;
+        margin-top: .25rem;
         padding: .5rem;
         gap: .5rem;
     }
