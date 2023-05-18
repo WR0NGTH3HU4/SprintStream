@@ -883,25 +883,32 @@
         if(p==0|| i==0 || h==0){
             szine.style.fill="red";
         }
+                
+        else if(p==h && h==i && ((p==i  && p <=80 && i <=80)||((p-i)<20) || (i-p<20))){
+            szine.style.fill="green";
+        }
+        else if(p>80&& i>80 ){
+            szine.style.fill="#c6dd0e";
+        }
         else if((p-h)>=40)
         {
             szine.style.fill="orange";
         }
+        else if((p-h)>=60)
+        {
+            szine.style.fill="red";
+        }
+
         else if((p-h)>=20){
             szine.style.fill="yellow";
         }
         else if((h-p)>=5){
             szine.style.fill="green";
         }
-        else if((p-i)>=15){
-            szine.style.fill="orange";
-        }
-        else if(p==i && p==h && h==i){
+        else if((h-i)>40){
             szine.style.fill="green";
         }
-        else{
-            szine.style.fill="yellow";
-        }
+
         
 
     }
