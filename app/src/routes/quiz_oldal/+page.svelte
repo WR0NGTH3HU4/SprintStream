@@ -95,6 +95,12 @@
 
     button{
         font-family: 'Times New Roman', Times, serif;
+
+        &:hover{
+            transition-property: transform;
+            transition-duration: .3s;
+            transform: scale(.95);
+        }
     }
 
     h2{
@@ -130,11 +136,13 @@
             display: flex;
             flex-direction: column;
             justify-content: space-around;
+            color: #E2E2E2;
             
             & > button{
                 padding: 15px;
                 margin: 5px;
                 background-color: #9BB1FF;
+                
                 border-radius: 15px;
                 width: 100px;
                 font-size: 32px;
@@ -190,6 +198,7 @@
 
     #quiz > .card:nth-child(odd) {
         background-color: #E2E2E2;
+        color: black;
     }
 
     #quiz > .card:nth-child(even) {
