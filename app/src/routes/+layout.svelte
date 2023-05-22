@@ -1,4 +1,5 @@
 <main>
+    <Navbar />
     <slot></slot>
 </main>
 
@@ -16,4 +17,15 @@
         box-sizing: border-box;
         font-family: 'Inter', sans-serif;
     }
+    
+    :global(nav) {
+        position: absolute;
+        width: 100%;
+        box-sizing: border-box;
+        z-index: 100;
+    }
 </style>
+
+<script lang="ts">
+	import Navbar from "../components/Navbar.svelte";
+</script>

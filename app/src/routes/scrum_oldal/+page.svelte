@@ -172,10 +172,9 @@
                                     •	A Sprint Tervezés végére a Fejlesztőcsapatnak el kell tudni magyarázni a Terméktulajdonosnak és a Scrum Mesternek, hogy miként szándékozik önszerveződő csapatként dolgozni a Sprint Cél megvalósítása és az elvárt inkrementum elkészítése érdekében.
                                 </p> 
                             </div>
-                            
                         </div>
-                        
                     </div>
+                    
                 </div>
             </div>
         </div>
