@@ -15,6 +15,8 @@
 </div>
 
 <style lang="scss">
+    @use '../scss/nav.scss';
+
     .combo {
         color: black !important;
         display: flex;
@@ -23,11 +25,8 @@
     }
 
     .name {
-        color: white;
-        cursor: pointer;
+        @extend .nav_link;
         display: flex;
-        align-items: center;
-        padding: 0 .5rem;
     }
 
     .options {

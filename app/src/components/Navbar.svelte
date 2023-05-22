@@ -14,6 +14,7 @@
 		<a href="vizeses_oldal">Modell</a>
 		<a href="quiz_oldal">Quiz</a>
 	</NavbarCombo>
+	<a href="rolunk">Rólunk</a>
 
 	<NavbarCombo name={'<span class="material-symbols-rounded">settings</span>'} noarrow>
 		<ThemeBubble theme="original" color="blue" />
@@ -47,6 +48,8 @@
 </nav>
 
 <style lang="scss">
+	@use '../scss/nav.scss';
+
 	:global(nav .options a) {
 		color: black;
 		text-decoration: none;
@@ -72,6 +75,10 @@
 
 		& > * {
 			cursor: pointer;
+		}
+
+		& > a, & > a:active, & > a:link, & > a:hover {
+			@extend .nav_link;
 		}
 	}
 
