@@ -887,6 +887,13 @@
         else if(p==h && h==i && ((p==i  && p <=80 && i <=80)||((p-i)<20) || (i-p<20))){
             szine.style.fill="green";
         }
+        else if((p>80&& i>80 )&&h<45){
+            szine.style.fill="orange";
+        }
+        else if((p>80&& i>80 )&&h<60){
+            szine.style.fill="yellow";
+        }
+
         else if(p>80&& i>80 ){
             szine.style.fill="#c6dd0e";
         }
