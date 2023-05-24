@@ -1,5 +1,5 @@
 <div>
-    <span id={theme}></span>
+    <span on:click={() => onClick()} id={theme}></span>
 </div>
 
 <style>
@@ -14,13 +14,19 @@
 
 <script lang="ts">
 	import { onMount } from "svelte";
+	import { ThemeManager } from "../util/theme/ThemeManager";
+	import { Themes, type Theme } from "../util/theme/Themes";
 
     export let theme: string;
-    export let color: string;
+    let color: string = Themes[theme][0];
 
     function onLoad(c) {
         const circle = document.getElementById(theme);
         circle.style.backgroundColor = c;
+    }
+
+    function onClick() {
+        ThemeManager.switchToTheme(theme as Theme);
     }
 
     onMount(() => {

@@ -17,34 +17,17 @@
 	<a href="rolunk">Rólunk</a>
 
 	<NavbarCombo name={'<span class="material-symbols-rounded">settings</span>'} noarrow>
-		<ThemeBubble theme="original" color="blue" />
-		<ThemeBubble theme="caribbean" color="blue" />
-		<ThemeBubble theme="cottonCandy" color="blue" />
-		<ThemeBubble theme="grass" color="blue" />
-		<ThemeBubble theme="navy" color="blue" />
-		<ThemeBubble theme="oceanNight" color="blue" />
-		<ThemeBubble theme="pine" color="blue" />
-		<ThemeBubble theme="pink" color="blue" />
-		<ThemeBubble theme="redwine" color="blue" />
-		<ThemeBubble theme="rose" color="blue" />
+		<ThemeBubble theme="default" />
+		<ThemeBubble theme="caribbean" />
+		<ThemeBubble theme="cottoncandy" />
+		<ThemeBubble theme="grass" />
+		<ThemeBubble theme="navy" />
+		<ThemeBubble theme="oceannight" />
+		<ThemeBubble theme="pine" />
+		<ThemeBubble theme="pink" />
+		<ThemeBubble theme="redwine" />
+		<ThemeBubble theme="rose" />
 	</NavbarCombo>
-	<!-- TODO: slot for NavbarCombo -->
-	<!--
-		<li>
-		<div class="paletta">
-			<img src="Színek/caribbean.png" >
-			<img src="Színek/cottonCandy.png" >
-			<img src="Színek/grass.png" >
-			<img src="Színek/navy.png" >
-			<img src="Színek/oceanNight.png" >
-			<img src="Színek/original.png" >
-			<img src="Színek/pine.png" >
-			<img src="Színek/pink.png" >
-			<img src="Színek/redWine.png" >
-			<img src="Színek/rose.png" >
-		</div>
-	</li>
-	-->
 </nav>
 
 <style lang="scss">
