@@ -60,10 +60,11 @@
                     <div>
                         <h2>Végeztél a kérdésekkel.</h2>
                         <!-- <p>A jól megválaszolt kérdések száma: {jok}/{kerdesek_szama}</p> -->
-                        <button class="btn" on:click={ellenorzes}>Ellenőrzés</button>
+                        <p>A helyes válaszokat zölddel a jelöli.</p>
+                        <button class="btn" on:click={ellenorzes} on:click={kezdes}>Ellenőrzés</button>
                     </div>
                     
-                    <button class="btn" on:click={tetejere}><!--🢁-->Reset</button>
+                    <button class="btn" on:click={tetejere}><!--🢁-->Újra</button>
                 </div>
                 <svg preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
                     <path fill="#788BFF" fill-opacity="1" d="M0,128L48,154.7C96,181,192,235,288,224C384,213,480,139,576,122.7C672,107,768,149,864,186.7C960,224,1056,256,1152,234.7C1248,213,1344,139,1392,101.3L1440,64L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>    
@@ -312,9 +313,9 @@
         let b: any = document.getElementById(`${i}_b`);
         let c: any = document.getElementById(`${i}_c`);
 
-        a.style.backgroundColor = toggles[i].get('a') ? "red" : "#9BB1FF";
-        b.style.backgroundColor = toggles[i].get('b') ? "red" : "#9BB1FF";
-        c.style.backgroundColor = toggles[i].get('c') ? "red" : "#9BB1FF";
+        a.style.backgroundColor = toggles[i].get('a') ? "#2b40ff" : "#9BB1FF";
+        b.style.backgroundColor = toggles[i].get('b') ? "#2b40ff" : "#9BB1FF";
+        c.style.backgroundColor = toggles[i].get('c') ? "#2b40ff" : "#9BB1FF";
     }
 
     function kovi_kerdes(kerdesek: any, jelenlegi_index: number, valasz: string) {
