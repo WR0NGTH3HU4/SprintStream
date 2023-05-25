@@ -61,7 +61,11 @@
                         <h2>Végeztél a kérdésekkel.</h2>
                         <!-- <p>A jól megválaszolt kérdések száma: {jok}/{kerdesek_szama}</p> -->
                         <p>A helyes válaszokat zölddel a jelöli.</p>
-                        <button class="btn" on:click={ellenorzes} on:click={kezdes}>Ellenőrzés</button>
+                        <p>A helytelen válaszok jelöletlenek.</p>
+                        {#if ellenorzott}
+                            <p id="helyes"> Helyes válaszok (ellenőrzés után): {jok}</p>
+                        {/if}
+                        <button class="btn" on:click={ellenorzes}>Ellenőrzés</button>
                     </div>
                     
                     <button class="btn" on:click={tetejere}><!--🢁-->Újra</button>
@@ -296,17 +300,17 @@
 </style>
 
 <script lang="ts">
-    import { each, element } from "svelte/internal";
+    import { each, element, noop } from "svelte/internal";
     import { QuestionManager } from "../../quiz/QuizManager";
     import { ToggleManager } from "../../util/ToggleManager";
     import { onMount } from "svelte";
     
     let qm: QuestionManager = new QuestionManager('scrum');
-    // let jok = 0;
+    let jok: number = 0;
     let kerdesek_szama = 10;
     let kerdesekPromise = qm.randomQuestions(kerdesek_szama);
     let toggles: ToggleManager[] = [];
-    
+    let ellenorzott = false;
     
     function toggleSzar(i: number, valasz: string) {
         let a: any = document.getElementById(`${i}_a`);
@@ -344,9 +348,11 @@
                 if (kerdesek[i].valasz == toggles[i].getToggled()) {
                     let helyes: any = document.getElementById(`${i}_${kerdesek[i].valasz}`);
                     helyes.style.backgroundColor = "green";
+                    jok++;
                 }
             }
         });
+        ellenorzott = true;
     }
 
     //
