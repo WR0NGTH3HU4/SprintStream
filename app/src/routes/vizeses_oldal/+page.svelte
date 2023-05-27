@@ -443,6 +443,7 @@
         align-items: center;
         position:relative;
         
+        
     }
 .kor{
         display: flex;
@@ -604,6 +605,15 @@
         .kor{
             transform: scale(.430) translate(74%,0%);
         }
+        .cim h1{
+            font-size: 6rem;
+        }
+        .cim img{
+            width: 70%;
+        }
+        .ph{
+            transform: scale(0.8);
+        }
         
     }
     @media screen and (max-width: 630px){
@@ -616,9 +626,10 @@
         .kor{
             transform: scale(.410) translate(80%,0%);
         }
+
         
     }
-
+    
     
     .kor:hover{
         animation: kiemeles 4s infinite;
@@ -632,7 +643,7 @@
         50%{             
             background-color: #292D32;            
              color: #E3E3E3;            
-            box-shadow: #E3E3E3 5px 5px;         
+   
         }
 
     }
