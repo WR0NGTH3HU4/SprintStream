@@ -1,130 +1,331 @@
 <main>
-    <div class="egesz">
-        <Navbar></Navbar>
-        <div class="body">
+    <div class="scrum">
+
+        <!--<Navbar></Navbar>-->
+
+
+        <!------------------------------------------------------------------------------------------------------>
             <div class="fejlec">
                 <img src="icons/scrum.png" alt="scrum kép">
                 <p>Scrum</p>
             </div>
-            <div class="lepesvalaszto">
-                <div class="gomb1 gomb btn">
-                    <p>1.lépés</p>
-                </div>
-                <div class=" gomb2 gomb btn">
-                    <p>2.lépés</p>
-                </div>
-                <div class=" gomb3 gomb btn">
-                    <p>3.lépés</p>
-                </div>
-                <div class=" gomb4 gomb btn">
-                    <p>4.lépés</p>
-                </div>
-                <div class=" gomb5 gomb btn">
-                    <p>5.lépés</p>
-                </div>
-                <div class=" gomb6 gomb btn">
-                    <p>6.lépés</p>
-                </div>
-                <div class=" gomb7 gomb btn">
-                    <p>7.lépés</p>
-                </div>
-            </div>
-            <div class="container">
-                <div class="indicator">
-                    <spam class="btn active btn2"></spam>
-                    <spam class="btn btn2"></spam>
-                    <spam class="btn btn2"></spam>
-                    <spam class="btn btn2"></spam>
-                    <spam class="btn btn2"></spam>
-                    <spam class="btn btn2"></spam>
-                    <spam class="btn btn2"></spam>
 
-                </div>
-                <div class="testimonial">
-                    <div class="slide-row" id="slide">
-                        <div class="slide-col">
-                            <div class="lepes-text">
+
+            <div class="lepesvalaszto">
+                <label for="i_1">
+                    <div  class="gomb1 gomb btn " >
+                        <p>1.lépés</p>
+                        
+                    </div>
+                </label>
+                <label for="i_2">
+                    <div class=" gomb2 gomb btn">
+                        <p>2.lépés</p>
+                    </div>
+                </label>
+                <label for="i_3">
+                    <div class=" gomb3 gomb btn">
+                        <p>3.lépés</p>
+                    </div>
+                </label>
+                <label for="i_4">
+                    <div class=" gomb4 gomb btn">
+                        <p>4.lépés</p>
+                    </div>
+                </label>
+                <label for="i_5">
+                    <div class=" gomb5 gomb btn ">
+                        <p>5.lépés</p>
+                    </div>
+                </label>
+                <label for="i_6">
+                    <div class=" gomb6 gomb btn">
+                        <p>6.lépés</p>
+                    </div>
+                </label>
+                <label for="i_7">
+                    <div class=" gomb7 gomb btn">
+                        <p>7.lépés</p>
+                    </div>
+                </label>
+            </div>
+
+
+                <div class="container">
+                
+                    <svg preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 1440 320">
+                        <path fill="#788BFF" fill-opacity="1" d="M0,192L48,202.7C96,213,192,235,288,240C384,245,480,235,576,202.7C672,171,768,117,864,117.3C960,117,1056,171,1152,208C1248,245,1344,267,1392,277.3L1440,288L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path>
+                        <path fill="#5465FF" fill-opacity="1" d="M0,192L48,176C96,160,192,128,288,149.3C384,171,480,245,576,277.3C672,309,768,299,864,266.7C960,235,1056,181,1152,149.3C1248,117,1344,107,1392,101.3L1440,96L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path>
+                    </svg>
+
+                    <!--
+                    <div class="indicator">
+                        <spam class="btn active btn2"></spam>
+                        <spam class="btn btn2"></spam>
+                        <spam class="btn btn2"></spam>
+                        <spam class="btn btn2"></spam>
+                        <spam class="btn btn2"></spam>
+                        <spam class="btn btn2"></spam>
+                        <spam class="btn btn2"></spam>
+    
+                    </div>
+    
+                    <div class="testimonial">
+                        <div class="slide-row" id="slide">
+                            <div class="slide-col">
+                                <div class="lepes-text">
+                                    <h3>Mi a Scrum?</h3>
+                                    <p>A Scrum egy agilis módszertan, amely együttműködést és folyamatos fejlesztést támogat. 
+                                        Az agilitás azt jelenti, hogy a projekt csapata folyamatosan javítja és finomítja a munkafolyamatot a visszajelzések (Daily Scrum) alapján. 
+                                        Ez a módszer hatékony lehet olyan projektekben, ahol a feladatok és a célok nem teljesen meghatározottak, és a változások gyakoriak, például a szoftvertervezésben.
+                                        </p> 
+                                </div>
+                                <div class="lepes-img">
+                                    <img src="icons/document.png" alt="kép">
+                                </div>
+                            </div>  
+                            <div class="slide-col">
+                                <div class="lepes-text lepes-text2">
+                                    <h3>A Terméktulajdonos:</h3>
+                                    <ul>
+                                        <li>A terméktulajdonos nem egy bizottság, hanem egy személy.</li>
+                                        <li>Az egyetlen személy, aki felelős a Termék Backlog <ez egy link lesz> kezeléséért.</li>
+                                        <li>A terméktulajdonos is elvégezheti, ezeket a feladatokat, de elvégeztetheti a fejlesztőcsapattal is.</li>
+                                        <li>Ahhoz, hogy a Terméktulajdonos sikeresen el tudja végezni a feladatát, a teljes szervezetnek tiszteletben kell tartania a döntéseit. A Terméktulajdonos döntései a Termék Backlog tartalmában és az elemek sorrendjében nyilvánulnak meg. Senki nincs felhatalmazva arra, hogy a Fejlesztőcsapattal a meghatározottól eltérő követelmény-rendszer szerint dolgoztasson, és a Fejlesztőcsapat sem fogadhat el utasítást senki mástól.</li>
+                                        
+                                    </ul>
+                                    
+                                </div>
+                                <div class="lepes-img">
+                                    <img src="icons/document.png" alt="kép">
+                                </div>
+                            </div>
+                            <div class="slide-col">
+                                <div class="lepes-text lepes-text2">
+                                    <h3>Scrum Mester:</h3>
+                                    <ul>
+                                        <li>A Scrum Mester a Scrum megértéséért és betartásáért felelős. A Scrum Mesterek ezt az által érik el, hogy megbizonyosodnak a csapat Scrum elméleti-, gyakorlati- és szabályismeretéről, valamint meggyőződnek elkötelezettségükről is.</li>
+                                        <li>A Scrum Mester szolgáltatásai a Terméktulajdonos felé</li>
+                                        <li>A Scrum Mester többféle módon segíti a Terméktulajdonost, többek között azzal, hogy:</li>
+                                        <ul class="bekezdes">
+                                            <li>Módszereket alakít ki a Termék Backlog hatékony kezelésére;</li>
+                                            <li>Segít megérteni a Scrum Csapatnak, hogy miért szükséges, hogy a Termék Backlog elemei világosak, tömörek legyenek;</li>
+                                            <li>Megérti a terméktervezést empirikus környezetben;</li>
+                                            <li>Biztosítja, hogy a Terméktulajdonos tudja, hogy miként rendezze a Termék Backlogot az érték maximalizálása érdekében</li>
+                                            <li>Érti és gyakorolja az agilitást; valamint,</li>
+                                            <li>Kérés illetve szükség esetén előmozdítja a Scrum események lebonyolítását.</li>
+                                            
+                                        </ul>
+                                        <li>A Scrum Mester szolgáltatásai a Fejlesztőcsapat felé</li>
+                                        <li>A Scrum Mester többféle módon segíti a Fejlesztőcsapatot, beleértve:</li>
+                                        <ul class="bekezdes">
+                                            <li>Felkészíti, támogatja a Fejlesztőcsapatot az önszerveződésben és a kereszt-funkcionalitás kialakításában;
+                                        Segíti a Fejlesztőcsapatot magas színvonalú termékek előállításában;
+                                        Eltávolítja a Fejlesztőcsapat útjába kerülő akadályokat;</li>
+                                            <li>Kérés illetve szükség esetén előmozdítja a Scrum események lebonyolítását; és,</li>
+                                            <li>Segíti a Fejlesztőcsapatot olyan szervezeti környezetben, ahol még nem teljes mértékben vezették be és értették meg a Scrumot.</li>
+                                        </ul>
+                                    </ul>
+                                </div>
+                                <div class="lepes-img">
+                                    <img src="icons/document.png" alt="kép">
+                                </div>
+                            </div>
+                            <div class="slide-col">
+                                <div class="lepes-text lepes-text2">
+                                    <h3>A Fejlesztőcsapat:</h3>
+                                    <ul>
+                                        <li>A Fejlesztőcsapat olyan szakemberekből áll, akik azon dolgoznak, hogy minden egyes Sprint végén leszállítható legyen a termék egy “Kész” potenciálisan kibocsátható verziója.</li>
+                                        <li>A Fejlesztő csapatokat úgy állítja össze és hatalmazza fel a szervezet, hogy ők maguk szervezzék és menedzseljék saját munkájukat. Az így létrejövő szinergia optimalizálja a Fejlesztőcsapat hatékonyságát és termelékenységét.</li>
+                                        <li>A Fejlesztőcsapatok az alábbi tulajdonságokkal rendelkeznek:</li>
+                                        <ul class="bekezdes">
+                                            <li>Önszerveződőek. Senki – még a Scrum Mester – sem mondja meg a Fejlesztőcsapatnak, hogy miként hozzanak létre a Termék Backlogból potenciálisan szállítható funkcionalitást tartalmazó Inkrementumokat;</li>
+                                            <li>A Fejlesztőcsapatok kereszt-funkcionálisak, és csapatként minden olyan ismerettel és készséggel rendelkeznek, ami szükséges a termék Inkrementumok elkészítéséhez;</li>
+                                            <li>A Scrum a „Fejlesztő”-n kívül nem alkalmaz külön titulust a Fejlesztőcsapat egyes tagjaira, függetlenül attól, hogy egyénenként milyen tevékenységet végeznek. Ez alól a szabály alól nincs kivétel.</li>
+                                            <li>. A Fejlesztőcsapatokban nincsenek alcsoportok egyes célfeladatok – pl. tesztelés vagy üzleti elemzés – elvégzésére; ez alól a szabály alól nincs kivétel; illetve,</li>
+                                            <li>A Fejlesztőcsapatban az egyes tagok speciális ismeretekkel, készségekkel és szakterületi tudással rendelkezhetnek, de a felelősség az egész Fejlesztőcsapatra, mint egy egységre hárul.</li>
+                                            
+                                        </ul>
+                                    </ul>
+                                    
+                                </div>
+                                <div class="lepes-img">
+                                    <img src="icons/document.png" alt="kép">
+                                </div>
+                            </div>
+                            <div class="slide-col">
+                                <div class="lepes-text lepes-text2">
+                                    <h3>A Sprint:</h3>
+                                    <ul>
+                                        <li>A Scrum lelke a legfeljebb egy hónapig tartó Sprint, melynek időtartama alatt előáll egy “Kész”, használható és potenciálisan kibocsátható termék.</li>
+                                        <li>A Sprintek hossza legjobb esetben a teljes fejlesztési idő során azonos. Az előző Sprint lezárása után azonnal egy újabb Sprint kezdődik.</li>
+                                        <li>A Sprintek Sprint Tervezésből, Napi Scrumokból, a fejlesztési munkából, a Sprint Áttekintésből és a Sprint Visszatekintésből épülnek föl.</li>
+                                        <li>A Sprint során:</li>
+                                        <ul class="bekezdes">
+                                            <li>Nem történnek olyan változtatások, melyek veszélyeztetik a Sprint Célját;</li>
+                                            <li>A minőségi célok nem csökkennek;</li>
+                                            <li>A Terméktulajdonos és a Fejlesztőcsapat újra tárgyalhatja és tisztázhatja a Feladatokat (Scope) az időközben szerzett ismeretek alapján.</li>
+                                        </ul>
+                                        <li>Hasonlóan a projektekhez, a Sprintek is valamilyen cél elérését szolgálják. 
+                                        -Minden egyes Sprint tartalmaz:</li>
+                                        <ul class="bekezdes">
+                                            <li>egy meghatározást, ami leírja, hogy minek kell megvalósulnia, egy modellt és egy rugalmas tervet, ami</li>
+                                            <li>irányt mutat a megvalósításban. A Sprint részének tekintjük továbbá az elvégzett munkát és az eredményül kapott terméket.</li>
+                                        </ul>
+                                        <li>A Sprintek időtartama egy naptári hónapra korlátozott. 
+                                        Ha a Sprint hossza túl hosszú, megváltozhat a megvalósítandó dolog specifikációja, emelkedhet a komplexitása és nőhet a kockázat. </li>
+                                        <li>A Sprintek úgy biztosítják a tervezhetőséget, hogy legalább minden naptári hónapban egyszer ellenőrzik a Sprint Cél felé haladást, és szükség esetén kiigazítják a folyamatot.</li>
+                                        
+                                    </ul>
+                                   
+                                       
+                                </div>
+                                <div class="lepes-img">
+                                    <img src="icons/document.png" alt="kép">
+                                </div>
+                            </div>
+                            <div class="slide-col">
+                                <div class="lepes-text lepes-text2 ">
+                                    <h3>Sprint tervezés:</h3>
+                                    <ul>
+                                        <li>A Sprintben végzendő munkát a Sprint Tervezésen tervezik meg.</li>
+                                        <li>Ez a terv a teljes Scrum Csapat közös munkájának eredménye.</li>
+                                        <li>A Sprint Tervezés időtartama egy hónapos Sprint esetében legfeljebb nyolc óra. </li>
+                                        <li>Rövidebb Sprintek esetén az esemény időtartama általában kisebb.</li>
+                                        <li>A Scrum Mester biztosítja, hogy az esemény megtörténjen, és a résztvevők megértsék annak célját. A Scrum Mester ráneveli a Scrum Csapatot az időkorlátok betartására.</li>
+                                        <li>A Sprint Tervezés a következő kérdésekre válaszol:</li>
+                                        <ul class="bekezdes">
+                                            <li>Mit fog tartalmazni a következő Sprint eredményeképpen szállítandó Inkrementum?</li>
+                                            <li>Hogyan lehet elvégezni az Inkrementum előállításához szükséges munkát?</li>
+                                            <li> Mi fog elkészülni ebben a Sprintben?</li>
+                                        </ul>
+                                            <li>A Fejlesztőcsapat azon dolgozik, hogy felvázolja a Sprint során megvalósítandó funkcionalitást.</li>
+                                            <li>A Terméktulajdonos bemutatja a Sprint során elérendő célt és azokat a Termék Backlog tételeket, amelyek megvalósításával a Sprint eléri a Sprint Célt. A teljes Scrum Csapat együttműködik a Sprintben elvégzendő munka megértésének érdekében.</li>
+                                            <li>Ennek a megbeszélésnek a bemeneti elemei a Termék Backlog, a legutóbbi termék Inkrementum, a Fejlesztőcsapat tervezett kapacitása a Sprint ideje alatt, valamint a Fejlesztőcsapat korábbi teljesítménye.</li>
+                                            <li>Az, hogy az adott Sprint számára a Termék Backlogból hány tételt választanak ki, egyedül a Fejlesztőcsapaton múlik. Kizárólag a Fejlesztőcsapat tudhatja, hogy mit képes végrehajtani a soron következő Sprintben.</li>
+                                            <li>Miután a Fejlesztőcsapat előre jelezte, hogy a Termék Backlog mely elemeit fogja leszállítani a Sprint során, a Scrum Csapat elkészíti a Sprint Célt <ide majd kell egy link>.</li>
+                                        
+                                    </ul>
+                                    
+                                    
+                                </div>
+                                <div class="lepes-img">
+                                    <img src="icons/document.png" alt="kép">
+                                </div>
+                            </div>
+                            <div class="slide-col">
+                                <div class="lepes-text lepes-text2">
+                                    <h3>Hogyan készül el a kiválasztott munka?</h3>
+                                    <ul>
+                                        <li>Miután a Sprint Célját meghatározta és a Sprintbe kerülő Termék Backlog tételeket kiválasztotta, a Fejlesztőcsapat eldönti, hogy a Sprint során miként építi be ezt a funkcionalitást a “Kész” termék inkrementumba.</li>
+                                        <li>Az erre a Sprintre kiválogatott Termék Backlog tételeket, valamint ezek leszállítási tervét együttesen Sprint Backlognak (Sprint Teendőlista) nevezik. </li>
+                                        <li>A Fejlesztőcsapat általában a Termék Backlog működő termék inkrementummá konvertálásához szükséges feladatok meghatározásával és a rendszer megtervezésével kezdi meg a munkát. </li>
+                                        <li>A munkamennyiség- és becsült ráfordítás szerint is változhat.</li>
+                                        <li>Mindamellett a Sprint Tervezés során elegendő mennyiségű kivitelezendő munkát terveznek meg a Fejlesztőcsapat részére annak érdekében, hogy megalapozottan előre tudják vetíteni, hogy mit vélnek elvégezhetőnek a soron következő Sprint alatt.</li>
+                                        <li>A megbeszélés végére a Fejlesztőcsapat a Sprint első napjaira tervezett feladatokat gyakran egy napos vagy annál kisebb részekre bontja le.</li>
+                                        <li>A Fejlesztőcsapat önszerveződve vállalja el a Sprint Backlogban szereplő egyes feladatokat a Sprint Tervezés alatt, valamint amennyire szükséges, a Sprint közben is.</li>
+                                        <li>A Terméktulajdonos segíthet tisztázni a kiválasztott Termék Backlog tételeket és kompromisszumokat köthet.</li>
+                                        <li>Ha a Fejlesztőcsapat úgy ítéli meg, hogy túl sok vagy túl kevés az elvégzendő munka, újratárgyalhatja a kiválasztott Termék Backlog tételeket a Terméktulajdonossal.</li>
+                                        <li>A Fejlesztőcsapat másokat is meghívhat a megbeszélésre, hogy technikai vagy szakterületi tanácsokat adjanak.</li>
+                                        <li>A Sprint Tervezés végére a Fejlesztőcsapatnak el kell tudni magyarázni a Terméktulajdonosnak és a Scrum Mesternek, hogy miként szándékozik önszerveződő csapatként dolgozni a Sprint Cél megvalósítása és az elvárt inkrementum elkészítése érdekében.</li>
+                                    </ul>
+                                        
+                                
+                                </div>
+                                <div class="lepes-img">
+                                    <img src="icons/document.png" alt="kép">
+                                </div>
+                                
+            
+                            </div>
+                            
+                        </div>
+                    </div>
+
+
+                   
+                    -->
+                    <input type="radio" name="switch" id="i_1"checked>
+                    <input type="radio" name="switch" id="i_2">
+                    <input type="radio" name="switch" id="i_3" >
+                    <input type="radio" name="switch" id="i_4">
+                    <input type="radio" name="switch" id="i_5">
+                    <input type="radio" name="switch" id="i_6">
+                    <input type="radio" name="switch" id="i_7">
+                    <div class="wrapper">
+                        <div class="slide">
+                            <div class="content content1">
+        
                                 <h3>Mi a Scrum?</h3>
                                 <p>A Scrum egy agilis módszertan, amely együttműködést és folyamatos fejlesztést támogat. 
                                     Az agilitás azt jelenti, hogy a projekt csapata folyamatosan javítja és finomítja a munkafolyamatot a visszajelzések (Daily Scrum) alapján. 
                                     Ez a módszer hatékony lehet olyan projektekben, ahol a feladatok és a célok nem teljesen meghatározottak, és a változások gyakoriak, például a szoftvertervezésben.
-                                    </p> 
-                            </div>
-                            <div class="lepes-img">
-                                <img src="icons/document.png" alt="kép">
-                            </div>
-                        </div>  
-                        <div class="slide-col">
-                            <div class="lepes-text">
+                                </p> 
+
+
+
+                            </div>   
+                        </div>
+                        <div class="slide">
+                            <div class="content content2">
                                 <h3>A Terméktulajdonos:</h3>
-                                <ul>
-                                    <li>A terméktulajdonos nem egy bizottság, hanem egy személy.</li>
-                                    <li>Az egyetlen személy, aki felelős a Termék Backlog <ez egy link lesz> kezeléséért.</li>
-                                    <li>A terméktulajdonos is elvégezheti, ezeket a feladatokat, de elvégeztetheti a fejlesztőcsapattal is.</li>
-                                    <li>Ahhoz, hogy a Terméktulajdonos sikeresen el tudja végezni a feladatát, a teljes szervezetnek tiszteletben kell tartania a döntéseit. A Terméktulajdonos döntései a Termék Backlog tartalmában és az elemek sorrendjében nyilvánulnak meg. Senki nincs felhatalmazva arra, hogy a Fejlesztőcsapattal a meghatározottól eltérő követelmény-rendszer szerint dolgoztasson, és a Fejlesztőcsapat sem fogadhat el utasítást senki mástól.</li>
-                                    
-                                </ul>
-                                
-                            </div>
-                            <div class="lepes-img">
-                                <img src="icons/document.png" alt="kép">
-                            </div>
+                                    <ul>
+                                        <li>A terméktulajdonos nem egy bizottság, hanem egy személy.</li>
+                                        <li>Az egyetlen személy, aki felelős a Termék Backlog <ez egy link lesz> kezeléséért.</li>
+                                        <li>A terméktulajdonos is elvégezheti, ezeket a feladatokat, de elvégeztetheti a fejlesztőcsapattal is.</li>
+                                        <li>Ahhoz, hogy a Terméktulajdonos sikeresen el tudja végezni a feladatát, a teljes szervezetnek tiszteletben kell tartania a döntéseit. A Terméktulajdonos döntései a Termék Backlog tartalmában és az elemek sorrendjében nyilvánulnak meg. Senki nincs felhatalmazva arra, hogy a Fejlesztőcsapattal a meghatározottól eltérő követelmény-rendszer szerint dolgoztasson, és a Fejlesztőcsapat sem fogadhat el utasítást senki mástól.</li>
+                                        
+                                    </ul>
+                            </div>    
                         </div>
-                        <div class="slide-col">
-                            <div class="lepes-text">
+                        <div class="slide">
+                            <div class="content content3">
                                 <h3>Scrum Mester:</h3>
-                                <ul>
-                                    <li>A Scrum Mester a Scrum megértéséért és betartásáért felelős. A Scrum Mesterek ezt az által érik el, hogy megbizonyosodnak a csapat Scrum elméleti-, gyakorlati- és szabályismeretéről, valamint meggyőződnek elkötelezettségükről is.</li>
-                                    <li>A Scrum Mester szolgáltatásai a Terméktulajdonos felé</li>
-                                    <li>A Scrum Mester többféle módon segíti a Terméktulajdonost, többek között azzal, hogy:</li>
-                                    <ul class="bekezdes">
-                                        <li>Módszereket alakít ki a Termék Backlog hatékony kezelésére;</li>
-                                        <li>Segít megérteni a Scrum Csapatnak, hogy miért szükséges, hogy a Termék Backlog elemei világosak, tömörek legyenek;</li>
-                                        <li>Megérti a terméktervezést empirikus környezetben;</li>
-                                        <li>Biztosítja, hogy a Terméktulajdonos tudja, hogy miként rendezze a Termék Backlogot az érték maximalizálása érdekében</li>
-                                        <li>Érti és gyakorolja az agilitást; valamint,</li>
-                                        <li>Kérés illetve szükség esetén előmozdítja a Scrum események lebonyolítását.</li>
-                                        
+                                    <ul>
+                                        <li>A Scrum Mester a Scrum megértéséért és betartásáért felelős. A Scrum Mesterek ezt az által érik el, hogy megbizonyosodnak a csapat Scrum elméleti-, gyakorlati- és szabályismeretéről, valamint meggyőződnek elkötelezettségükről is.</li>
+                                        <li>A Scrum Mester szolgáltatásai a Terméktulajdonos felé</li>
+                                        <li>A Scrum Mester többféle módon segíti a Terméktulajdonost, többek között azzal, hogy:</li>
+                                        <ul class="bekezdes">
+                                            <li>Módszereket alakít ki a Termék Backlog hatékony kezelésére;</li>
+                                            <li>Segít megérteni a Scrum Csapatnak, hogy miért szükséges, hogy a Termék Backlog elemei világosak, tömörek legyenek;</li>
+                                            <li>Megérti a terméktervezést empirikus környezetben;</li>
+                                            <li>Biztosítja, hogy a Terméktulajdonos tudja, hogy miként rendezze a Termék Backlogot az érték maximalizálása érdekében</li>
+                                            <li>Érti és gyakorolja az agilitást; valamint,</li>
+                                            <li>Kérés illetve szükség esetén előmozdítja a Scrum események lebonyolítását.</li>
+                                            
+                                        </ul>
+                                        <li>A Scrum Mester szolgáltatásai a Fejlesztőcsapat felé</li>
+                                        <li>A Scrum Mester többféle módon segíti a Fejlesztőcsapatot, beleértve:</li>
+                                        <ul class="bekezdes">
+                                            <li>Felkészíti, támogatja a Fejlesztőcsapatot az önszerveződésben és a kereszt-funkcionalitás kialakításában;
+                                        Segíti a Fejlesztőcsapatot magas színvonalú termékek előállításában;
+                                        Eltávolítja a Fejlesztőcsapat útjába kerülő akadályokat;</li>
+                                            <li>Kérés illetve szükség esetén előmozdítja a Scrum események lebonyolítását; és,</li>
+                                            <li>Segíti a Fejlesztőcsapatot olyan szervezeti környezetben, ahol még nem teljes mértékben vezették be és értették meg a Scrumot.</li>
+                                        </ul>
                                     </ul>
-                                    <li>A Scrum Mester szolgáltatásai a Fejlesztőcsapat felé</li>
-                                    <li>A Scrum Mester többféle módon segíti a Fejlesztőcsapatot, beleértve:</li>
-                                    <ul class="bekezdes">
-                                        <li>Felkészíti, támogatja a Fejlesztőcsapatot az önszerveződésben és a kereszt-funkcionalitás kialakításában;
-                                    Segíti a Fejlesztőcsapatot magas színvonalú termékek előállításában;
-                                    Eltávolítja a Fejlesztőcsapat útjába kerülő akadályokat;</li>
-                                        <li>Kérés illetve szükség esetén előmozdítja a Scrum események lebonyolítását; és,</li>
-                                        <li>Segíti a Fejlesztőcsapatot olyan szervezeti környezetben, ahol még nem teljes mértékben vezették be és értették meg a Scrumot.</li>
-                                    </ul>
-                                </ul>
-                            </div>
-                            <div class="lepes-img">
-                                <img src="icons/document.png" alt="kép">
                             </div>
                         </div>
-                        <div class="slide-col">
-                            <div class="lepes-text">
+                        <div class="slide">
+                            <div class="content content4">
                                 <h3>A Fejlesztőcsapat:</h3>
-                                <ul>
-                                    <li>A Fejlesztőcsapat olyan szakemberekből áll, akik azon dolgoznak, hogy minden egyes Sprint végén leszállítható legyen a termék egy “Kész” potenciálisan kibocsátható verziója.</li>
-                                    <li>A Fejlesztő csapatokat úgy állítja össze és hatalmazza fel a szervezet, hogy ők maguk szervezzék és menedzseljék saját munkájukat. Az így létrejövő szinergia optimalizálja a Fejlesztőcsapat hatékonyságát és termelékenységét.</li>
-                                    <li>A Fejlesztőcsapatok az alábbi tulajdonságokkal rendelkeznek:</li>
-                                    <ul class="bekezdes">
-                                        <li>Önszerveződőek. Senki – még a Scrum Mester – sem mondja meg a Fejlesztőcsapatnak, hogy miként hozzanak létre a Termék Backlogból potenciálisan szállítható funkcionalitást tartalmazó Inkrementumokat;</li>
-                                        <li>A Fejlesztőcsapatok kereszt-funkcionálisak, és csapatként minden olyan ismerettel és készséggel rendelkeznek, ami szükséges a termék Inkrementumok elkészítéséhez;</li>
-                                        <li>A Scrum a „Fejlesztő”-n kívül nem alkalmaz külön titulust a Fejlesztőcsapat egyes tagjaira, függetlenül attól, hogy egyénenként milyen tevékenységet végeznek. Ez alól a szabály alól nincs kivétel.</li>
-                                        <li>. A Fejlesztőcsapatokban nincsenek alcsoportok egyes célfeladatok – pl. tesztelés vagy üzleti elemzés – elvégzésére; ez alól a szabály alól nincs kivétel; illetve,</li>
-                                        <li>A Fejlesztőcsapatban az egyes tagok speciális ismeretekkel, készségekkel és szakterületi tudással rendelkezhetnek, de a felelősség az egész Fejlesztőcsapatra, mint egy egységre hárul.</li>
-                                        
+                                    <ul>
+                                        <li>A Fejlesztőcsapat olyan szakemberekből áll, akik azon dolgoznak, hogy minden egyes Sprint végén leszállítható legyen a termék egy “Kész” potenciálisan kibocsátható verziója.</li>
+                                        <li>A Fejlesztő csapatokat úgy állítja össze és hatalmazza fel a szervezet, hogy ők maguk szervezzék és menedzseljék saját munkájukat. Az így létrejövő szinergia optimalizálja a Fejlesztőcsapat hatékonyságát és termelékenységét.</li>
+                                        <li>A Fejlesztőcsapatok az alábbi tulajdonságokkal rendelkeznek:</li>
+                                        <ul class="bekezdes">
+                                            <li>Önszerveződőek. Senki – még a Scrum Mester – sem mondja meg a Fejlesztőcsapatnak, hogy miként hozzanak létre a Termék Backlogból potenciálisan szállítható funkcionalitást tartalmazó Inkrementumokat;</li>
+                                            <li>A Fejlesztőcsapatok kereszt-funkcionálisak, és csapatként minden olyan ismerettel és készséggel rendelkeznek, ami szükséges a termék Inkrementumok elkészítéséhez;</li>
+                                            <li>A Scrum a „Fejlesztő”-n kívül nem alkalmaz külön titulust a Fejlesztőcsapat egyes tagjaira, függetlenül attól, hogy egyénenként milyen tevékenységet végeznek. Ez alól a szabály alól nincs kivétel.</li>
+                                            <li>. A Fejlesztőcsapatokban nincsenek alcsoportok egyes célfeladatok – pl. tesztelés vagy üzleti elemzés – elvégzésére; ez alól a szabály alól nincs kivétel; illetve,</li>
+                                            <li>A Fejlesztőcsapatban az egyes tagok speciális ismeretekkel, készségekkel és szakterületi tudással rendelkezhetnek, de a felelősség az egész Fejlesztőcsapatra, mint egy egységre hárul.</li>
+                                            
+                                        </ul>
                                     </ul>
-                                </ul>
-                                
-                            </div>
-                            <div class="lepes-img">
-                                <img src="icons/document.png" alt="kép">
-                            </div>
+                            </div>    
                         </div>
-                        <div class="slide-col">
-                            <div class="lepes-text">
+                        <div class="slide">
+                            <div class="content content5">
                                 <h3>A Sprint:</h3>
                                 <ul>
                                     <li>A Scrum lelke a legfeljebb egy hónapig tartó Sprint, melynek időtartama alatt előáll egy “Kész”, használható és potenciálisan kibocsátható termék.</li>
@@ -147,15 +348,11 @@
                                     <li>A Sprintek úgy biztosítják a tervezhetőséget, hogy legalább minden naptári hónapban egyszer ellenőrzik a Sprint Cél felé haladást, és szükség esetén kiigazítják a folyamatot.</li>
                                     
                                 </ul>
-                               
-                                   
-                            </div>
-                            <div class="lepes-img">
-                                <img src="icons/document.png" alt="kép">
-                            </div>
+                            
+                            </div>    
                         </div>
-                        <div class="slide-col">
-                            <div class="lepes-text">
+                        <div class="slide">
+                            <div class="content content6">
                                 <h3>Sprint tervezés:</h3>
                                 <ul>
                                     <li>A Sprintben végzendő munkát a Sprint Tervezésen tervezik meg.</li>
@@ -177,53 +374,60 @@
                                     
                                 </ul>
                                 
-                                
-                            </div>
-                            <div class="lepes-img">
-                                <img src="icons/document.png" alt="kép">
-                            </div>
-                        </div>
-                        <div class="slide-col">
-                            <div class="lepes-text">
+                            </div>   
+                        </div> 
+                        <div class="slide">
+                            <div class="content content7">
+        
                                 <h3>Hogyan készül el a kiválasztott munka?</h3>
-                                <ul>
-                                    <li>Miután a Sprint Célját meghatározta és a Sprintbe kerülő Termék Backlog tételeket kiválasztotta, a Fejlesztőcsapat eldönti, hogy a Sprint során miként építi be ezt a funkcionalitást a “Kész” termék inkrementumba.</li>
-                                    <li>Az erre a Sprintre kiválogatott Termék Backlog tételeket, valamint ezek leszállítási tervét együttesen Sprint Backlognak (Sprint Teendőlista) nevezik. </li>
-                                    <li>A Fejlesztőcsapat általában a Termék Backlog működő termék inkrementummá konvertálásához szükséges feladatok meghatározásával és a rendszer megtervezésével kezdi meg a munkát. </li>
-                                    <li>A munkamennyiség- és becsült ráfordítás szerint is változhat.</li>
-                                    <li>Mindamellett a Sprint Tervezés során elegendő mennyiségű kivitelezendő munkát terveznek meg a Fejlesztőcsapat részére annak érdekében, hogy megalapozottan előre tudják vetíteni, hogy mit vélnek elvégezhetőnek a soron következő Sprint alatt.</li>
-                                    <li>A megbeszélés végére a Fejlesztőcsapat a Sprint első napjaira tervezett feladatokat gyakran egy napos vagy annál kisebb részekre bontja le.</li>
-                                    <li>A Fejlesztőcsapat önszerveződve vállalja el a Sprint Backlogban szereplő egyes feladatokat a Sprint Tervezés alatt, valamint amennyire szükséges, a Sprint közben is.</li>
-                                    <li>A Terméktulajdonos segíthet tisztázni a kiválasztott Termék Backlog tételeket és kompromisszumokat köthet.</li>
-                                    <li>Ha a Fejlesztőcsapat úgy ítéli meg, hogy túl sok vagy túl kevés az elvégzendő munka, újratárgyalhatja a kiválasztott Termék Backlog tételeket a Terméktulajdonossal.</li>
-                                    <li>A Fejlesztőcsapat másokat is meghívhat a megbeszélésre, hogy technikai vagy szakterületi tanácsokat adjanak.</li>
-                                    <li>A Sprint Tervezés végére a Fejlesztőcsapatnak el kell tudni magyarázni a Terméktulajdonosnak és a Scrum Mesternek, hogy miként szándékozik önszerveződő csapatként dolgozni a Sprint Cél megvalósítása és az elvárt inkrementum elkészítése érdekében.</li>
-                                </ul>
-                                    
-                            
-                            </div>
-                            <div class="lepes-img">
-                                <img src="icons/document.png" alt="kép">
-                            </div>
-                        </div>
-                        
+                                    <ul>
+                                        <li>Miután a Sprint Célját meghatározta és a Sprintbe kerülő Termék Backlog tételeket kiválasztotta, a Fejlesztőcsapat eldönti, hogy a Sprint során miként építi be ezt a funkcionalitást a “Kész” termék inkrementumba.</li>
+                                        <li>Az erre a Sprintre kiválogatott Termék Backlog tételeket, valamint ezek leszállítási tervét együttesen Sprint Backlognak (Sprint Teendőlista) nevezik. </li>
+                                        <li>A Fejlesztőcsapat általában a Termék Backlog működő termék inkrementummá konvertálásához szükséges feladatok meghatározásával és a rendszer megtervezésével kezdi meg a munkát. </li>
+                                        <li>A munkamennyiség- és becsült ráfordítás szerint is változhat.</li>
+                                        <li>Mindamellett a Sprint Tervezés során elegendő mennyiségű kivitelezendő munkát terveznek meg a Fejlesztőcsapat részére annak érdekében, hogy megalapozottan előre tudják vetíteni, hogy mit vélnek elvégezhetőnek a soron következő Sprint alatt.</li>
+                                        <li>A megbeszélés végére a Fejlesztőcsapat a Sprint első napjaira tervezett feladatokat gyakran egy napos vagy annál kisebb részekre bontja le.</li>
+                                        <li>A Fejlesztőcsapat önszerveződve vállalja el a Sprint Backlogban szereplő egyes feladatokat a Sprint Tervezés alatt, valamint amennyire szükséges, a Sprint közben is.</li>
+                                        <li>A Terméktulajdonos segíthet tisztázni a kiválasztott Termék Backlog tételeket és kompromisszumokat köthet.</li>
+                                        <li>Ha a Fejlesztőcsapat úgy ítéli meg, hogy túl sok vagy túl kevés az elvégzendő munka, újratárgyalhatja a kiválasztott Termék Backlog tételeket a Terméktulajdonossal.</li>
+                                        <li>A Fejlesztőcsapat másokat is meghívhat a megbeszélésre, hogy technikai vagy szakterületi tanácsokat adjanak.</li>
+                                        <li>A Sprint Tervezés végére a Fejlesztőcsapatnak el kell tudni magyarázni a Terméktulajdonosnak és a Scrum Mesternek, hogy miként szándékozik önszerveződő csapatként dolgozni a Sprint Cél megvalósítása és az elvárt inkrementum elkészítése érdekében.</li>
+                                    </ul>
+
+
+
+                            </div>   
+                        </div> 
                     </div>
+                    <div class="controls">
+                    <label for="i_1">⬤</label>
+                    <label for="i_2">⬤</label>
+                    <label for="i_3">⬤</label>
+                    <label for="i_4">⬤</label>
+                    <label for="i_5">⬤</label>
+                    <label for="i_6">⬤</label>
+                    <label for="i_7">⬤</label>
+                    </div>
+
                 </div>
-            </div>
-        </div>
-    </div>  
+                
+    </div>
+     
 </main>
 
 <style lang="scss">
-    *{
-        margin: 0;
-        padding: 0;
-    }
-    
     main{
+        background-color:#5465FF ;
+    }
+
+
+    .scrum{
+        width: 100%;
         background-color:#5465FF ;
         
     }
+
+
     .fejlec{
         background-color: #5465FF;
         height: 400px;
@@ -235,8 +439,7 @@
         
     }
     .fejlec img {
-        //width: 50%;
-        //height: 60%;
+        
         height: 70%;
         
         border-radius: 6%;
@@ -244,17 +447,32 @@
     .fejlec p {
         font-size: 100px;
     }
+
+
+    /*#kezdes{
+        padding: 0 80px;
+        display: flex;
+        height: 1000px;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }*/
+    
+    
+    
     .lepesvalaszto{
         background-color: #5465FF;
-        height: 80vh;
+        height: 700px;
         display: flex;
         flex-direction: row;
         flex-wrap: nowrap;
         margin-left: 10%;
         margin-right: 10%;
+        
         align-items: center;
-        z-index: 1;
+        
     }
+
     .gomb{
         display: flex;
         flex-direction: column;
@@ -331,21 +549,40 @@
     .gomb p {
         font-size: 250%;
     }
-    .gomb:hover{
-        border: 3px solid #000000;
+    
+    
+
+
+    .testimonial{
+        
+        max-width: 800px;
+        height:100% ;
+        overflow: hidden;
+        background-color: white;
+        //position: absolute;
+        //transform: translateX(50%,50%);
+        margin: auto;
     }
     .bekezdes{
         margin-left: 30px;
         margin-top: 10px;
         margin-bottom: 10px;
     }
-
-
+/*
+    .elsohullam{
+        display: block;
+        z-index: 1;
+    }
+    .masodikhullam{
+        
+        display: block;
+        z-index: 0;
+    }
 
     .slide-row{
         display: flex;
         
-        width: 5600px;
+        width: 7*800px;
         transition: 0.5s;
         z-index: 2;
     }
@@ -390,18 +627,18 @@
         color: #000;
     }
     .container{
-        width: 800px;
+        width: 100vw;
         height: 1300px;
         position: absolute;
-        top: 180%;
+        //top: 210%;
         left: 50%;
-        transform: translate(-50%,-50%);
+        transform: translateX(-50%);
     }
     .indicator{
         position: absolute;
         left: 50%;
         transform: translateX(-50%);
-        bottom: 20px;
+        bottom: -300px;
         z-index: 100;
     }
     .btn2{
@@ -417,18 +654,246 @@
     
     .active{
         width: 45px;
+    }*/
+    @media only screen and (max-width: 1000px){
+        .gomb7{
+            background: #BFD7FF;
+            border-radius: 20px;
+            width: 21%;
+            height: 25%;
+            transform: translate(250% , -30%);
+            
+            z-index: 0;
+        }
+        .gomb p {
+            font-size: 180%;
+        }
     }
-    .testimonial{
-        width: 100%;
-        height:100% ;
-        overflow: hidden;
+/*
+    @media only screen and (max-width: 800px){
+
+        .slide-row{
+            display: flex;
+            
+            width: 7*550px;
+            transition: 0.5s;
+            z-index: 2;
+        }
+        .slide-col{
+            
+            width: 550px;
+            height: 600px;
+            position: relative;
+        }
+
+    }*/
+    @media only screen and (max-width: 700px){
+        .gomb p {
+            font-size: 180%;
+        }
+        .gomb7{
+            background: #BFD7FF;
+            border-radius: 20px;
+            width: 21%;
+            height: 25%;
+            transform: translate(250% , -30%);
+            
+            z-index: 0;
+        }
+    }
+    @media only screen and (max-width: 600px){
+        .fejlec p {
+            font-size: 80px;
+        }
+        .testimonial{
+        
+            max-width: 550px;
+            height:100% ;
+            overflow: hidden;
+            background-color: white;
+            //position: absolute;
+            //transform: translateX(50%,50%);
+            margin: auto;
+        }
+
+        
+        .gomb1{
+            background: #9BB1FF;
+            border-radius: 20px;
+            z-index: 0;
+            width: 18%;
+            height: 15%;
+            transform: translate(40%, -85%);
+        }
+        .gomb2{
+            background: #BFD7FF;
+            border-radius: 20px;
+            width: 20%;
+            height: 20%;
+            transform: translate(55% , 10%);
+            
+            z-index: 17;
+        }
+        .gomb3{
+            background: #788BFF;
+            border-radius: 20px;
+            
+            width:25%;
+            height: 25%;
+            transform: translate(35% , 70%);
+            
+            z-index: 0;
+        }
+        .gomb4{
+            background: #9BB1FF;
+            border-radius: 20px;
+            width: 23%;
+            height: 25%;
+            transform: translate(125%, 5%);
+            
+            z-index: 6;
+        }
+        .gomb5{
+            background: #788BFF;
+            border-radius: 20px;
+            width: 34%;
+            height: 18%;
+            transform: translate(77%,-100%);
+            
+            z-index: 0;
+        }
+        .gomb6{
+            background: #788BFF;
+            border-radius: 20px;
+            width: 25%;
+            height: 25%;
+            transform: translate(158% , 75%);
+            
+            z-index: 0;
+        }
+        .gomb7{
+            background: #BFD7FF;
+            border-radius: 20px;
+            width: 22%;
+            height: 20%;
+            transform: translate(250% , -30%);
+            
+            z-index: 0;
+        }
     }
 
+    
+
+/*-------------------------------------------------------------------------*/
 
 
-    @media screen and (max-width: 760px){}
+/* Some resets, not essencial for this example to work */
+
+* {
+  box-sizing: border-box;
+}
+/*
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}*/
+
+input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+  position: absolute;
+}
+
+/* Base styles for this example */
+
+.wrapper {
+  width: 80vw; /* unfortunately width has to be set to some hard value */
+  //height: 90vh;
+  display: flex;
+  
+}
+
+.slide {
+  width: 0;
+}
+
+.content {
+  width: 80vw;
+  height: 100%; /* this is optional if you want every slide to have same height as the highest one */
+}
+
+/* Additional styling */
+
+html, body {
+  background-color: #BDBDBD;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; 
+  
+}
+
+.wrapper {
+  margin: 0 auto;
+  background-color: white;
+  ;
+}
+
+span {
+  background-color: white;
+  text-align: center;
+  line-height: 4rem;
+  width: 4rem;
+  border-radius: 8rem;
+  color: #616161;
+  font-size: 2rem;
+}
+
+.content {
+  padding: 30px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .6s;
+  height: auto;
+  
+}
 
 
+
+
+#i_1:checked ~ .wrapper .content1,
+#i_2:checked ~ .wrapper .content2,
+#i_3:checked ~ .wrapper .content3,
+#i_4:checked ~ .wrapper .content4,
+#i_5:checked ~ .wrapper .content5,
+#i_6:checked ~ .wrapper .content6,
+#i_7:checked ~ .wrapper .content7 {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+label {
+  color: #000000;
+  transition-duration: .6s;
+  cursor: pointer;
+}
+
+#i_1:checked ~ .controls label[for="i_1"],
+#i_2:checked ~ .controls label[for="i_2"],
+#i_3:checked ~ .controls label[for="i_3"],
+#i_4:checked ~ .controls label[for="i_4"],
+#i_5:checked ~ .controls label[for="i_5"],
+#i_6:checked ~ .controls label[for="i_6"],
+#i_7:checked ~ .controls label[for="i_7"] {
+  color: #c7c7c7;
+}
+.gomb:hover{
+        border: 3px solid #000000;
+    }
+/*-------------------------------------------------------------------------*/
 
 </style>
 
@@ -437,7 +902,7 @@
 	import Navbar from "../../components/Navbar.svelte";
     import { onMount } from 'svelte';
     
-        onMount(() => {
+      /*  onMount(() => {
             let i ;
             let btn: any = document.getElementsByClassName("btn");
             let slide = document.getElementById("slide");
@@ -451,6 +916,7 @@
                 }
             }
             btn[1].onclick = function(){
+                
                 slide.style.transform= "translateX(-800px)";
                 for(i=7;i<14;i++){
                     btn[i].classList.remove("active");
@@ -554,6 +1020,6 @@
                 } 
                 this.classList.add("active");
             }
-        });
+        });*/
     
 </script>
