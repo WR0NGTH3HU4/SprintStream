@@ -378,7 +378,7 @@
                         <div class="slide">
                             <div class="content content13">
         
-                                <h3>A "Kész" fogalma:</h3>
+                                <h2>A "Kész" fogalma:</h2>
                                     <ul>
                                         Amikor egy Termék Backlog tételt Késznek nyilvánítanak, mindenkinek pontosan kell tudnia, hogy a “Kész” definíció mit is jelent. Bár ez Scrum Csapatonként jelentősen eltérhet, az áttekinthetőség biztosítása érdekében a csapattagoknak közös, egyértelmű értelmezéssel kell rendelkezniük arról, mikor tekintenek egy munkát késznek. Ez a “Kész definíciója” a Scrum Csapat számára, és ezt használják annak megállapítására, hogy a termék Inkrementummal való munka mikor fejeződik be. 
                                         
