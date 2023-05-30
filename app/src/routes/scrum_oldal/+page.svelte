@@ -231,6 +231,7 @@
                             <div class="content content7">
         
                                 <h3>Hogyan készül el a kiválasztott munka?</h3>
+
                                     <ul>
                                         <li>Miután a Sprint Célját meghatározta és a Sprintbe kerülő Termék Backlog tételeket kiválasztotta, a Fejlesztőcsapat eldönti, hogy a Sprint során miként építi be ezt a funkcionalitást a “Kész” termék inkrementumba.</li>
                                         <li>Az erre a Sprintre kiválogatott Termék Backlog tételeket, valamint ezek leszállítási tervét együttesen Sprint Backlognak (Sprint Teendőlista) nevezik. </li>
@@ -409,6 +410,7 @@
 
                     <path fill="#5465FF" fill-opacity="1" d="M0,64L26.7,106.7C53.3,149,107,235,160,266.7C213.3,299,267,277,320,250.7C373.3,224,427,192,480,186.7C533.3,181,587,203,640,208C693.3,213,747,203,800,181.3C853.3,160,907,128,960,144C1013.3,160,1067,224,1120,234.7C1173.3,245,1227,203,1280,160C1333.3,117,1387,75,1413,53.3L1440,32L1440,320L1413.3,320C1386.7,320,1333,320,1280,320C1226.7,320,1173,320,1120,320C1066.7,320,1013,320,960,320C906.7,320,853,320,800,320C746.7,320,693,320,640,320C586.7,320,533,320,480,320C426.7,320,373,320,320,320C266.7,320,213,320,160,320C106.7,320,53,320,27,320L0,320Z"></path>
                 </svg>
+
                     
                 </div>
                 
