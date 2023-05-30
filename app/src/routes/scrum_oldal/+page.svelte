@@ -474,6 +474,13 @@
         align-items: center;
         
     }
+    .controls{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+    }
 
     .gomb{
         display: flex;
