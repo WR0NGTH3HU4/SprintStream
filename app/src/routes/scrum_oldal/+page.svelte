@@ -107,7 +107,7 @@
                         <div class="slide">
                             <div class="content content1">
         
-                                <h3>Mi a Scrum?</h3>
+                                <h2>Mi a Scrum?</h2>
                                 <p>A Scrum egy agilis módszertan, amely együttműködést és folyamatos fejlesztést támogat. 
                                     Az agilitás azt jelenti, hogy a projekt csapata folyamatosan javítja és finomítja a munkafolyamatot a visszajelzések (Daily Scrum) alapján. 
                                     Ez a módszer hatékony lehet olyan projektekben, ahol a feladatok és a célok nem teljesen meghatározottak, és a változások gyakoriak, például a szoftvertervezésben.
@@ -119,7 +119,7 @@
                         </div>
                         <div class="slide">
                             <div class="content content2">
-                                <h3>A Terméktulajdonos:</h3>
+                                <h2>A Terméktulajdonos:</h2>
                                     <ul>
                                         <li>A terméktulajdonos nem egy bizottság, hanem egy személy.</li>
                                         <li>Az egyetlen személy, aki felelős a Termék Backlog <ez egy link lesz> kezeléséért.</li>
@@ -131,7 +131,7 @@
                         </div>
                         <div class="slide">
                             <div class="content content3">
-                                <h3>Scrum Mester:</h3>
+                                <h2>Scrum Mester:</h2>
                                     <ul>
                                         <li>A Scrum Mester a Scrum megértéséért és betartásáért felelős. A Scrum Mesterek ezt az által érik el, hogy megbizonyosodnak a csapat Scrum elméleti-, gyakorlati- és szabályismeretéről, valamint meggyőződnek elkötelezettségükről is.</li>
                                         <li>A Scrum Mester szolgáltatásai a Terméktulajdonos felé</li>
@@ -159,7 +159,7 @@
                         </div>
                         <div class="slide">
                             <div class="content content4">
-                                <h3>A Fejlesztőcsapat:</h3>
+                                <h2>A Fejlesztőcsapat:</h2>
                                     <ul>
                                         <li>A Fejlesztőcsapat olyan szakemberekből áll, akik azon dolgoznak, hogy minden egyes Sprint végén leszállítható legyen a termék egy “Kész” potenciálisan kibocsátható verziója.</li>
                                         <li>A Fejlesztő csapatokat úgy állítja össze és hatalmazza fel a szervezet, hogy ők maguk szervezzék és menedzseljék saját munkájukat. Az így létrejövő szinergia optimalizálja a Fejlesztőcsapat hatékonyságát és termelékenységét.</li>
@@ -177,7 +177,7 @@
                         </div>
                         <div class="slide">
                             <div class="content content5">
-                                <h3>A Sprint:</h3>
+                                <h2>A Sprint:</h2>
                                 <ul>
                                     <li>A Scrum lelke a legfeljebb egy hónapig tartó Sprint, melynek időtartama alatt előáll egy “Kész”, használható és potenciálisan kibocsátható termék.</li>
                                     <li>A Sprintek hossza legjobb esetben a teljes fejlesztési idő során azonos. Az előző Sprint lezárása után azonnal egy újabb Sprint kezdődik.</li>
@@ -204,7 +204,7 @@
                         </div>
                         <div class="slide">
                             <div class="content content6">
-                                <h3>Sprint tervezés:</h3>
+                                <h2>Sprint tervezés:</h2>
                                 <ul>
                                     <li>A Sprintben végzendő munkát a Sprint Tervezésen tervezik meg.</li>
                                     <li>Ez a terv a teljes Scrum Csapat közös munkájának eredménye.</li>
@@ -230,7 +230,7 @@
                         <div class="slide">
                             <div class="content content7">
         
-                                <h3>Hogyan készül el a kiválasztott munka?</h3>
+                                <h2>Hogyan készül el a kiválasztott munka?</h2>
 
                                     <ul>
                                         <li>Miután a Sprint Célját meghatározta és a Sprintbe kerülő Termék Backlog tételeket kiválasztotta, a Fejlesztőcsapat eldönti, hogy a Sprint során miként építi be ezt a funkcionalitást a “Kész” termék inkrementumba.</li>
@@ -253,7 +253,7 @@
                         <div class="slide">
                             <div class="content content8">
         
-                                <h3>Napi Scrum:</h3>
+                                <h2>Napi Scrum:</h2>
                                     <ul>
                                         <li>A Napi Scrum megbeszélés egy maximum 15 perc időtartamú megbeszélés, ahol a Fejlesztőcsapat összehangolja a tevékenységeket, és megtervezi az elkövetkezendő 24 órát.</li>
                                         <li>Ezt a legutóbbi Napi Scrum megbeszélés óta elvégzett feladatok elemzésével, majd a következő Napi Scrum előtt elvégezhető feladatok megtervezésével teszi meg. </li>
@@ -277,7 +277,7 @@
                         <div class="slide">
                             <div class="content content9">
         
-                                <h3>Sprint Áttekintés:</h3>
+                                <h2>Sprint Áttekintés:</h2>
                                     <ul>
                                         <li>A Sprint Áttekintést (Sprint Review) a Sprint végén tartják azzal a céllal, hogy ellenőrizzék az Inkrementumot és szükség esetén módosítsák a Termék Backlogot.</li>
 
@@ -308,7 +308,7 @@
                         <div class="slide">
                             <div class="content content10">
         
-                                <h3>Sprint Visszatekintés:</h3>
+                                <h2>Sprint Visszatekintés:</h2>
                                     <ul>
                                         <li>A Sprint Visszatekintés egy lehetőség a Scrum Csapatnak arra, hogy elemezze saját tevékenységét, és ezzel kapcsolatban egy fejlesztési tervet készítsen, amit a következő Sprintek során megvalósít.</li>
                                         <li>A Sprint Visszatekintés a Sprint Áttekintés után, a következő Sprint Tervezés előtt történik. </li>
@@ -333,7 +333,7 @@
                         <div class="slide">
                             <div class="content content11">
         
-                                <h3>Termék Backlog:</h3>
+                                <h2>Termék Backlog:</h2>
                                     <ul>
                                         <li>A Termék Backlog egy sorba rendezett lista, ami minden olyan dolgot tartalmaz, amire szükség lehet a termékben, valamint ez alkotja a termékkel kapcsolatos változtatási követelmények egyetlen forrását. </li>
                                         <li>A Terméktulajdonos felelős a Termék Backlogért, beleértve annak tartalmát, elérhetőségét és sorba rendezését. A Termék Backlog sosem tekinthető teljesnek. </li>
@@ -359,7 +359,7 @@
                         <div class="slide">
                             <div class="content content12">
         
-                                <h3>Sprint Backlog:</h3>
+                                <h2>Sprint Backlog:</h2>
                                     <ul>
                                         <li>A Sprint Backlog a Termék Backlog elemeinek egy, a Sprintre kiválasztott halmazát, és a Sprint Cél megvalósítására vonatkozó tervet tartalmaz.  </li>
                                         <li>A Sprint Backlog mindazt a munkát láthatóvá teszi, melyet a Fejlesztőcsapat szükségesnek vél elvégezni a Sprint Cél teljesítéséhez.  </li>
@@ -438,6 +438,10 @@
         flex-wrap: nowrap;
         justify-content: center;
         align-items: center;
+       
+    }
+    .controls label{ 
+        padding: 3px;
     }
 
     .fejlec{
@@ -461,6 +465,7 @@
     }
     .slide{
         text-align: justify;
+        font-size: 20px;
     }
 
     
