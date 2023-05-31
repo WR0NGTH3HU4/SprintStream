@@ -5,25 +5,32 @@
             <img src="icons/waterfall-chart.png">
             <h1>Vízesés</h1>
         </div>
-        <div class="main">
+        <div class="lepesek">
+
             <div on:click={elso} class="kor kor1">
                 <h3>2.lépés</h3>
             </div>
+
             <div on:click={masodik} class="kor kor2">
                 <h3>1.lépés</h3>
             </div>
+
             <div on:click={harmadik} class="kor kor3">
                 <h3>3.lépés</h3>
             </div>
+
             <div on:click={negyedik} class="kor kor4">
                 <h3>4.lépés</h3>
             </div>
+
             <div on:click={otodik} class="kor kor5">
                 <h3>5.lépés</h3>
-            </div>            
+            </div>     
+
             <div on:click={hatodik} class="kor kor6">
                 <h3>6.lépés</h3>
-            </div>            
+            </div>      
+
             <div on:click={hetedik} class="kor kor7">
                 <h3>7.lépés</h3>
             </div>
@@ -232,30 +239,24 @@
   border: 1px solid #E3E3E3;
   box-shadow: -407px 0 0 400px #E3E3E3;
 }
-    .main{
 
-        border-color: #5465FF;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        flex-wrap: wrap;
-    }
 
     .egesz{
-        width: 100%;
+       width: 100%;
         background-color:#5465FF ;
-        
+
     }
-    .main{
+    .lepesek{
         
-        height: 70rem;
+        border-color: #5465FF;
+        width: 100%;
         display: flex;
         flex-direction: row;
         flex-wrap: wrap ;
         justify-content:center;
         align-items: center;
-        align-content: space-between;
+ 
+        
         
         
     }
@@ -274,62 +275,63 @@
         font-size: 15rem;
     }
     .kor{
+        align-self: center;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center ;
-        position: absolute;
+        position: static;
         border-radius: 100%;
         text-align: center;
         font-size: 150%;
-    
+        top: auto;
+        right: auto;
+        
+        width: 30rem;
+        height: 30rem;
+        
     }
 
     .kor1{
-
+        
+        order: 2;
         background-color:#BFD7FF ;
-        width: 30rem;
-        height: 30rem;
+
 
     }
     .kor2{
+        order: 1;
         background-color:#788BFF ;
-        width: 25rem;
-        height: 25rem;
+
 
     }
     .kor3{
-        
+        order: 3;
         background-color:#9BB1FF ;
-        width: 32rem;
-        height: 32rem;
+
 
     }
     .kor4{
+        order: 4;
         background-color:#E3E3E3 ;
-        width: 25rem;
-        height: 25rem;
-
-        
-        
 
     }
     .kor5{
+        order: 5;
         background-color:#BFD7FF ;
-        width: 32rem;
-        height: 32rem;
+
 
     }
     .kor6{
+        order: 6;
         background-color:#788BFF ;
-        width: 35rem;
-        height: 35rem;
+
 
     }
     .kor7{
+        order: 7;
         background-color:#BFD7FF ;
-        width: 25rem;
-        height: 25rem;
+
 
     }
     .ph{
@@ -433,8 +435,8 @@
         display: block;
 
     }
-    @media screen and (min-width: 300px){
-        .main{
+    @media screen and (min-width: 600px){
+        .lepesek{
         
         height: 70rem;
         display: flex;
@@ -455,6 +457,7 @@
         border-radius: 100%;
         text-align: center;
         font-size: 150%;
+        
     }
     .kor1{
         
@@ -531,6 +534,7 @@
     }
     @media screen and (max-width: 1580px){
         .kor{
+            
             transform: scale(.8) translate(30%,0%);
         }
         .skala{
