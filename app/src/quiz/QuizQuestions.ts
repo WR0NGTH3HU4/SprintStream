@@ -182,12 +182,32 @@ export const quizQuestions: {[keretrendszer: string]: QuizQuestion[]} = {
     ],
     vizeses: [
         {
-            kerdes: " ",
-            a: "A) ",
-            b: "B) ",
-            c: "C) ",
+            kerdes: "Mit nem tartalmaz a procektháromszög?",
+            a: "A) Hatókör",
+            b: "B) Résztvevők száma",
+            c: "C) Költség",
+            valasz: "b"
+        },
+        {
+            kerdes: "A stratégiai szint 2 nagy szervezeti egységbből áll?",
+            a: "A) Igaz",
+            b: "B) Hamis",
             valasz: "a"
         },
+        {
+            kerdes: "Projekt Felügyelő Bizottság (PFB) egyenlő a Magas Szintű Támogató Testület (MTT) - tel",
+            a: "A) Igaz",
+            b: "B) Hamis",
+            valasz: "a"
+        },
+        {
+            kerdes: "Ki a projekt szponzor?",
+            a: "A) Vezető",
+            b: "B) Támogató",
+            c: "C) Megrendelő",
+            valasz: "c"
+        },
+
     ],
 };
 
