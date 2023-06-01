@@ -1,8 +1,6 @@
 export class ToggleManager {
-
-    private toggles: { [key: string]: boolean } = {};
-
-
+    public toggles: {[key: string]: boolean} = {};
+    
     constructor(keys: string[]) {
         for (let key of keys) {
             this.toggles[key] = false;
@@ -31,12 +29,3 @@ export class ToggleManager {
         return null;
     }
 }
-
-        this.toggles[toggleable] = !this.toggles[toggleable];
-    }
-
-    public isToggled(key: string): boolean {
-        return this.toggles[key];
-    }
-}
-

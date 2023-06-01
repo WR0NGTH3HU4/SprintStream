@@ -161,11 +161,7 @@ export const quizQuestions: {[keretrendszer: string]: QuizQuestion[]} = {
         },
 		{
             kerdes: "Mit jelent a transzparencia?",
-<<<<<<< Updated upstream
             a: "A) átláthatóság",
-=======
-            a: "A) áttekinthetőség",
->>>>>>> Stashed changes
             b: "B) változtathatóság",
             c: "C) plakáton bemutatható",
             valasz: "a"
