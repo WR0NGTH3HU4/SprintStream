@@ -23,10 +23,10 @@ export const quizQuestions: {[keretrendszer: string]: QuizQuestion[]} = {
         },
         {
             kerdes: "Melyik nem jellemző a scrumra?",
-            a: "A) A projekt csapata folyamatosan javítja és finomítja a munkafolyamatot a visszajelzések.",
+            a: "A) A projekt csapata folyamatosan javítja és finomítja a munkafolyamatot a visszajelzések alapján.",
             b: "B) Együttműködést és folyamatos fejlesztést támogat.",
             c: "C) Ha nincsenek meghatározva pontosan a célok akkor semmiképp sem fog jól működni a megvalósítás.",
-            valasz: "a"
+            valasz: "c"
         },
         {
             kerdes: "Melyik nem Scrum esemény?",

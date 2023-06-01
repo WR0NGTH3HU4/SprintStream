@@ -30,7 +30,7 @@
                     <div id="{`${i}`}" class="tartalom">
                         <div class="kerdes">
                             <h2>Kérdés #{`${i+1}`}</h2>
-                            <p>{kerdes.kerdes}</p>
+                            <h4>{kerdes.kerdes}</h4>
                             <div class="valasz">
                                 <div>
                                     {#if !!kerdes.a}<p>{kerdes.a} </p>{/if}
