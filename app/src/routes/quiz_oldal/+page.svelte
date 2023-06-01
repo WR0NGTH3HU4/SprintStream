@@ -29,7 +29,8 @@
                     </svg>
                     <div id="{`${i}`}" class="tartalom">
                         <div class="kerdes">
-                            <h2>{kerdes.kerdes}</h2>
+                            <h2>Kérdés #{`${i+1}`}</h2>
+                            <p>{kerdes.kerdes}</p>
                             <div class="valasz">
                                 <div>
                                     {#if !!kerdes.a}<p>{kerdes.a} </p>{/if}
@@ -99,6 +100,7 @@
     }
 
     button{
+        cursor: pointer;
         font-family: 'Times New Roman', Times, serif;
 
         &:hover{
