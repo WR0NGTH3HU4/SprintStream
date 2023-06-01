@@ -62,12 +62,7 @@
                             <img src="icons/document.png" alt="kep">
                     </div>
                     <div class="nyilak">
-                        <svg on:click={lapoz_hatra} class="hatra" width="100" height="161" viewBox="0 0 100 161" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M75 136.588L29.0683 90.6568C23.6439 85.2324 23.6439 76.356 29.0683 70.9316L75 25" stroke="#788BFF" stroke-width="48.5835" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                        <svg on:click={lapoz_elore} class="elore" width="100" height="161" viewBox="0 0 100 161" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M25 136.589L70.9316 90.6573C76.3561 85.2329 76.3561 76.3565 70.9316 70.932L25 25" stroke="#788BFF" stroke-width="48.5839" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
+
                                 
                     </div>
                 
@@ -369,7 +364,8 @@
     .nyilak{
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
+        justify-content: center;
+        align-items: center;
         align-self: center;
         width:80%;
         padding-top: 5%;
@@ -730,13 +726,16 @@
     
     
     let cim=["A projekt menedzsment(1.)","Szervezet(2.)","Projektfolyamatok, fázisok(3.)","A projekt működési rendje(4.)","IT projekt megközelítés(5.)","Összegzés(6.)","Mellékletek(7.)"];
-    let szoveg=["Segítséget nyújt a szervezetek projektjeinek, hatékony menedzselésében, enélkül olyan lenne a projekt, mint egy Lego szett.  Megfelelő utasítás eljárás nélkül káosz lenne a vége. A mi útmutatónk tehát jelenesetben az eljárásrend, taglalja, hogy a költségvetés alapelveit típustól független, az egyes szakszavakat a projektmenedzsment témakörében(terminológia), és a folyamatok alkalmazását."
+    let szoveg=[["Segítséget nyújt a szervezetek projektjeinek, hatékony menedzselésében, enélkül olyan lenne a projekt, mint egy Lego szett.  Megfelelő utasítás eljárás nélkül káosz lenne a vége. A mi útmutatónk tehát jelenesetben az eljárásrend, taglalja, hogy a költségvetés alapelveit típustól független, az egyes szakszavakat a projektmenedzsment témakörében(terminológia), és a folyamatok alkalmazását."
     
     ,"Ismét gondoljunk a Lego szettekre, vannak különlegesebb darabok, amelyek a konkrét instrukciók(lépések) mellett kisebb információval akár tájékoztatással vannak ellátva. Az esetünkben a különleges darabok az államigazgatási projektek főként és ezek jellemzőit bővítik a hazai sajátosságok, törvények.","A módszertan definíciója: \nA vízesés alapú, avagy szekvenciális modell, fix mérföldkövekhez kapcsolódik (itt gondolhatunk akár kedvenc játékunkra, hiszen ott is gyakran találkozhatunk ilyenekkel, mondjuk, ha egy nagyobb szintet érünk el, vagy hosszabb ideje játszunk)."
     
-    ,"A projektháromszög\n Nagyon fontos, hogy ne ijedjünk meg rögtön a hallatán ez nem valami szekta jelképe!A menedzsment fő tényezőit és a köztük lévő összefüggést prezentálja nekünk. A következők tehát, az idő, a költség, a hatókör és a minőség. A fontosságuk esetenként változik, gondoljunk ezúttal egy autóra és azok kialakítására, ha változtatunk a motor pozícióján változtatni kell a vázon, ami esetenként nagyobb költségvetést igényel (mind ez attól függ, hogy milyen célra születik meg az autó). A lényeg ezúttal, hogy ha az egyik tényező változik akkor a többi is. Működését gyakorolhatjuk az oldalon hiszen külön szántunk neki egy lépést."
+    ,"A projektháromszög\n Nagyon fontos, hogy ne ijedjünk meg rögtön a hallatán ez nem valami szekta jelképe!A menedzsment fő tényezőit és a köztük lévő összefüggést prezentálja nekünk. A következők tehát, az idő, a költség, a hatókör és a minőség. A fontosságuk esetenként változik, gondoljunk ezúttal egy autóra és azok kialakítására, ha változtatunk a motor pozícióján változtatni kell a vázon, ami esetenként nagyobb költségvetést igényel (mind ez attól függ, hogy milyen célra születik meg az autó). A lényeg ezúttal, hogy ha az egyik tényező változik akkor a többi is. Működését gyakorolhatjuk az oldalon hiszen külön szántunk neki egy lépést."]
+
+    //HELY A BELSŐ TÖMBÖK KÖZÖTT
+    //2.LÉPÉS
     
-    ,"Általános felépítése\n Tegyük fel, hogy ismét egy Lego szettel van dolgunk méghozzá egy hatalmassal és összerakásához csapatokat szeretnénk kialakítani, hogy a szett megfelelően legyen kezelve és összerakva. A szervezetek egységeit és kulcspozícióit már a tervezés során össze kell raknunk. Két szintre tudunk kialakítani szervezeteket. "
+    ,["Általános felépítése\n Tegyük fel, hogy ismét egy Lego szettel van dolgunk méghozzá egy hatalmassal és összerakásához csapatokat szeretnénk kialakítani, hogy a szett megfelelően legyen kezelve és összerakva. A szervezetek egységeit és kulcspozícióit már a tervezés során össze kell raknunk. Két szintre tudunk kialakítani szervezeteket. "
     
     ,"Stratégai szint\n Ezen a szinten két nagy szervezeti egység található, az egyik a Magas Szintű Támogató Testület (MTT) más nevén Projekt Felügyelő Bizottság (PFB), és a Projekt Irányító Bizottság (PIB). "
     
@@ -763,15 +762,77 @@
     ,"Projektvezető\nŐ az, aki a meghatározott projektháromszög elvárásait korlátait betartatja. Tehet javaslatot a projektet érintő tervekre és változásokra, amiket később a PIB bírál majd. Térjünk vissza egy pillanatra a Lego-s példánkra, az egyszerűség kedvéért, tegyük fel, hogy már megvan melyik szettet választottuk, hogy milyen úton jutunk hozzá, és milyen feltételek szükségesek hozzá, kell egy ember, aki konkrétan összeállítja a szetten dolgozó csapatokat(projekttagokat) majd ellenőrzi a munkájukat, ahhoz, hogy minden jól menjen szükséges, hogy megfelelő dokumentációt vezessen munkát és költségvetést illetően. Illetve megkell teremtenie a megfelelő kommunikációt a csapatok közt és a csapatok és maga közt. Amennyiben ezek nem történnek meg az elkészítés közben olyan problémák merülhetnek fel, amelyek azt eredményezik, hogy a Legonk összeesik"
 
     
-    ,"Szakmai vezető\n"
+    ,"Szakmai vezető\nAz előbb említett, megszervezett csapatok munkáját szervezik meg majd ellenőrzik a munkát, illetve gondoskodnak a dokumentációért. Előkészítik a projekthez beszerzendők tartalmát."
 
-    ,"\n"
+    ,"Projekt vezetés (PV)\nA projekt legfelső operatív szintjén állnak, biztosítják, hogy a projekt mindenféleképp előre haladjon, tehát nagyon egyszerűen a példánkkal úgy tudnánk ezt magyarázni, hogy ők ügyelnek azért, hogy a LEGO építése ne abból álljon, hogy össze majd rögtön szétszednek elemeket, hanem csakis a pontos összerakás folyik.Ide tartozik a projektvezető(k) és a szakmai vezető(k) is. Pár példa a tagokra: Projektasszisztens, projektkoordinátor, pénzügyi vezető, jogtanácsos, beszerzési referens (beszerzési szakismeretekért felel), kommunikációs szakértő, személyügyi referens."
     
-    ,"\n"
+    ,"Munkacsoport/projekt tag\nÉrtük felelnek a szakmai vezetők, ők azok, akik ténylegesen dolgoznak a kijelölt feladatköreikben és a projekt előrehaladását (tehát lényegében, a fölöttük lévők előre haladtatnak) végzik. Fontos, hogy a munkacsoport vezetők fele közöljék a projekt jelenlegi helyzetét (pozitív és negatív értelemben is)."]
     
-    ,"\n"
+    //HELY A BELSŐ TÖMBÖK KÖZÖTT
+    //3.LÉPÉS
     
-    ,"A fejezetek végére értél, gratulálunk, reméljük segíthettünk!"];
+    ,["Projektötlet\nTalán az egyik legnehezebb része ez a projektnek, vagy akár mindennek, méghozzá a kezdet. Az kiötlésben három kérdőszó vezet minket célra, ezek pedig a „Mit?” (mi a probléma, mi a projekt célja), „Ki?” (valósítja meg) és „Hogyan?”", 
+
+    "Előkészítés\nAz előkészítés két nagy lépésre bontható, amelyek újabb és újabb lépésekre bonthatóak fel. A projektelemzés hét lépésre bontható fel méghozzá, a szükségletelemzés, célelemzés, környezetelemzés, gazdaságossági vizsgálat, kockázatelemzés, projekt érintettek értékelése és kezelése, megvalósítási tanulmány. A projekttervezés a tervezési fázis kialakítására, projektmenedzsment felállítására, tervezési fázisindító megbeszélésére, struktúratervezésre, ráfordító elemzésre, időtervezésre, emberi erőforrások tervezésére, költségtervezésre, projekt alapító dokumentum elkészítésére, külső kommunikációra, projekt érintettek kezelésére és a tervek részletes kidolgozására bontható fel.",
+
+    "Megvalósítás\nA projektünk ezen részén történik a feladatok kiadása, ami történhet a projektvezető felől a projekttagok felé vagy a munkacsoport-vezetők felé. Kitöltésre kerülnek a heti sablon űrlapok és az emlékeztető sablonok, az előbbi pontosításra és értelmezésre szolgál az utóbbi pedig a projekttermékek és leszállítandó eredménytermékek státuszának vezetésére szolgál. A projekt előrehaladását a mérföldkövek teljesítése jelzi.",
+
+    "Zárás\nA projektzárás pénzügyi és menedzsment szempontú lezárásból áll. Ez a szakasz a projekt minden folyamatát lezárja (akár gondolhatunk arra, hogy sikerült összerakni az ötezer darabos csillagrombolót és a helyére teszünk mindent). Természetesen szükséges, hogy a projektvezető minden végrehajtott fázist az MT (menedzsment terv) szerint ellenőrizzen."
+
+
+    ],
+
+    [
+        "Nyomon követés és irányítás\n A projektvégrehajtást nem szabad magára hagyni, vagy a véletlenre bízni, hanem aktívan irányítani és befolyásolni kell. A nyomon követés során folyamatosan, illetve a lehetőségekhez képest a leggyakrabban információkat kell biztosítani a projekt előrehaladásáról. Határidő- vagy költségtúllépés jelei esetén a projektvezetésnek be kell avatkoznia. Ha probléma merül fel a projekteredmények megvalósításakor, a projektvezetésnek lépnie kell. A projektvezetésnek kezelnie kell a kockázatokat, melyek a határidőre, költségkeretre, vagy a minőségre hatással lehetnek. Jelentős eltérés, vagy a projektcélokat érintő változtatások esetén be kell vonni a megbízót és a döntéshozó testületet. A projekttervek, illetve célok változtatását megfelelően dokumentálni kell. Amennyiben hiba lépett fel probléma adódott a következő kérdések nyújthatnak nekünk segítséget. „Mi történt?”, „Mikor történt?”, „Hol történt?”, „Hogyan történt?”, „Miért történt?”, „Ki vett részt benne? (Nem bűnbak keresése a cél)”, „Milyen hatása van az eltérésnek a sikerre?” \nMegoldások:\nA projekttagok közvetlen utasítása \nA projekttagok képzése \nA projekttagok mentesítése a projekten kívüli feladatok alól  \nA projekttagok cseréje  \nA projekttagok agilis, napi szintű illetve naponta többszöri beszámoltatása  \nA dolgozói létszám növelése \nA projektvégrehajtás módosítása \n A kommunikáció javítása  \nMegbeszélések a projekttagokkal \nA megbízó és a döntéshozó testület tájékoztatása \nA projektinfrastruktúra változtatása \nA megbeszélések helyszínének megfelelő megválasztása, az ügyfélnél tartott megbeszélések arányának növelése   " ,
+    
+
+        "Jelentési és döntéshozatali rend\nA célja, hogy a PIB és az MTT pontos, aktuális információt kapjon és tudjon menedzselni, tehát, ha a Lego összerakásában mondjuk egy külső rétegnél járunk akkor ne a Lego szerkezetéről adjunk információkat. Ez a folyamat az operatív szintről döntéshozói szint felé irányul. Egy ilyen jelentésnek hetente kell megtörténnie.",
+
+        "Dokumentációs rend\nSzakmai eredmény:  \nProjekttartalom \nProjekteredmények \nProjektelemzések  \nMunkaanyagok tartalma  \nRészeredmények \nstb. \n \nProjektmenedzsment:\nProjektmegbízás\nProjektszervezet  \nProjektindítás \nProjekttervezés \nNyomon követés és irányítás  \nProjektzárás  \nÁtadás-átvételi jegyzőkönyv \nListák  \nstb.",
+
+        "Változtatásmenedzsment folyamata\n Fontos ügyelni arra, hogy csak elfogadott változások lépjenek életbe. Nem sérthetik az idő és költség tényezőket. A változtatás teljes hatását dokumentálni kell.",
+
+        "Kockázatkezelés rendje\nA kockázatok kezelésére úgy lehet a legjobban megoldást nyújtani, hogyha a projekttervező alaposan feltérképezi a helyzetet, amit egy betanult, kialakított vagy megjegyzett módszertan alapján történik.",
+
+        "Problémakezelés\n A projektvezető a sajátkörében megoldhatja a problémát. Ha a projektvezető szükségesnek látja, elindíthat egy változtatáskezelési folyamatot. Felmerülhet kockázat, aminek következtében kockázatkezelési folyamat indítható el.Elvégzendő feladatok a probléma bekövetkezteként\n \n1. Az akadályt kiváltó helyzet megvizsgálása. \n2. A helyzet elemzése. \n3. Megoldások, javaslatok kidolgozása.\nA probléma felvetője megoldási lehetőségeket is felsorolhat. A Projektvezető egyéb szempontokat is figyelembe vehet, mint a problémafelvető. \nBonyolultabb esetben a következőket kell tenni:  \nÖssze kell írni a tényeket. \nÖssze kell írni, mi az, ami jól megy a projektben\nÖssze kell írni, mi az, ami rosszul megy. \nÖssze kell írni, mi szükséges ahhoz, hogy megoldjuk a problémát. ",
+
+        "Stakeholderek menedzsmentje \nFontos meghatározni, hogy stakeholderenként ki felel érte és milyen módon mit kommunikál/közvetít neki. Érdemes akár egy külön informális hálózatot kialakítani."
+
+
+    ],
+    ["Két nagy csoport \nInfrastruktúrafejlesztés (Hardware)\nAlkalmazásfejlesztés/szoftverbevezetés",
+
+    "Szakmai specifikáció\nMinden IT projekt alapja egy olyan dokumentum, amely tartalmazza a szakami oldal elvárásait, követelményeit. Tartalmaznia kell, hogy mi a célja a projektnek, továbbá az üzleti folyamat leírását, a kiváltó okot és problémát, aminek megoldása érdekében a termék készül.",
+
+    "Folyamattervezés\nA folyamattervezés során részletesen meg kell határozni azokat a folyamatokat, amelyeket a rendszer részben vagy egészben támogat. A folyamattervezés során mindig a folyamatok teljes életciklusát kell figyelembe venni, meg kell határozni a folyamat indulásához szükséges adatokat és paramétereket, a folyamat során módosuló/keletkező adatok típusát és a folyamat befejezése során a végtermék tulajdonságait és a fogadó folyamat kereteit",
+
+    "Adatmodell tervezés\nCélja, hogy leírja, hogy milyen adatokat használ, illetve továbbit a projekt végbemenetele során. Pontos elkészítésével kiküszöbölhetjük a későbbi problémákat, amik felmerülhetnek a projekt készítése során. Akár egy forgatókönyv, ha a stábtól kezdve a színészekig mindenki érti a dolgát akkor nem aggódhat gond, akkor se, ha esetleg improvizálni kell.",
+
+    "Architektúra tervezés\nEz a terv tartalmazza a termék szoftveres felépítését, igényeit tulajdonságait, illetve ugyanezt hardware oldalról. A kiterjesztés, fejlődés/bővítés lehetőségeit, és az elvárásokat is leírja. Fontos, hogy a szerkezete minél egyszerűbb legyen annak érdekében, életbe léptetése könnyen menjen a fejlesztéskor. Ismét a forgatókönyves példára érdemes gondolni, a párhuzam itt a kockázat és a színészek improvizálása közt vonható le.",
+
+    "Fejlesztői specifikáció\nA fejlesztői specifikáció egy olyan dokumentum, amely kifejezetten a fejlesztőknek szól ezzel tartalmazva minden olyan elemet, fogalmat, eljárást, amelyeket a fejlesztőknek használniuk kell (például osztályok).",
+
+    "Fejlesztés\nA fejlesztési folyamat történhet külső, illetve belső erőforrások bevonásával is. A fejlesztés során kiemelt fontosságú a megfelelő dokumentáció elkészítése ez biztosítja, hogy a fejlesztőt érintő bárminemű probléma esetén egy másik fejlesztő zökkenőmentesen tudja átvenni a feladatot továbbá a felmerült hibák kezelésére javasolt egy hibakezelő (bug tracker) alkalmazás használata, kombinálva egy megfelelő verziókezelő rendszerre.",
+
+    "Adatmigráció\nAmennyiben a projekt célja egy vagy több létező rendszer leváltása, a leváltott rendszerekben található adatokat át kell tölteni az új rendszerbe, ez az adatmigráció. Az adatmigráció során fontos szempont a teljes körűség, hogy a régi rendszerben található adatok mindegyike áttöltésre kerüljön.",
+
+    "Tesztelés\nA tesztelés célja annak biztosítása, hogy a rendszer képes elvégezni az összes támogatott üzleti folyamatot.\n \nElvégzendő tesztek: \nFejlesztői teszt:\nFejlesztői teszt:\nlényege a program alapvető funkcióit megnézni, hogy az elvárásoknak megfelelően működik-e, továbbá amennyiben hibára fut a program, mi történik. A nevéből adódóan a fejlesztők végzik.\n \nIntegrációs teszt:\nAz egyes alrendszerek közti kommunikáció kerül ellenőrzésre (adatbázisok stb.).\n  \nTerhelés teszt:\nA rendszer tesztelése a specifikációban meghatározott felhasználók minimális és maximális számának és tevékenységének szimulálásával.\n \nBiztonsági teszt:\nEz a teszt akkor kerül megvalósításra, amennyibben az alkalmazás az internetet is használja, ilyenkor kiderül hol vannak, olyan részei a szoftvernek, amelyek könnyen támadás alá kerülhetnek.\n \nPrototípus teszt:\nAz alkalmazást részeire-funkcióira bontva kell tesztelni.\n \nElfogadási teszt:\nEgy forgatókönyv alapján azonosítják és besorolják a hibákat még a rendszer indulása előtt.\n \nFelhasználói teszt:\nFelhasználói tesztelés során a rendszert általában szimulációs tesztadatok helyett valós adatokkal tesztelik. Feltárhatja az olyan problémákat, amelyeket esetleg a tesztadatok nem hoztak elő.\n \nGo live teszt:\nEnnek a tesztnek az a célja, hogy a felhasználók meggyőződjenek, hogy a termék biztonságosan és megfelelően használható lesz majd éles körülmények között.",
+
+    "Élesítés\nAz élesítés a sikeres tesztelést követően, a megfelelő jóváhagyások megszerzése után az arra kijelölt időablakban történik. Természetesen a hibák számainak minimalizálása után "
+    
+
+],
+    ["Figyelem! Ez a lépés a felhasznált dokumentumból szó szerint került beillesztésre ez már csak kiegészítő anyag így ragaszkodunk ahhoz, hogy az ajánlások ne egy átfogó tartalomra hivatkozzanak, amelyet mi szerkesztettünk, hanem az eredeti dokumentumra, ide érdemes akár, akkor visszatérni, mikor érdekeltség-igény szerint átolvasásra került az eredeti dokumentum is.", "1. A projektmenedzsment-eljárásrend valamennyi lépését nem lehet minden projektnél teljeskörűen alkalmazni, a dokumentum inkább ajánlásként kezelendő. Lehetőség szerint ne a bonyolultság, hanem a megalapozott szakmai fontosság döntsön az alkalmazásra kerülő ajánlásokról. (Valamennyi olyan elemet célszerű elhagyni, amelyet nem tudunk hasznosítani, csak önmagáért dolgoznánk ki.)\n 2. Az előző pontból következik: egy adott projekt esetében mindenképpen testre kell szabni, a PAD dokumentumban kell az aktuális projekthez és szervezeti szabályokhoz, szokásokhoz igazítani a szervezetet, folyamatokat, működési rendet és a sablonokat is. A projektvezető korábbi saját tapasztalata is fontos input egy új projekt indításakor, azt is fel lehet és célszerű használni a lokalizáláskor, de ugyanakkor nem szabad csak arra építeni.\n 3. A célok felsőszintű megfogalmazása, dokumentumban történő rögzítése a célrendszerrel, sikerkritériumokkal együtt és azok elfogadása nélkülözhetetlen alapja egy projekt előkészítésének. A projekt előrehaladása során valamennyi változtatásnál ellenőrizni kell, hogy a célok nem sérülnek-e, ugyanakkor biztosítani kell a célok megváltoztathatóságát is.", 
+
+    " 4. A funkcionális szervezet és a projekt, valamint a döntéshozó fórumok kapcsolódásainak rögzítése kiemelt fontosságú. A szervezeti szintű döntéseket, változásokat a projektnek is kezelnie kell.\n 5. Kell, hogy legyen a projektnek szponzora, aki a vezetői elkötelezettséget biztosítja, akinek fontos a projekt sikere. A szponzort - rendszeres tájékoztatás keretében - a projektről informálni kell.\n6. Nagy hangsúlyt kell helyezni az adott projekt környezetébe (portfólióba) illesztésébe is. Ebbe bele tartozik a külső függőségek és külső kapcsolatok kezelése is, minden olyan, minek eredménye a projektünkre is hatással van/lesz. Összefüggő projekteknél rendszeresen értékelni kell azok programba illesztésének hatásait. ",
+
+    "7. Fontos lépés az egyes mérföldkövek, szakaszok végén az elvégzett tevékenységek kiértékelésének elvégzése, erre is érdemes hangsúlyt helyezni. Ebben a projekt minőségbiztosítója is a projektvezető segítségére lehet. \n8. A projekt belső működését le kell képezni az esetleges beszállítók, stratégiai partnerek együttműködési csatornáin is. Ennek legmegfelelőbb szintje a velük kötött szerződés vagy annak melléklete. \n9. Jelen eljárásrend a projektmenedzsment során alkalmazandó technikai elemeket mutatja be, de nagy hiba, ha a projektvezető a projekt csapattal nem foglalkozik, csak a projektmenedzsment technikák gépies alkalmazásával vagy a projektmenedzsment támogató eszköz menedzselésével. ",
+
+     "10. A projektek kudarcának leggyakoribb okai és azok kezelése:\n a. felelősségvállalás hiánya -> a projektszervezet megfelelő összeállítása\n b. hatáskör hiánya -> felhatalmazás \n c. előkészítés hiánya -> alapos, megfelelő szintű tervezés \n d. döntésképtelenség -> döntéshozatali folyamat minden lépésének meghatározása\n e. túl komplex (teljesíthetetlen) terjedelem meghatározása -> szakaszolás.\n 11. Mindig legyünk tisztában a kapcsolódó eljárásrendekkel, különösen a kivételkezelésekkel, korrekciós lehetőségekkel. Igyekezzünk lehetőséget teremteni valamennyi stakeholderrel az informális egyeztetésre is. \n 12. Európai uniós projektek esetén: a projekt elszámolási és pénzügyi folyamatok menedzsmentje, továbbá kiemelten a közbeszerzési eljárások kezelése olyan speciális tudást igényel, amelyek ismerete nélkül nem szabad elkezdeni a projektet. A tervezés során figyelemmel kell lenni ezek átfutási idejére is, különös tekintettel a változtatások kezeléséhez kapcsolódóan érdemes erre készülni."],
+    ["Figyelem! Ez a lépés a felhasznált dokumentumból szó szerint került beillesztésre ez már csak kiegészítő anyag így ragaszkodunk ahhoz, hogy az ajánlások ne egy átfogó tartalomra hivatkozzanak, amelyet mi szerkesztettünk, hanem az eredeti dokumentumra, ide érdemes akár, akkor visszatérni, mikor érdekeltség-igény szerint átolvasásra került az eredeti dokumentum is.","•Az alábbiakban meghatározzuk a dokumentumban alkalmazott – pontosítást igénylő – kifejezéseket és rövidítéseket\nRövidítés - kifejezés Meghatározás\nEM - Együttműködési Megállapodás\nEMIR - Egységes Monitoring Információs Rendszer\nEPTK - Elektronikus Pályázó Tájékoztató és Kommunikációs Rendszer\nERFA - Európai Regionális Fejlesztési Alap\nESZA - Európai Szociális Alap\nHJ - Heti jelentés\nIH - Irányító Hatóság\nKA - Kohéziós Alap\nKAT - Kapcsolati tábla \nMT - Megvalósíthatósági tanulmány\nMTT - Magas szintű Támogató Testület\nOP - Operatív program\nPAD - Projekt Alapító Dokumentum\nPFB - Projekt Felügyelő Bizottság",
+    "PIB - Projekt Irányító Bizottság\nPME - vagy Eljárásrend Projektmenedzsment-eljárásrend \nPTS - Projekt termék struktúra\nPZD - Projektzáró dokumentum – a projekt végrehajtás értékelését tartalmazó és a projekt eredményeit összefoglaló dokumentum\nRBS - Kockázatlebontási struktúra (Risk Breakdown Structure)\nRMT - Részletes Megvalósíthatósági Tanulmány\nTLS - Termék lebontási struktúra\nTSZ - Támogatási Szerződés "]
+
+];
 
 
 
@@ -940,21 +1001,8 @@
     }
 
 
-    function lapoz_elore(){
-        if (index != szoveg.length - 1){
-           index++;
-            
-        }
-        else{
-            index=szoveg.length-1;
-        }
-    }
-    function lapoz_hatra(){
-        if (index!=0){
-            index--;
-            
-        }
-
+    function lapozasgombok(){
+        
     }
 
 </script>
