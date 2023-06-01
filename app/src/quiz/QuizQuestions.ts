@@ -294,7 +294,7 @@ export const quizQuestions: {[keretrendszer: string]: QuizQuestion[]} = {
             c: "C) Projektelemzések",
             valasz: "b"
         },
-        {//18
+        {
             kerdes: "Ki a Stakeholder (ejtsd: sztékholder)?",
             a: "A) Aki tartja a steaket",
             b: "B) Fejlesztők",
@@ -302,23 +302,44 @@ export const quizQuestions: {[keretrendszer: string]: QuizQuestion[]} = {
             valasz: "c"
         },
         {
-            kerdes: " ",
-            a: "A) ",
-            b: "B) ",
-            c: "C) ",
+            kerdes: "Mi az adatmodell célja?",
+            a: "A) Hogy leírja milyen adatokat használ, továbbít a projekt.",
+            b: "B) Az adatok típusát és tárolási folyamatát ábrázolja.",
+            c: "C) Adatok logikai és szerkezeti leírását foglalja össze.",
             valasz: "a"
         },
-        
+        {//20
+			kerdes: "Mit jelent az adatmigráció?",
+			a: "A) Adatok nyomtalan eltűnése.",
+			b: "B) Kéretlen adatok érkeznek az eszközünkre.",
+			c: "C) A régi rendszer adatainak áttöltése az újba.",
+			valasz: "a"
+		},
+		{
+			kerdes: 'Mit "takat" az EM?',
+			a: "A) Egységes Monitoring Információs Rendszer",
+			b: "B) Együttműködési Megállapodás",
+			c: "C) Tipográfiai mértékegység",
+			valasz: "b"
+		},
+		{
+			kerdes: 'Mit "takat" az IH?',
+			a: "A) Irányító Hatóság",
+			b: "B) Információs Hivatal",
+			c: "C) International House Budapest",
+			valasz: "a"
+		},
+
     ],
 };
 
 /*
-{
-    kerdes: " ",
-    a: "A) ",
-    b: "B) ",
-    c: "C) ",
-    valasz: "a"
-},
+		{
+			kerdes: " ",
+			a: "A) ",
+			b: "B) ",
+			c: "C) ",
+			valasz: "a"
+		},
 
 */
