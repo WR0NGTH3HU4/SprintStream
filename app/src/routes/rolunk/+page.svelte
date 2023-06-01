@@ -29,6 +29,8 @@
 </style>
 
 <script lang="ts">
+	import ClickerGeneratorCanvas from "../../components/ClickerGeneratorCanvas.svelte";
+
 	import ClickerGenerator from "../../components/ClickerGenerator.svelte";
 	import Navbar from "../../components/Navbar.svelte";
     import { onMount } from 'svelte';
