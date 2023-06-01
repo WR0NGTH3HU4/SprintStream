@@ -1,5 +1,7 @@
 export class ToggleManager {
+
     private toggles: { [key: string]: boolean } = {};
+
 
     constructor(keys: string[]) {
         for (let key of keys) {
@@ -13,7 +15,23 @@ export class ToggleManager {
                 this.toggles[key] = false;
             }
         }
-    
+
+        this.toggles[toggleable] = !this.toggles[toggleable];
+    }
+
+    public get(key: string) {
+        return this.toggles[key];
+    }
+
+    public getToggled(): string | null {
+        for (let key in this.toggles) {
+            if (this.toggles[key] == true) return key;
+        }
+
+        return null;
+    }
+}
+
         this.toggles[toggleable] = !this.toggles[toggleable];
     }
 
@@ -21,3 +39,4 @@ export class ToggleManager {
         return this.toggles[key];
     }
 }
+
