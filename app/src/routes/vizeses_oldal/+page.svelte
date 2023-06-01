@@ -62,7 +62,12 @@
                             <img src="icons/document.png" alt="kep">
                     </div>
                     <div class="nyilak">
-
+                        <svg on:click={lapoz_hatra} class="hatra" width="100" height="161" viewBox="0 0 100 161" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M75 136.588L29.0683 90.6568C23.6439 85.2324 23.6439 76.356 29.0683 70.9316L75 25" stroke="#788BFF" stroke-width="48.5835" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <svg on:click={lapoz_elore} class="elore" width="100" height="161" viewBox="0 0 100 161" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M25 136.589L70.9316 90.6573C76.3561 85.2329 76.3561 76.3565 70.9316 70.932L25 25" stroke="#788BFF" stroke-width="48.5839" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
                                 
                     </div>
                 
@@ -1001,8 +1006,21 @@
     }
 
 
-    function lapozasgombok(){
-        
+    function lapoz_elore(){
+        if (index != szoveg.length - 1){
+           index++;
+            
+        }
+        else{
+            index=szoveg.length-1;
+        }
+    }
+    function lapoz_hatra(){
+        if (index!=0){
+            index--;
+            
+        }
+
     }
 
 </script>
