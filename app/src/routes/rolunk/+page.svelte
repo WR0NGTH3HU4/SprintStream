@@ -1,6 +1,6 @@
 <main>
     <section class="main">
-        <ClickerGenerator elemShape="square" shapes="{shapes}" />
+        <ClickerGenerator elemShape="circle" shapes="{shapes}" />
     </section>
 </main>
 
@@ -35,19 +35,19 @@
     
     const shapes = [
         {
-            text: "asdasd",
+            text: "0",
         },
         {
-            text: "asdasd"
+            text: "1"
         },
         {
-            text: "asdasd"
+            text: "2"
         },
         {
-            text: "asdasd"
+            text: "3"
         },
         {
-            text: "asdasd"
+            text: "4"
         },
     ];
 
