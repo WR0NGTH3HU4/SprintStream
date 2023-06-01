@@ -1,93 +1,97 @@
 <div id="selector">
-    
+    <div id="shapes">
+        {#each shapes as shape}
+            <div class="shape" on:click={() => dispatch('shapeClick', { id: shape.id })} style="
+                --size: {Math.floor(Math.random() * 200) + 120}px;
+                --color: {shape.backgroundColor || `var(--${Math.floor(Math.random() * 4) + 1})`};
+                --background-image: {shape.backgroundImage || 'none'};
+                --offset-x: {Math.floor(Math.random() * 50) - 30}px;
+                --offset-y: {Math.floor(Math.random() * 100)}px;
+                --border-radius: {elemShape == 'circle' ? '50%' : '15px'};"
+            >
+                <span>{shape.text || ''}</span>
+            </div>
+        {/each}
+    </div>
 </div>
 
 <style lang="scss">
-    #selector {
-        height: 100vh;
-        position: relative;
+    @media screen and (max-width: 1100px) {
+        #shapes .shape {
+            transform: translateX(var(--offset-x)) scale(0.7) !important;
+
+            &:hover {
+                transform: translateX(var(--offset-x)) scale(0.8) !important;
+            }
+        }
     }
+
+    #selector {
+        position: relative;
+
+        display: flex;
+        align-items: center;
+    }
+
+    #shapes {
+        flex: 1;
+        width: 100vh;
+        overflow-x: visible;
+        overflow-y: visible;
+        align-content: center;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        display: flex;
+        gap: 2rem;
+        
+        .shape {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            text-align: center;
+
+            min-width: var(--size);
+            width: var(--size);
+            min-height: var(--size);
+            height: var(--size);
+            background-color: var(--color);
+            background-image: var(--background-image);
+            background-size: cover;
+            background-position: center;
+            transform: translateX(var(--offset-x)) translateY(var(--offset-y));
+            transition: transform .2s ease-out;
+            line-height: var(--size);
+            cursor: pointer;
+
+            border-radius: var(--border-radius);
+
+            &:nth-child(even) {
+                margin-top: -1rem;
+            }
+
+            &:nth-child(odd) {
+                margin-top: 1rem;
+            }
+
+            &:hover {
+                transform: translateX(var(--offset-x)) translateY(var(--offset-y)) scale(1.2);
+                transition: transform .2s ease-out;
+            }
+        }
+    }
+
 </style>
 
 <script lang="ts">
-	import { onMount } from "svelte";
-
-    interface ShapeObj {
-        x: number;
-        y: number;
-        size: number;
-    }
+    import { createEventDispatcher } from 'svelte';
+	import type { Shape } from "../util/model/Shape";
 
 	export let elemShape: 'circle' | 'square';
-    export let size: { min: number; max: number } = { min: 100, max: 500 };
-	export let shapes: { text: string; backgroundImage?: string; onClick?: () => any }[];
-    export let bounds: { top?: number, bottom?: number; left?: number; right?: number } = { top: 100, bottom: 0, left: 100, right: 0 };
+    export let size: { min: number; max: number } = { min: 100, max: 200 };
+	export let shapes: { id: string; text?: string; backgroundImage?: string; backgroundColor?: string }[];
+    // export let bounds: { top?: number, bottom?: number; left?: number; right?: number } = { top: 100, bottom: 0, left: 100, right: 0 };
     
-    let generated = new Promise<boolean>((resolve, reject) => {});
-    let reserved: ShapeObj[] = [];
-
-    function isColliding(c1: ShapeObj, c2: ShapeObj): boolean {
-        if (
-            c1.x < c2.x + c2.size &&
-            c1.x + c1.size > c2.x &&
-            c1.y < c2.y + c2.size &&
-            c1.size + c1.y > c2.y
-        ) return true;
-
-        return false;
-    }
-
-    function canBePlaced(obj: ShapeObj): boolean {
-        for (let resObj of reserved) {
-            if (isColliding(resObj, obj)) {
-                return false;
-            }
-        }
-        
-        return true;
-    }
-
-    function generate() {
-        const selector = document.getElementById('selector');
-        const width: number = selector.offsetWidth;
-        const height: number = selector.offsetHeight;
-        const centerX: number = width / 2;
-        const centerY: number = height / 2;
-
-        for (let i = 0; i < shapes.length; i++) {
-            let s: number, x: number, y: number;
-            let shape: ShapeObj;
-            let shapeMeta = shapes[i];
-
-            do {
-                s = Math.floor(Math.random() * size.max) + size.min;
-                const offsetX = Math.random() * centerX * 0.5; // Adjust the bias here
-                const offsetY = Math.random() * centerY * 0.5; // Adjust the bias here
-                x = centerX + (Math.random() < 0.5 ? -1 : 1) * offsetX;
-                y = centerY + (Math.random() < 0.5 ? -1 : 1) * offsetY;
-                shape = { x, y, size: s };
-            } while (!canBePlaced(shape));
-
-            const elem = document.createElement('span');
-
-            elem.innerHTML = shapeMeta.text;
-            elem.style.backgroundImage = shapeMeta.backgroundImage ? `url(${shapeMeta.backgroundImage})` : 'none';
-            elem.onclick = shapeMeta.onClick;
-            elem.style.borderRadius = elemShape == 'circle' ? '100%' : '20px';
-            elem.style.lineHeight = elem.style.width = elem.style.height = `${s}px`;
-            elem.style.position = 'absolute';
-            elem.style.transform = 'translate(-50%, -50%)';
-            elem.style.backgroundColor = 'black';
-            elem.style.left = `${x - s / 2}px`;
-            elem.style.top = `${y - s / 2}px`;
-            elem.style.textAlign = 'center';
-
-            reserved.push(shape);
-            selector.appendChild(elem);
-        }
-    }
-
-	onMount(() => {
-        generate();
-	});
+	const dispatch = createEventDispatcher();
 </script>
