@@ -10,8 +10,8 @@
             <div on:click={elso} class="kor kor1">
                 <h3>2.lépés</h3>
             </div>
-
-            <div on:click={masodik} class="kor kor2">
+            
+            <div on:click={masodik } class="kor kor2">
                 <h3>1.lépés</h3>
             </div>
 
@@ -56,7 +56,7 @@
                     <div class="szoveg">
                         <div>
                             <h1 class="jelenlegi_cim">{cim[cim_index]}</h1>
-                            <p class="jelenlegi_szoveg">{kov_elem}</p>
+                            <p id="jelenlegi_szoveg">{szoveg[index][belso]}</p>
                         </div>
                         
                             <img src="icons/document.png" alt="kep">
@@ -132,6 +132,13 @@
               </svg>
         </div>
     </div>
+
+    <div>
+        <button on:click={stepBackward}>Backward</button>
+        <span>{mainArray[currentArrayIndex][currentElementIndex]}</span>
+        <button on:click={stepForward}>Forward</button>
+      </div>
+      
 </main>
 
 <style lang="scss">
@@ -369,7 +376,7 @@
     .nyilak{
         display: flex;
         flex-direction: row;
-        justify-content: center;
+        justify-content: space-between;
         align-items: center;
         align-self: center;
         width:80%;
@@ -642,6 +649,17 @@
     .ph:hover{
         animation: kiemeles 4s infinite;
     }
+    .elore path:hover{
+        animation: lepes 4s infinite;
+    }
+    .hatra path:hover{
+        animation: lepes 4s infinite;
+    }
+    @keyframes lepes{
+        50%{
+            stroke: #292D32;
+        }
+    }
     @keyframes kiemeles{
 
 
@@ -655,7 +673,7 @@
 </style>
 
 <script lang="ts">
-	import { set_data } from "svelte/internal";
+	import { each, set_data } from "svelte/internal";
 	import Navbar from "../../components/Navbar.svelte";
     import { onMount } from 'svelte';
     let hatra:any;
@@ -684,9 +702,11 @@
     let p: any;
     let i:any;
     let h: any;
+
     
 
     onMount(() => {
+
         hatra= document.querySelector('.hatra');
         elore= document.querySelector('.elore');
         olvasas= document.querySelector('.olvasas');
@@ -728,6 +748,7 @@
     
     let cim_index=0;
     let index=0;
+    let belso = 0;
     
     
     let cim=["A projekt menedzsment(1.)","Szervezet(2.)","Projektfolyamatok, fázisok(3.)","A projekt működési rendje(4.)","IT projekt megközelítés(5.)","Összegzés(6.)","Mellékletek(7.)"];
@@ -822,7 +843,7 @@
 
     "Adatmigráció\nAmennyiben a projekt célja egy vagy több létező rendszer leváltása, a leváltott rendszerekben található adatokat át kell tölteni az új rendszerbe, ez az adatmigráció. Az adatmigráció során fontos szempont a teljes körűség, hogy a régi rendszerben található adatok mindegyike áttöltésre kerüljön.",
 
-    "Tesztelés\nA tesztelés célja annak biztosítása, hogy a rendszer képes elvégezni az összes támogatott üzleti folyamatot.\n \nElvégzendő tesztek: \nFejlesztői teszt:\nFejlesztői teszt:\nlényege a program alapvető funkcióit megnézni, hogy az elvárásoknak megfelelően működik-e, továbbá amennyiben hibára fut a program, mi történik. A nevéből adódóan a fejlesztők végzik.\n \nIntegrációs teszt:\nAz egyes alrendszerek közti kommunikáció kerül ellenőrzésre (adatbázisok stb.).\n  \nTerhelés teszt:\nA rendszer tesztelése a specifikációban meghatározott felhasználók minimális és maximális számának és tevékenységének szimulálásával.\n \nBiztonsági teszt:\nEz a teszt akkor kerül megvalósításra, amennyibben az alkalmazás az internetet is használja, ilyenkor kiderül hol vannak, olyan részei a szoftvernek, amelyek könnyen támadás alá kerülhetnek.\n \nPrototípus teszt:\nAz alkalmazást részeire-funkcióira bontva kell tesztelni.\n \nElfogadási teszt:\nEgy forgatókönyv alapján azonosítják és besorolják a hibákat még a rendszer indulása előtt.\n \nFelhasználói teszt:\nFelhasználói tesztelés során a rendszert általában szimulációs tesztadatok helyett valós adatokkal tesztelik. Feltárhatja az olyan problémákat, amelyeket esetleg a tesztadatok nem hoztak elő.\n \nGo live teszt:\nEnnek a tesztnek az a célja, hogy a felhasználók meggyőződjenek, hogy a termék biztonságosan és megfelelően használható lesz majd éles körülmények között.",
+    "Tesztelés\nA tesztelés célja annak biztosítása, hogy a rendszer képes elvégezni az összes támogatott üzleti folyamatot.\n \nElvégzendő tesztek: \n \nFejlesztői teszt:\nlényege a program alapvető funkcióit megnézni, hogy az elvárásoknak megfelelően működik-e, továbbá amennyiben hibára fut a program, mi történik. A nevéből adódóan a fejlesztők végzik.\n \nIntegrációs teszt:\nAz egyes alrendszerek közti kommunikáció kerül ellenőrzésre (adatbázisok stb.).\n  \nTerhelés teszt:\nA rendszer tesztelése a specifikációban meghatározott felhasználók minimális és maximális számának és tevékenységének szimulálásával.\n \nBiztonsági teszt:\nEz a teszt akkor kerül megvalósításra, amennyibben az alkalmazás az internetet is használja, ilyenkor kiderül hol vannak, olyan részei a szoftvernek, amelyek könnyen támadás alá kerülhetnek.\n \nPrototípus teszt:\nAz alkalmazást részeire-funkcióira bontva kell tesztelni.\n \nElfogadási teszt:\nEgy forgatókönyv alapján azonosítják és besorolják a hibákat még a rendszer indulása előtt.\n \nFelhasználói teszt:\nFelhasználói tesztelés során a rendszert általában szimulációs tesztadatok helyett valós adatokkal tesztelik. Feltárhatja az olyan problémákat, amelyeket esetleg a tesztadatok nem hoztak elő.\n \nGo live teszt:\nEnnek a tesztnek az a célja, hogy a felhasználók meggyőződjenek, hogy a termék biztonságosan és megfelelően használható lesz majd éles körülmények között.",
 
     "Élesítés\nAz élesítés a sikeres tesztelést követően, a megfelelő jóváhagyások megszerzése után az arra kijelölt időablakban történik. Természetesen a hibák számainak minimalizálása után "
     
@@ -842,14 +863,19 @@
 
 
 
+
     function elso(){
         if(kapcsolas_1==false){
-            index=4;
+            index=1;
+            belso=0;
             cim_index=1;
+            
             olvasas.style.display="flex";
             szovegek.style.display="flex";
             nyilak.style.display="flex";
+
             projharomszog.style.display="none";
+
         }
         else if(kapcsolas_1==true){
             olvasas.style.display="none";
@@ -859,11 +885,14 @@
     }
     function masodik(){
         if(kapcsolas_2==false){
-            kov_elem = szoveg[0][0]
+            index=0;
+            belso=0
+            
             cim_index=0;
             olvasas.style.display="flex";
             szovegek.style.display="flex";
             nyilak.style.display="flex";
+            
             projharomszog.style.display="none";
         }
         else if(kapcsolas_2==true){
@@ -875,6 +904,8 @@
     function harmadik(){
         if(kapcsolas_3==false){
             cim_index=2
+            index=2;
+            belso=0;
             olvasas.style.display="flex";
             szovegek.style.display="flex";
             nyilak.style.display="flex";
@@ -889,6 +920,8 @@
     function negyedik(){
         if(kapcsolas_4==false){
             cim_index=3;
+            index=3;
+            belso=0;
             olvasas.style.display="flex";
             szovegek.style.display="flex";
             nyilak.style.display="flex";
@@ -904,6 +937,8 @@
     function otodik(){
         if(kapcsolas_5==false){
             cim_index=4;
+            index=4;
+            belso=0;
             olvasas.style.display="flex";
             szovegek.style.display="flex";
             nyilak.style.display="flex";
@@ -918,6 +953,8 @@
     function hatodik(){
         if(kapcsolas_6==false){        
             cim_index=5;
+            index=5;
+            belso=0;
             olvasas.style.display="flex";
             szovegek.style.display="flex";
             nyilak.style.display="flex";
@@ -932,6 +969,8 @@
     function hetedik(){
         if(kapcsolas_7==false){
             cim_index=6;
+            index=6;
+            belso=0;
             olvasas.style.display="flex";
             szovegek.style.display="flex";
             nyilak.style.display="flex";
@@ -1007,25 +1046,62 @@
     }
 
 
-    let kov_elem;
+   
 
     function lapoz_elore(){
-        if (index != szoveg.length - 1){
-            let jelenlegi_Tomb = szoveg[index]
-            let kov_index=(index+1) % szoveg.length;
-            kov_elem = jelenlegi_Tomb[kov_index];
+        if (belso < szoveg[index].length-1){
+            belso++
 
         }
-        else{
-            index=szoveg.length-1;
+        else if(index<szoveg.length-1){
+            index++
+            belso=0;
+            
+            cim_index++;
         }
-    }
+
+        }
+    
     function lapoz_hatra(){
-        if (index!=0){
-            index--;
+        if ( belso>0){
+            belso--;
             
         }
+        else if(index>0){
+            index--;
+            belso =szoveg[index].length-1;
+            
+            cim_index--;
+        }
 
     }
+    let mainArray = [
+    ["element1", "element2", "element3"],
+    ["element4", "element5"],
+    ["element6", "element7", "element8", "element9"]
+  ];
+
+  let currentArrayIndex = 0;
+  let currentElementIndex = 0;
+
+  function stepForward() {
+    if (currentElementIndex < mainArray[currentArrayIndex].length - 1) {
+      currentElementIndex++;
+    } else if (currentArrayIndex < mainArray.length - 1) {
+      currentArrayIndex++;
+      currentElementIndex = 0;
+    }
+  }
+
+  function stepBackward() {
+    if (currentElementIndex > 0) {
+      currentElementIndex--;
+    } else if (currentArrayIndex > 0) {
+      currentArrayIndex--;
+      currentElementIndex = mainArray[currentArrayIndex].length - 1;
+    }
+  }
+
+
 
 </script>
