@@ -60,23 +60,23 @@
     const shapes = [
         {
             id: "0",
-            backgroundImage: 'url(./rolunk/csoka_andras.jpg)',
+            backgroundImage: 'url(rolunk/csoka_andras.jpg)',
         },
         {
             id: "1",
-            backgroundImage: 'url(./rolunk/csaszar_andras.jpg)',
+            backgroundImage: 'url(rolunk/csaszar_andras.jpg)',
         },
         {
             id: "2",
-            backgroundImage: 'url(./rolunk/kovago_levente.jpg)',
+            backgroundImage: 'url(rolunk/kovago_levente.jpg)',
         },
         {
             id: "3",
-            backgroundImage: 'url(./rolunk/kulimak_mate.jpg)',
+            backgroundImage: 'url(rolunk/kulimak_mate.jpg)',
         },
         {
             id: "4",
-            backgroundImage: 'url(./rolunk/tatrai_dominik.jpg)',
+            backgroundImage: 'url(rolunk/tatrai_dominik.jpg)',
         },
     ];
 
@@ -84,7 +84,7 @@
         {
             nev: "Csóka András",
             leiras: "Sziasztok! Én Csóka András vagyok az weboldalnak a quiz részét csináltam én kisebb nagyobb segítségekkel. Szabadidőmben is szívesen foglalkozok programozással és a tudásom bővítésével. Nagyon könnyen beilleszkedek és alkalmazkodok. Az oldal készítése alatt a Bajai SZC Türr István Technikumba járok ahol a 11.a osztály tagja vagyok.",
-            kep: "./rolunk/csoka_andras.jpg",
+            kep: "rolunk/csoka_andras.jpg",
             media: [
                 {
                     tipus: "github",
@@ -95,7 +95,7 @@
         {
             nev: "Császár András",
             leiras: "halo csaszar andras vagyok, szereny es okos es rendkivul ferfias. turros tanulo vagyok es szamitasaim szerint nem vagyok rossz programozasbol (napi 10 orakat programozok fyi). a projekt nelkulem plain html cssben lenne es github pagesen lenne hostolva",
-            kep: "./rolunk/csaszar_andras.jpg",
+            kep: "rolunk/csaszar_andras.jpg",
             media: [
                 {
                     tipus: "github",
@@ -106,7 +106,7 @@
         {
             nev: "Kővágó Levente",
             leiras: "Hello! Kővágó Leventének vagyok. Baján, a Türr Istán technikum 11.a osztályos tanulója vagyok szoftver fejlesztői ágazaton. Szerbiában egy kis faluban élek, Bezdánban. Versenyszinten kajakozok és napi szinten edzek. A projektben az én feladatom volt a Scrum aloldal megtervezése és megvalósítása, illetve a képek/ikonok keresése. Kisebb nehézségek akadtak a reszponzivításal, illetve a gombok pozicionálásával, de sikeresen vettem az akadályt és megoldottam kisebb segítségekkel.",
-            kep: "./rolunk/kovago_levente.jpg",
+            kep: "rolunk/kovago_levente.jpg",
             media: [
                 {
                     tipus: "github",
@@ -121,7 +121,7 @@
         {
             nev: "Kulimák Máté",
             leiras: "Sziasztok! Kulimák Máté vagyok, vaskúti lakos, a Bajai SZC Türr István Technikum 11.A osztályos tanulója. A projektben leginkább a kreatív feladatokban vettem részt illetve a Jirát kezeltem illetve a \"rólunk\" oldalt én kezdtem el, viszont ezt a PowerPoint miatt félbe kellett hagynom. Érdekesnek valamint izgalmasnak tartom az informatikát és remélem, hogy ezen a területen tudok majd elhelyezkedni.",
-            kep: "./rolunk/kulimak_mate.jpg",
+            kep: "rolunk/kulimak_mate.jpg",
             media: [
                 {
                     tipus: "github",
@@ -140,7 +140,7 @@
         {
             nev: "Tátrai Dominik Oszkár",
             leiras: "Sziasztok Tátrai Dominik vagyok! Röviden magamról annyit mondanék, hogy szabadidőmben szívesen tervezgetek, tanulok új dolgokat vagy kezdek számomra kreatív projektbe ezek leginkább zenei területeken merülnek ki, viszonylag sok stílusra vevő vagyok, vagy sokhoz alkalmazkodni tudok ha úgy van. Úgy gondolom hogy a hobbijaim segítenek nekem, hogy komolyabb területeken is hasznossá tudjak válni, akárcsak ebben a projektben, a többi csapattársammal egyetemben. Jelenleg a Bajai SZC Türr István Technikumba járok ahol a 11.a osztály tagja vagyok. A feladatom az oldalt illetően a \"Vízesés modell\" aloldal elkészítése volt, felmerültek nehézségek az oldal készítése közben, de a rugalmas csapatmunkánknak köszönhetően idővel mindenre sort tudtunk keríteni és megoldani a problémákat.",
-            kep: "./rolunk/tatrai_dominik.jpg",
+            kep: "rolunk/tatrai_dominik.jpg",
             media: [
                 {
                     tipus: "github",
