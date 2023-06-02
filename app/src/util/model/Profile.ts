@@ -3,7 +3,7 @@ export interface Profile {
     leiras: string;
     kep: string;
     media: {
-        tipus: 'github';
-        link: '';
+        tipus: 'github' | 'instagram' | 'twitter';
+        link: string;
     }[];
 }

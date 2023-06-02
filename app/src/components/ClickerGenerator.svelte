@@ -7,7 +7,8 @@
                 --background-image: {shape.backgroundImage || 'none'};
                 --offset-x: {Math.floor(Math.random() * 50) - 30}px;
                 --offset-y: {Math.floor(Math.random() * 100)}px;
-                --border-radius: {elemShape == 'circle' ? '50%' : '15px'};"
+                --border-radius: {elemShape == 'circle' ? '50%' : '15px'};
+                --border: {border ? '2px solid black' : 'none'};"
             >
                 <span>{shape.text || ''}</span>
             </div>
@@ -41,6 +42,7 @@
         align-content: center;
         flex-wrap: wrap;
         justify-content: center;
+        align-items: center;
 
         display: flex;
         gap: 2rem;
@@ -66,6 +68,7 @@
             cursor: pointer;
 
             border-radius: var(--border-radius);
+            border: var(--border);
 
             &:nth-child(even) {
                 margin-top: -1rem;
@@ -88,6 +91,7 @@
     import { createEventDispatcher } from 'svelte';
 	import type { Shape } from "../util/model/Shape";
 
+    export let border: boolean = false;
 	export let elemShape: 'circle' | 'square';
     export let size: { min: number; max: number } = { min: 100, max: 200 };
 	export let shapes: { id: string; text?: string; backgroundImage?: string; backgroundColor?: string }[];
