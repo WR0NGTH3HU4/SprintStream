@@ -83,8 +83,8 @@
                 <div class="container">
                 
                     <svg preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 1440 320">
-                        <path fill="#788BFF" fill-opacity="1" d="M0,192L48,202.7C96,213,192,235,288,240C384,245,480,235,576,202.7C672,171,768,117,864,117.3C960,117,1056,171,1152,208C1248,245,1344,267,1392,277.3L1440,288L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path>
-                        <path fill="#5465FF" fill-opacity="1" d="M0,192L48,176C96,160,192,128,288,149.3C384,171,480,245,576,277.3C672,309,768,299,864,266.7C960,235,1056,181,1152,149.3C1248,117,1344,107,1392,101.3L1440,96L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path>
+                        <path fill="var(--1)" fill-opacity="1" d="M0,192L48,202.7C96,213,192,235,288,240C384,245,480,235,576,202.7C672,171,768,117,864,117.3C960,117,1056,171,1152,208C1248,245,1344,267,1392,277.3L1440,288L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path>
+                        <path fill="var(--0)" fill-opacity="1" d="M0,192L48,176C96,160,192,128,288,149.3C384,171,480,245,576,277.3C672,309,768,299,864,266.7C960,235,1056,181,1152,149.3C1248,117,1344,107,1392,101.3L1440,96L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path>
                     </svg>
 
                     <div class="szoveg">
@@ -97,10 +97,10 @@
                     </div>
                     <div class="nyilak">
                         <svg on:click={lapoz_hatra} class="hatra" width="100" height="161" viewBox="0 0 100 161" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M75 136.588L29.0683 90.6568C23.6439 85.2324 23.6439 76.356 29.0683 70.9316L75 25" stroke="#788BFF" stroke-width="48.5835" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M75 136.588L29.0683 90.6568C23.6439 85.2324 23.6439 76.356 29.0683 70.9316L75 25" stroke="var(--1)" stroke-width="48.5835" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
                         <svg on:click={lapoz_elore} class="elore" width="100" height="161" viewBox="0 0 100 161" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M25 136.589L70.9316 90.6573C76.3561 85.2329 76.3561 76.3565 70.9316 70.932L25 25" stroke="#788BFF" stroke-width="48.5839" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M25 136.589L70.9316 90.6573C76.3561 85.2329 76.3561 76.3565 70.9316 70.932L25 25" stroke="var(--1)" stroke-width="48.5839" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
                                 
                     </div>
@@ -422,11 +422,11 @@
                 -->
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
 
-                        <path fill="#BFD7FF" fill-opacity="1" d="M0,224L26.7,234.7C53.3,245,107,267,160,256C213.3,245,267,203,320,170.7C373.3,139,427,117,480,128C533.3,139,587,181,640,197.3C693.3,213,747,203,800,213.3C853.3,224,907,256,960,234.7C1013.3,213,1067,139,1120,122.7C1173.3,107,1227,149,1280,144C1333.3,139,1387,85,1413,58.7L1440,32L1440,320L1413.3,320C1386.7,320,1333,320,1280,320C1226.7,320,1173,320,1120,320C1066.7,320,1013,320,960,320C906.7,320,853,320,800,320C746.7,320,693,320,640,320C586.7,320,533,320,480,320C426.7,320,373,320,320,320C266.7,320,213,320,160,320C106.7,320,53,320,27,320L0,320Z"></path>
+                        <path fill="var(--3)" fill-opacity="1" d="M0,224L26.7,234.7C53.3,245,107,267,160,256C213.3,245,267,203,320,170.7C373.3,139,427,117,480,128C533.3,139,587,181,640,197.3C693.3,213,747,203,800,213.3C853.3,224,907,256,960,234.7C1013.3,213,1067,139,1120,122.7C1173.3,107,1227,149,1280,144C1333.3,139,1387,85,1413,58.7L1440,32L1440,320L1413.3,320C1386.7,320,1333,320,1280,320C1226.7,320,1173,320,1120,320C1066.7,320,1013,320,960,320C906.7,320,853,320,800,320C746.7,320,693,320,640,320C586.7,320,533,320,480,320C426.7,320,373,320,320,320C266.7,320,213,320,160,320C106.7,320,53,320,27,320L0,320Z"></path>
 
 
 
-                    <path fill="#5465FF" fill-opacity="1" d="M0,64L26.7,106.7C53.3,149,107,235,160,266.7C213.3,299,267,277,320,250.7C373.3,224,427,192,480,186.7C533.3,181,587,203,640,208C693.3,213,747,203,800,181.3C853.3,160,907,128,960,144C1013.3,160,1067,224,1120,234.7C1173.3,245,1227,203,1280,160C1333.3,117,1387,75,1413,53.3L1440,32L1440,320L1413.3,320C1386.7,320,1333,320,1280,320C1226.7,320,1173,320,1120,320C1066.7,320,1013,320,960,320C906.7,320,853,320,800,320C746.7,320,693,320,640,320C586.7,320,533,320,480,320C426.7,320,373,320,320,320C266.7,320,213,320,160,320C106.7,320,53,320,27,320L0,320Z"></path>
+                    <path fill="var(--0)" fill-opacity="1" d="M0,64L26.7,106.7C53.3,149,107,235,160,266.7C213.3,299,267,277,320,250.7C373.3,224,427,192,480,186.7C533.3,181,587,203,640,208C693.3,213,747,203,800,181.3C853.3,160,907,128,960,144C1013.3,160,1067,224,1120,234.7C1173.3,245,1227,203,1280,160C1333.3,117,1387,75,1413,53.3L1440,32L1440,320L1413.3,320C1386.7,320,1333,320,1280,320C1226.7,320,1173,320,1120,320C1066.7,320,1013,320,960,320C906.7,320,853,320,800,320C746.7,320,693,320,640,320C586.7,320,533,320,480,320C426.7,320,373,320,320,320C266.7,320,213,320,160,320C106.7,320,53,320,27,320L0,320Z"></path>
                 </svg>
                 </div>
                 
@@ -438,7 +438,7 @@
 <style lang="scss">
 
     main{
-        background-color:#5465FF ;
+        background-color:var(--0) ;
     }
 
     .container{
@@ -446,7 +446,7 @@
     }
     .scrum{
         width: 100%;
-        background-color:#5465FF ;
+        background-color:var(--0) ;
         
     }
     .controls{
@@ -462,7 +462,7 @@
     }
 
     .fejlec{
-        background-color: #5465FF;
+        background-color: var(--0);
         height: 400px;
         display: flex;
         flex-direction: row;
@@ -484,7 +484,7 @@
 
     
     .lepesvalaszto{
-        background-color: #5465FF;
+        background-color: var(--0);
         height: 700px;
         display: flex;
         flex-direction: row;
@@ -513,7 +513,7 @@
         transform: translate(20rem);
     }
     .gomb1{
-        background: #9BB1FF;
+        background: var(--2);
         border-radius: 20px;
         z-index: 0;
         width: 15%;
@@ -521,7 +521,7 @@
         transform: translate(20%, -120%);
     }
     .gomb2{
-        background: #BFD7FF;
+        background: var(--3);
         border-radius: 20px;
         width: 16%;
         height: 20%;
@@ -530,7 +530,7 @@
         z-index: 17;
     }
     .gomb3{
-        background: #788BFF;
+        background: var(--1);
         border-radius: 20px;
         
         width:20%;
@@ -540,7 +540,7 @@
         z-index: 0;
     }
     .gomb4{
-        background: #9BB1FF;
+        background: var(--2);
         border-radius: 20px;
         width: 17%;
         height: 20%;
@@ -549,7 +549,7 @@
         z-index: 6;
     }
     .gomb5{
-        background: #788BFF;
+        background: var(--1);
         border-radius: 20px;
         width: 20%;
         height: 20%;
@@ -558,7 +558,7 @@
         z-index: 0;
     }
     .gomb6{
-        background: #788BFF;
+        background: var(--1);
         border-radius: 20px;
         width: 20%;
         height: 23%;
@@ -567,7 +567,7 @@
         z-index: 0;
     }
     .gomb7{
-        background: #BFD7FF;
+        background: var(--3);
         border-radius: 20px;
         width: 20%;
         height: 20%;
@@ -576,7 +576,7 @@
         z-index: 0;
     }
     .gomb8{
-        background: #9BB1FF;
+        background: var(--2);
         border-radius: 20px;
         width: 18%;
         height: 20%;
@@ -585,7 +585,7 @@
         z-index: 0;
     }
     .gomb9{
-        background: #788BFF;
+        background: var(--1);
         border-radius: 20px;
         width: 18%;
         height: 20%;
@@ -594,7 +594,7 @@
         z-index: 0;
     }
     .gomb10{
-        background: #BFD7FF;
+        background: var(--3);
         border-radius: 20px;
         width: 18%;
         height: 20%;
@@ -603,7 +603,7 @@
         z-index: 0;
     }
     .gomb11{
-        background: #788BFF;
+        background: var(--1);
         border-radius: 20px;
         width: 18%;
         height: 20%;
@@ -612,7 +612,7 @@
         z-index: 0;
     }
     .gomb12{
-        background: #9BB1FF;
+        background: var(--2);
         border-radius: 20px;
         width: 18%;
         height: 20%;
@@ -621,7 +621,7 @@
         z-index: 0;
     }
     .gomb13{
-        background: #788BFF;
+        background: var(--1);
         border-radius: 20px;
         width: 18%;
         height: 20%;
@@ -672,7 +672,7 @@
             font-size: 140%;
         }
         .gomb1{
-        background: #9BB1FF;
+        background: var(--2);
         border-radius: 20px;
         z-index: 0;
         width: 15%;
@@ -680,7 +680,7 @@
         transform: translate(20%, -120%);
     }
     .gomb2{
-        background: #BFD7FF;
+        background: var(--3);
         border-radius: 20px;
         width: 16%;
         height: 15%;
@@ -689,7 +689,7 @@
         z-index: 17;
     }
     .gomb3{
-        background: #788BFF;
+        background: var(--1);
         border-radius: 20px;
         
         width:20%;
@@ -699,7 +699,7 @@
         z-index: 0;
     }
     .gomb4{
-        background: #9BB1FF;
+        background: var(--2);
         border-radius: 20px;
         width: 17%;
         height: 15%;
@@ -708,7 +708,7 @@
         z-index: 6;
     }
     .gomb5{
-        background: #788BFF;
+        background: var(--1);
         border-radius: 20px;
         width: 20%;
         height: 15%;
@@ -717,7 +717,7 @@
         z-index: 0;
     }
     .gomb6{
-        background: #788BFF;
+        background: var(--1);
         border-radius: 20px;
         width: 20%;
         height: 18%;
@@ -726,7 +726,7 @@
         z-index: 0;
     }
     .gomb7{
-        background: #BFD7FF;
+        background: var(--3);
         border-radius: 20px;
         width: 20%;
         height: 15%;
@@ -735,7 +735,7 @@
         z-index: 0;
     }
     .gomb8{
-        background: #9BB1FF;
+        background: var(--2);
         border-radius: 20px;
         width: 18%;
         height: 15%;
@@ -744,7 +744,7 @@
         z-index: 0;
     }
     .gomb9{
-        background: #788BFF;
+        background: var(--1);
         border-radius: 20px;
         width: 18%;
         height: 15%;
@@ -753,7 +753,7 @@
         z-index: 0;
     }
     .gomb10{
-        background: #BFD7FF;
+        background: var(--3);
         border-radius: 20px;
         width: 18%;
         height: 15%;
@@ -762,7 +762,7 @@
         z-index: 0;
     }
     .gomb11{
-        background: #788BFF;
+        background: var(--1);
         border-radius: 20px;
         width: 18%;
         height: 15%;
@@ -771,7 +771,7 @@
         z-index: 0;
     }
     .gomb12{
-        background: #9BB1FF;
+        background: var(--2);
         border-radius: 20px;
         width: 18%;
         height: 15%;
@@ -780,7 +780,7 @@
         z-index: 0;
     }
     .gomb13{
-        background: #788BFF;
+        background: var(--1);
         border-radius: 20px;
         width: 18%;
         height: 15%;
@@ -802,11 +802,11 @@
 /*------------------------------------------------------------*/
 
 .ellenorzes{
-        background-color: #BFD7FF;
+        background-color: var(--3);
         margin-top:2rem;
         padding: 5% 10% 5% 10%;
         border-radius: 20px;
-        box-shadow: #5465FF 5px 5px 5px ;
+        box-shadow: var(--0) 5px 5px 5px ;
 
 
 
@@ -827,7 +827,7 @@
         }
     }
     .ertek{
-        background-color:#E3E3E3 ;
+        background-color:var(--4) ;
         margin-left: 5%;
         width: 5rem;
         height: 2rem;
@@ -845,7 +845,7 @@
         padding-bottom: 2%;
         width: 25%;
         height: 30%;
-        background-color: #788BFF;
+        background-color: var(--1);
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -891,23 +891,23 @@
   appearance: none; 
   height: 1rem;
   width: 1rem;
-  background-color: #E3E3E3;
+  background-color: var(--4);
   border-radius: 50%;
-  border: 2px solid #E3E3E3;
-  box-shadow: -407px 0 0 400px #E3E3E3;
+  border: 2px solid var(--4);
+  box-shadow: -407px 0 0 400px var(--4);
 }
 
 .slider::-moz-range-thumb {
   height: 15px;
   width: 15px;
-  background-color: #E3E3E3;
+  background-color: var(--4);
   border-radius: 50%;
-  border: 1px solid #E3E3E3;
-  box-shadow: -407px 0 0 400px #E3E3E3;
+  border: 1px solid var(--4);
+  box-shadow: -407px 0 0 400px var(--4);
 }
     .main{
 
-        border-color: #5465FF;
+        border-color: var(--0);
         display: flex;
         flex-direction: row;
         justify-content: center;
@@ -917,7 +917,7 @@
 
     main {
         width: 100%;
-        background-color:#5465FF ;
+        background-color:var(--0) ;
         
     }
     .main{
@@ -948,7 +948,7 @@
     }
 
     .ph{
-        background-color: #788BFF;
+        background-color: var(--1);
         width: 23rem;
         height: 23rem;
         border-radius: 100%;
@@ -967,7 +967,7 @@
         flex-wrap: nowrap;
         justify-content: center;
         align-items: center;
-        background-color: #E3E3E3;
+        background-color: var(--4);
     }
     .olvasas{
         display: flex;
@@ -1124,7 +1124,7 @@
         
         
     });
-
+    
     
     let cim_index=0;
     let index=0;
