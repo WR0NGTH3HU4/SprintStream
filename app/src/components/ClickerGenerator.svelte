@@ -4,12 +4,13 @@
             <div class="shape" on:click={() => dispatch('shapeClick', { id: shape.id })} style="
                 --size: {Math.floor(Math.random() * 200) + 120}px;
                 --color: {shape.backgroundColor || `var(--${Math.floor(Math.random() * 4) + 1})`};
-                --background-image: {shape.backgroundImage || 'none'};
                 --offset-x: {Math.floor(Math.random() * 50) - 30}px;
                 --offset-y: {Math.floor(Math.random() * 100)}px;
                 --border-radius: {elemShape == 'circle' ? '50%' : '15px'};
                 --border: {border ? '2px solid black' : 'none'};"
             >
+                <!-- if statement ide ha ell bg image -->
+                <img class="background-image" src="{shape.backgroundImage}" alt="ja" />
                 <span>{shape.text || ''}</span>
             </div>
         {/each}
@@ -53,13 +54,13 @@
             justify-content: center;
             align-content: center;
             text-align: center;
+            overflow: hidden;
 
             min-width: var(--size);
             width: var(--size);
             min-height: var(--size);
             height: var(--size);
             background-color: var(--color);
-            background-image: var(--background-image);
             background-size: cover;
             background-position: center;
             transform: translateX(var(--offset-x)) translateY(var(--offset-y));
@@ -81,6 +82,19 @@
             &:hover {
                 transform: translateX(var(--offset-x)) translateY(var(--offset-y)) scale(1.2);
                 transition: transform .2s ease-out;
+            }
+
+            *:not(img:nth-child(1)) {
+                z-index: 1;
+            }
+
+            img:nth-child(1) {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                z-index: 0;
             }
         }
     }

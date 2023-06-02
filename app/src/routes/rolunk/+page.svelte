@@ -60,23 +60,23 @@
     const shapes = [
         {
             id: "0",
-            backgroundImage: 'url(rolunk/csoka_andras.jpg)',
+            backgroundImage: 'rolunk/csoka_andras.jpg',
         },
         {
             id: "1",
-            backgroundImage: 'url(rolunk/csaszar_andras.jpg)',
+            backgroundImage: 'rolunk/csaszar_andras.jpg',
         },
         {
             id: "2",
-            backgroundImage: 'url(rolunk/kovago_levente.jpg)',
+            backgroundImage: 'rolunk/kovago_levente.jpg',
         },
         {
             id: "3",
-            backgroundImage: 'url(rolunk/kulimak_mate.jpg)',
+            backgroundImage: 'rolunk/kulimak_mate.jpg',
         },
         {
             id: "4",
-            backgroundImage: 'url(rolunk/tatrai_dominik.jpg)',
+            backgroundImage: 'rolunk/tatrai_dominik.jpg',
         },
     ];
 
