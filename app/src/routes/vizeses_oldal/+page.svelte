@@ -56,7 +56,7 @@
                     <div class="szoveg">
                         <div>
                             <h1 class="jelenlegi_cim">{cim[cim_index]}</h1>
-                            <p class="jelenlegi_szoveg">{szoveg[index]}</p>
+                            <p class="jelenlegi_szoveg">{kov_elem}</p>
                         </div>
                         
                             <img src="icons/document.png" alt="kep">
@@ -731,6 +731,7 @@
     
     
     let cim=["A projekt menedzsment(1.)","Szervezet(2.)","Projektfolyamatok, fázisok(3.)","A projekt működési rendje(4.)","IT projekt megközelítés(5.)","Összegzés(6.)","Mellékletek(7.)"];
+
     let szoveg=[["Segítséget nyújt a szervezetek projektjeinek, hatékony menedzselésében, enélkül olyan lenne a projekt, mint egy Lego szett.  Megfelelő utasítás eljárás nélkül káosz lenne a vége. A mi útmutatónk tehát jelenesetben az eljárásrend, taglalja, hogy a költségvetés alapelveit típustól független, az egyes szakszavakat a projektmenedzsment témakörében(terminológia), és a folyamatok alkalmazását."
     
     ,"Ismét gondoljunk a Lego szettekre, vannak különlegesebb darabok, amelyek a konkrét instrukciók(lépések) mellett kisebb információval akár tájékoztatással vannak ellátva. Az esetünkben a különleges darabok az államigazgatási projektek főként és ezek jellemzőit bővítik a hazai sajátosságok, törvények.","A módszertan definíciója: \nA vízesés alapú, avagy szekvenciális modell, fix mérföldkövekhez kapcsolódik (itt gondolhatunk akár kedvenc játékunkra, hiszen ott is gyakran találkozhatunk ilyenekkel, mondjuk, ha egy nagyobb szintet érünk el, vagy hosszabb ideje játszunk)."
@@ -858,7 +859,7 @@
     }
     function masodik(){
         if(kapcsolas_2==false){
-            index=0;
+            kov_elem = szoveg[0][0]
             cim_index=0;
             olvasas.style.display="flex";
             szovegek.style.display="flex";
@@ -1006,10 +1007,14 @@
     }
 
 
+    let kov_elem;
+
     function lapoz_elore(){
         if (index != szoveg.length - 1){
-           index++;
-            
+            let jelenlegi_Tomb = szoveg[index]
+            let kov_index=(index+1) % szoveg.length;
+            kov_elem = jelenlegi_Tomb[kov_index];
+
         }
         else{
             index=szoveg.length-1;
