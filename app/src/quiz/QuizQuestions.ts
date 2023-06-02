@@ -6,7 +6,7 @@ export type QuizQuestion = {
     valasz: string
 };
 
-export const quizQuestions: {[fasz: string]: QuizQuestion[]} = {
+export const quizQuestions: {[keretrendszer: string]: QuizQuestion[]} = {
     scrum: [
         {
             kerdes: "Mi a scrum?",
@@ -23,10 +23,10 @@ export const quizQuestions: {[fasz: string]: QuizQuestion[]} = {
         },
         {
             kerdes: "Melyik nem jellemző a scrumra?",
-            a: "A) A projekt csapata folyamatosan javítja és finomítja a munkafolyamatot a visszajelzések.",
+            a: "A) A projekt csapata folyamatosan javítja és finomítja a munkafolyamatot a visszajelzések alapján.",
             b: "B) Együttműködést és folyamatos fejlesztést támogat.",
             c: "C) Ha nincsenek meghatározva pontosan a célok akkor semmiképp sem fog jól működni a megvalósítás.",
-            valasz: "a"
+            valasz: "c"
         },
         {
             kerdes: "Melyik nem Scrum esemény?",
@@ -161,7 +161,7 @@ export const quizQuestions: {[fasz: string]: QuizQuestion[]} = {
         },
 		{
             kerdes: "Mit jelent a transzparencia?",
-            a: "A) átláthatóság",
+            a: "A) áttekinthetőség",
             b: "B) változtathatóság",
             c: "C) plakáton bemutatható",
             valasz: "a"
@@ -182,11 +182,164 @@ export const quizQuestions: {[fasz: string]: QuizQuestion[]} = {
     ],
     vizeses: [
         {
-            kerdes: " ",
-            a: "A) ",
-            b: "B) ",
-            c: "C) ",
+            kerdes: "Mit nem tartalmaz a procektháromszög?",
+            a: "A) Hatókör",
+            b: "B) Résztvevők száma",
+            c: "C) Költség",
+            valasz: "b"
+        },
+        {
+            kerdes: "A stratégiai szint 2 nagy szervezeti egységbből áll?",
+            a: "A) Igaz",
+            b: "B) Hamis",
             valasz: "a"
         },
+        {
+            kerdes: "Projekt Felügyelő Bizottság (PFB) egyenlő a Magas Szintű Támogató Testület (MTT) - tel",
+            a: "A) Igaz",
+            b: "B) Hamis",
+            valasz: "a"
+        },
+        {
+            kerdes: "Ki a projekt szponzor?",
+            a: "A) Vezető",
+            b: "B) Támogató",
+            c: "C) Megrendelő",
+            valasz: "c"
+        },
+        {
+            kerdes: "A Projekt Irányító Bizottság feladata, hogy felügyeljék a projekt a kijelölt tervek mentén haladjon?",
+            a: "A) Igaz",
+            b: "B) Hamis",
+            valasz: "a"
+        },
+        {
+            kerdes: "Ezen a szinten törénik a projekt megvalósítása.",
+            a: "A) Stratégiai szint",
+            b: "B) Operatív szint",
+            c: "C) Alkotói szint",
+            valasz: "b"
+        },
+        {
+            kerdes: "A projekt menedzseléséért felelősek.",
+            a: "A) Projekt munkatársai",
+            b: "B) Támogató szakértők",
+            c: "C) Tisztségviselők",
+            valasz: "c"
+        },
+        {
+            kerdes: "Azok a külső szállítók, akik a projekt lebonyolításában segítenek.",
+            a: "A) Támogató szakértők",
+            b: "B) Üzleti partnerek",
+            c: "C) Projekt szponzor",
+            valasz: "b"
+        },
+        {
+            kerdes: "Megszervezett csapatok munkáját szervezik meg majd ellenőrzik.",
+            a: "A) Szakmai vezető",
+            b: "B) Projektvezető",
+            c: "C) Projekt vezetés",
+            valasz: "a"
+        },
+        {
+            kerdes: "Melyik nem projekt folyamat?",
+            a: "A) Projektötlet",
+            b: "B) Előkészítés",
+            c: "C) Nyomonkövetés",
+            valasz: "c"
+        },
+        {
+            kerdes: "Mi nem segít a projektötlet meghatározásában?",
+            a: "A) Ki?",
+            b: "B) Mikor?",
+            c: "C) Hogyan?",
+            valasz: "b"
+        },
+        {
+            kerdes: "A szükségletelemzés, célelemzés, környezetelemzés, elemzési központ felállítása, gazdaságossági vizsgálat, kockázatelemzés, projekt érintettek értékelése és kezelése, megvalósítási tanulmány,  mind része a projektelemzésnek?",
+            a: "A) Igaz",
+            b: "B) Hamis",
+            valasz: "b"
+        },
+        {
+            kerdes: "A projektzárás pénzügyi és menedzsment szempontú lezárásból áll?",
+            a: "A) Igaz",
+            b: "B) Hamis",
+            valasz: "a"
+        },
+        {
+            kerdes: "Amennyiben hiba lépett fel probléma adódott a következő kérdések nyújthatnak nekünk segítséget. „Mi történt?”, „Mikor történt?”, „Hol történt?”, „Hogyan történt?”, „Miért történt?”, „Ki vett részt benne?",
+            a: "A) Igaz",
+            b: "B) Hamis",
+            valasz: "a"
+        },
+        {
+            kerdes: "Mi a jelentési és döntéshozatali rend célja?",
+            a: "A) A PIB és az MTT pontos, aktuális információt kapjon",
+            b: "B) Mindenki tájékozott legyen a döntésekkel kapcsolatban",
+            c: "C) A projektinfrastruktúra változásának jelentése",
+            valasz: "a"
+        },
+        {
+            kerdes: "Mi nem eredménye a dokumentációs rendnek?",
+            a: "A) Projekttartalom",
+            b: "B) Információs akták",
+            c: "C) Projektelemzések",
+            valasz: "b"
+        },
+        {
+            kerdes: "Mi a projektmenedzsment része?",
+            a: "A) Projekttartalom",
+            b: "B) Projektindítás",
+            c: "C) Projektelemzések",
+            valasz: "b"
+        },
+        {
+            kerdes: "Ki a Stakeholder (ejtsd: sztékholder)?",
+            a: "A) Aki tartja a steaket",
+            b: "B) Fejlesztők",
+            c: "C) Projekt résztvevői",
+            valasz: "c"
+        },
+        {
+            kerdes: "Mi az adatmodell célja?",
+            a: "A) Hogy leírja milyen adatokat használ, továbbít a projekt.",
+            b: "B) Az adatok típusát és tárolási folyamatát ábrázolja.",
+            c: "C) Adatok logikai és szerkezeti leírását foglalja össze.",
+            valasz: "a"
+        },
+        {//20
+			kerdes: "Mit jelent az adatmigráció?",
+			a: "A) Adatok nyomtalan eltűnése.",
+			b: "B) Kéretlen adatok érkeznek az eszközünkre.",
+			c: "C) A régi rendszer adatainak áttöltése az újba.",
+			valasz: "a"
+		},
+		{
+			kerdes: 'Mit "takat" az EM?',
+			a: "A) Egységes Monitoring Információs Rendszer",
+			b: "B) Együttműködési Megállapodás",
+			c: "C) Tipográfiai mértékegység",
+			valasz: "b"
+		},
+		{
+			kerdes: 'Mit "takat" az IH?',
+			a: "A) Irányító Hatóság",
+			b: "B) Információs Hivatal",
+			c: "C) International House Budapest",
+			valasz: "a"
+		},
+
     ],
 };
+
+/*
+		{
+			kerdes: " ",
+			a: "A) ",
+			b: "B) ",
+			c: "C) ",
+			valasz: "a"
+		},
+
+*/
