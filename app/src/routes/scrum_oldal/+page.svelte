@@ -788,8 +788,17 @@
         
         z-index: 0;
     }
+	.fejlec img {
+        
+        height: 40%;
+        
+        border-radius: 6%;
     }
-
+    }
+.dockep{
+        width: 30%;
+    }
+    
 /*------------------------------------------------------------*/
 
 .ellenorzes{
