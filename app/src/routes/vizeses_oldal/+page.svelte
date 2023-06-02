@@ -133,11 +133,7 @@
         </div>
     </div>
 
-    <div>
-        <button on:click={stepBackward}>Backward</button>
-        <span>{mainArray[currentArrayIndex][currentElementIndex]}</span>
-        <button on:click={stepForward}>Forward</button>
-      </div>
+
       
 </main>
 
@@ -1075,32 +1071,7 @@
         }
 
     }
-    let mainArray = [
-    ["element1", "element2", "element3"],
-    ["element4", "element5"],
-    ["element6", "element7", "element8", "element9"]
-  ];
 
-  let currentArrayIndex = 0;
-  let currentElementIndex = 0;
-
-  function stepForward() {
-    if (currentElementIndex < mainArray[currentArrayIndex].length - 1) {
-      currentElementIndex++;
-    } else if (currentArrayIndex < mainArray.length - 1) {
-      currentArrayIndex++;
-      currentElementIndex = 0;
-    }
-  }
-
-  function stepBackward() {
-    if (currentElementIndex > 0) {
-      currentElementIndex--;
-    } else if (currentArrayIndex > 0) {
-      currentArrayIndex--;
-      currentElementIndex = mainArray[currentArrayIndex].length - 1;
-    }
-  }
 
 
 
