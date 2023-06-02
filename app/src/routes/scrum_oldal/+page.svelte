@@ -661,7 +661,7 @@
         border-radius: 20px;
         width: 17%;
         height: 20%;
-        transform: translate(120%, 5%);
+        transform: translate(110%, 5%);
         
         z-index: 6;
     }
@@ -771,15 +771,146 @@
         margin-bottom: 10px;
     }
 
-   @media only screen and (max-width: 1000px){
+@media only screen and (max-width: 1000px){
         .gomb4{
             transform: translate(100%, 5%);
         }
         .gomb p {
             font-size: 180%;
         }
+        .fejlec p{
+            font-size: 80px;
+        } 
+        .fejlec img {
+        
+        height: 60%;
+        
+        border-radius: 6%;
     }
-
+    }
+@media only screen and (max-width: 650px){
+        
+        .gomb p {
+            font-size: 140%;
+        }
+        .gomb1{
+        background: #9BB1FF;
+        border-radius: 20px;
+        z-index: 0;
+        width: 15%;
+        height: 15%;
+        transform: translate(20%, -120%);
+    }
+    .gomb2{
+        background: #BFD7FF;
+        border-radius: 20px;
+        width: 16%;
+        height: 15%;
+        transform: translate(55% , -50%);
+        
+        z-index: 17;
+    }
+    .gomb3{
+        background: #788BFF;
+        border-radius: 20px;
+        
+        width:20%;
+        height: 20%;
+        transform: translate(0% , 20%);
+        
+        z-index: 0;
+    }
+    .gomb4{
+        background: #9BB1FF;
+        border-radius: 20px;
+        width: 17%;
+        height: 15%;
+        transform: translate(110%, 5%);
+        
+        z-index: 6;
+    }
+    .gomb5{
+        background: #788BFF;
+        border-radius: 20px;
+        width: 20%;
+        height: 15%;
+        transform: translate(100%,-110%);
+        
+        z-index: 0;
+    }
+    .gomb6{
+        background: #788BFF;
+        border-radius: 20px;
+        width: 20%;
+        height: 18%;
+        transform: translate(130% , 75%);
+        
+        z-index: 0;
+    }
+    .gomb7{
+        background: #BFD7FF;
+        border-radius: 20px;
+        width: 20%;
+        height: 15%;
+        transform: translate(166% , 20%);
+        
+        z-index: 0;
+    }
+    .gomb8{
+        background: #9BB1FF;
+        border-radius: 20px;
+        width: 18%;
+        height: 15%;
+        transform: translate(213% , -70%);
+        
+        z-index: 0;
+    }
+    .gomb9{
+        background: #788BFF;
+        border-radius: 20px;
+        width: 18%;
+        height: 15%;
+        transform: translate(270% , 90%);
+        
+        z-index: 0;
+    }
+    .gomb10{
+        background: #BFD7FF;
+        border-radius: 20px;
+        width: 18%;
+        height: 15%;
+        transform: translate(300% , 00%);
+        
+        z-index: 0;
+    }
+    .gomb11{
+        background: #788BFF;
+        border-radius: 20px;
+        width: 18%;
+        height: 15%;
+        transform: translate(300% , -150%);
+        
+        z-index: 0;
+    }
+    .gomb12{
+        background: #9BB1FF;
+        border-radius: 20px;
+        width: 18%;
+        height: 15%;
+        transform: translate(350% , -70%);
+        
+        z-index: 0;
+    }
+    .gomb13{
+        background: #788BFF;
+        border-radius: 20px;
+        width: 18%;
+        height: 15%;
+        transform: translate(378% , 60%);
+        
+        z-index: 0;
+    }
+    }
 
 * {
   box-sizing: border-box;
@@ -900,6 +1031,7 @@ label {
 	import Navbar from "../../components/Navbar.svelte";
     import { onMount } from 'svelte';
       
+
 
     let hatra:any;
     let elore:any;
@@ -1229,4 +1361,5 @@ label {
 
     }
     
+
 </script>

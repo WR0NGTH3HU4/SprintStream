@@ -1,6 +1,6 @@
 <main>
     <div id="quiz">
-        {#await qm.randomQuestions(kerdesek_szama)}
+        {#await kerdesekPromise}
             loding van tes
         {:then kerdesek}
             <div class="vege card">
@@ -20,6 +20,7 @@
                     <path fill="#5465FF" fill-opacity="1" d="M0,288L48,245.3C96,203,192,117,288,106.7C384,96,480,160,576,208C672,256,768,288,864,266.7C960,245,1056,171,1152,165.3C1248,160,1344,224,1392,256L1440,288L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
                 </svg>
             </div>
+        
             {#each kerdesek as kerdes, i}
                 <div class="card">
                     <svg preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 1440 320">
@@ -35,10 +36,10 @@
                                     {#if !!kerdes.b}<p>{kerdes.b} </p>{/if}
                                     {#if !!kerdes.c}<p>{kerdes.c} </p>{/if}
                                 </div>
-                                <div>
-                                    {#if !!kerdes.a}<button on:click={() => kovi_kerdes(kerdesek, i, "a")}>A</button>{/if}
-                                    {#if !!kerdes.b}<button on:click={() => kovi_kerdes(kerdesek, i, "b")}>B</button>{/if}
-                                    {#if !!kerdes.c}<button on:click={() => kovi_kerdes(kerdesek, i, "c")}>C</button>{/if}
+                                <div class="button">
+                                    {#if !!kerdes.a}<button id="{`${i}_a`}" on:click={() => kovi_kerdes(kerdesek, i, "a")}>A</button>{/if}
+                                    {#if !!kerdes.b}<button id="{`${i}_b`}" on:click={() => kovi_kerdes(kerdesek, i, "b")}>B</button>{/if}
+                                    {#if !!kerdes.c}<button id="{`${i}_c`}" on:click={() => kovi_kerdes(kerdesek, i, "c")}>C</button>{/if}
                                 </div>                            
                             </div>
                         </div>
@@ -58,9 +59,16 @@
                 <div id="ertekeles">
                     <div>
                         <h2>Végeztél a kérdésekkel.</h2>
-                        <p>A jól megválaszolt kérdések száma: {jok}/{kerdesek_szama}</p>
+                        <!-- <p>A jól megválaszolt kérdések száma: {jok}/{kerdesek_szama}</p> -->
+                        <p>A helyes válaszokat zölddel a jelöli.</p>
+                        <p>A helytelen válaszok jelöletlenek.</p>
+                        {#if ellenorzott}
+                            <p id="helyes"> Helyes válaszok (ellenőrzés után): {jok}</p>
+                        {/if}
+                        <button class="btn" on:click={ellenorzes}>Ellenőrzés</button>
                     </div>
-                    <button class="btn" on:click={tetejere}>🢁</button>
+                    
+                    <button class="btn" on:click={tetejere}><!--🢁-->Újra</button>
                 </div>
                 <svg preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
                     <path fill="#788BFF" fill-opacity="1" d="M0,128L48,154.7C96,181,192,235,288,224C384,213,480,139,576,122.7C672,107,768,149,864,186.7C960,224,1056,256,1152,234.7C1248,213,1344,139,1392,101.3L1440,64L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>    
@@ -92,6 +100,12 @@
 
     button{
         font-family: 'Times New Roman', Times, serif;
+
+        &:hover{
+            transition-property: transform;
+            transition-duration: .3s;
+            transform: scale(.95);
+        }
     }
 
     h2{
@@ -127,11 +141,13 @@
             display: flex;
             flex-direction: column;
             justify-content: space-around;
+            color: #E2E2E2;
             
             & > button{
                 padding: 15px;
                 margin: 5px;
                 background-color: #9BB1FF;
+                
                 border-radius: 15px;
                 width: 100px;
                 font-size: 32px;
@@ -173,7 +189,9 @@
         align-items: center;
         padding: 40px;
 
-        & > .btn{
+        
+    }
+    .btn{
             font-size: 50px;
             padding: 20px;
             background-color: #9BB1FF;
@@ -182,10 +200,10 @@
             color: #E2E2E2;
             height: 110px;
         }
-    }
 
     #quiz > .card:nth-child(odd) {
         background-color: #E2E2E2;
+        color: black;
     }
 
     #quiz > .card:nth-child(even) {
@@ -282,20 +300,36 @@
 </style>
 
 <script lang="ts">
-	import { each, element } from "svelte/internal";
+    import { each, element, noop } from "svelte/internal";
     import { QuestionManager } from "../../quiz/QuizManager";
+    import { ToggleManager } from "../../util/ToggleManager";
     import { onMount } from "svelte";
-
+    
     let qm: QuestionManager = new QuestionManager('scrum');
-    let jok = 0;
+    let jok: number = 0;
     let kerdesek_szama = 10;
+    let kerdesekPromise = qm.randomQuestions(kerdesek_szama);
+    let toggles: ToggleManager[] = [];
+    let ellenorzott = false;
+    
+    function toggleSzar(i: number, valasz: string) {
+        let a: any = document.getElementById(`${i}_a`);
+        let b: any = document.getElementById(`${i}_b`);
+        let c: any = document.getElementById(`${i}_c`);
+
+        a.style.backgroundColor = toggles[i].get('a') ? "#2b40ff" : "#9BB1FF";
+        b.style.backgroundColor = toggles[i].get('b') ? "#2b40ff" : "#9BB1FF";
+        c.style.backgroundColor = toggles[i].get('c') ? "#2b40ff" : "#9BB1FF";
+    }
 
     function kovi_kerdes(kerdesek: any, jelenlegi_index: number, valasz: string) {
         let uj_index : number = jelenlegi_index +1;
         document.getElementById(`${uj_index}`)?.scrollIntoView({behavior: 'smooth', block: 'center'})
 
-        if (kerdesek[jelenlegi_index].valasz == valasz) jok++;
-   
+        toggles[jelenlegi_index].toggle(valasz);
+        toggleSzar(jelenlegi_index, valasz);
+        // if (kerdesek[jelenlegi_index].valasz == valasz) jok++;
+
     };
 
     function tetejere(){
@@ -303,8 +337,27 @@
         window.location.reload();
     };
 
-
 	function kezdes(): any{
 		document.getElementById(`${0}`)?.scrollIntoView({behavior: 'smooth', block: 'center'})
 	}
+
+
+    function ellenorzes(){
+        kerdesekPromise.then(kerdesek => {
+            for (let i = 0; i < kerdesek_szama; i++) {
+                if (kerdesek[i].valasz == toggles[i].getToggled()) {
+                    let helyes: any = document.getElementById(`${i}_${kerdesek[i].valasz}`);
+                    helyes.style.backgroundColor = "green";
+                    jok++;
+                }
+            }
+        });
+        ellenorzott = true;
+    }
+
+    //
+    for (let i = 0; i < kerdesek_szama; i++) {
+        toggles.push(new ToggleManager(["a", "b", "c"]));
+    }
+
 </script>
