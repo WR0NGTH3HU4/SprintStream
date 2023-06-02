@@ -641,15 +641,14 @@
 .gomb:hover{
         border: 3px solid #000000;
     }
-<<<<<<< Updated upstream
+
     .bekezdes{
         margin-left: 30px;
         margin-top: 10px;
         margin-bottom: 10px;
     }
 
-=======
->>>>>>> Stashed changes
+
 @media only screen and (max-width: 1000px){
         .gomb4{
             transform: translate(100%, 5%);
@@ -790,8 +789,7 @@
         z-index: 0;
     }
     }
-<<<<<<< Updated upstream
-=======
+
 /*------------------------------------------------------------*/
 
 .ellenorzes{
@@ -801,7 +799,7 @@
         border-radius: 20px;
         box-shadow: #5465FF 5px 5px 5px ;
 
->>>>>>> Stashed changes
+
 
     }
     .ellenorzes:hover{
