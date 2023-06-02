@@ -30,10 +30,6 @@ export class ToggleManager {
 
         return null;
     }
-}
-
-        this.toggles[toggleable] = !this.toggles[toggleable];
-    }
 
     public isToggled(key: string): boolean {
         return this.toggles[key];
