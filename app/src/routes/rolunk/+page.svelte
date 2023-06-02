@@ -133,7 +133,7 @@
                 },
                 {
                     tipus: "instagram",
-                    link: "https://github.com/wr0ngth3hu4",
+                    link: "https://instagram.com/wr0ngth3hu4",
                 },
             ],
         },
