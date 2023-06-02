@@ -93,7 +93,7 @@
                             <p class="jelenlegi_szoveg">{szoveg[index]}</p>
                         </div>
                         
-                            <img src="icons/document.png" alt="kep">
+                            <img src="icons/document.png" alt="kep" class="dockep">
                     </div>
                     <div class="nyilak">
                         <svg on:click={lapoz_hatra} class="hatra" width="100" height="161" viewBox="0 0 100 161" fill="none" xmlns="http://www.w3.org/2000/svg">
