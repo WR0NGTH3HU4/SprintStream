@@ -648,6 +648,7 @@
         margin-bottom: 10px;
     }
 
+
 @media only screen and (max-width: 1000px){
         .gomb4{
             transform: translate(100%, 5%);
