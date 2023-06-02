@@ -10,7 +10,7 @@
 		<a href="scrum_oldal">Modell</a>
 		<a href="quiz_oldal">Quiz</a>
 	</NavbarCombo>
-	<NavbarCombo name="Víz az esés">
+	<NavbarCombo name="Vízesés">
 		<a href="vizeses_oldal">Modell</a>
 		<a href="quiz_oldal">Quiz</a>
 	</NavbarCombo>
