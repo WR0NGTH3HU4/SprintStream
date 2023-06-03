@@ -54,7 +54,7 @@
         <div></div>
     </section>
     {#if modalShown}
-        <modal>
+        <modal on:click|self={() => modalShown = false}>
             <div>
                 <h1>Választható módszertanok:</h1>
                 <span>
@@ -147,6 +147,7 @@
         display: flex;
         flex-direction: column;
         min-height: 100vh;
+        max-width: 100%;
     }
 
     section:nth-child(odd) {
@@ -269,6 +270,7 @@
         & > svg {
             animation: linear infinite spin 25s;
             height: 60vw;
+            width: 60vw;
         }
     }
 

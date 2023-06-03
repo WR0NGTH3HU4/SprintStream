@@ -199,6 +199,7 @@
         flex-wrap: wrap;
         position: absolute;
         transform: translate(20rem);
+        transition: .3s;
     }
     .gomb1{
         background: var(--2);
@@ -327,6 +328,7 @@
 
 
 .gomb:hover{
+    transition: .3s;
         border: 3px solid #000000;
     }
 
