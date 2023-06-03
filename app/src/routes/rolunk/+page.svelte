@@ -114,7 +114,7 @@
                 },
                 {
                     tipus: "instagram",
-                    link: "https://github.com/_levente_k",
+                    link: "https://instagram.com/_levente_k",
                 },
             ],
         },
