@@ -22,7 +22,7 @@
                 <h2>Olvass bele az egyszerű leírásainkba!</h2>
                 <span>Gondosan átnéztünk számtalan hivatalos dokumentumot a Scrum és a Vízesés-modell specifikációiról, hogy azokat leegyszerűsítsük felhasználóink számára a zökkenőmentes tanulás érdekében.</span>
             </div>
-            <a href="" class="button">Jól hangzik, vigyél oda!</a>
+            <a href="" class="button" on:click={() => modalShown = true}>Jól hangzik, vigyél oda!</a>
         </div>
         <div class="not-flex divider">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
@@ -53,6 +53,17 @@
         </div>
         <div></div>
     </section>
+    {#if modalShown}
+        <modal on:click|self={() => modalShown = false}>
+            <div>
+                <h1>Választható módszertanok:</h1>
+                <span>
+                    <a href="vizeses_oldal" class="button">Vízesés</a>
+                    <a href="scrum_oldal" class="button">Scrum</a>
+                </span>
+            </div>
+        </modal>
+    {/if}
 </main>
 
 <style lang="scss">
@@ -61,6 +72,34 @@
     @keyframes spin {
         to {
             transform: rotate(360deg);
+        }
+    }
+
+    modal {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba($color: #000000, $alpha: .6);
+        z-index: 100;
+
+        div {
+            padding: 2rem;
+            border-radius: 8px;
+            background-color: var(--4);
+            width: fit-content;
+            height: fit-content;
+
+            span {
+                width: 100%;
+                justify-content: space-evenly;
+                display: flex;
+            }
         }
     }
 
@@ -108,6 +147,7 @@
         display: flex;
         flex-direction: column;
         min-height: 100vh;
+        max-width: 100%;
     }
 
     section:nth-child(odd) {
@@ -230,6 +270,7 @@
         & > svg {
             animation: linear infinite spin 25s;
             height: 60vw;
+            width: 60vw;
         }
     }
 
@@ -272,4 +313,5 @@
 	import { fly } from "svelte/transition";
 	import NagyonMenoTransition from "../components/NagyonMenoTransition.svelte";
 
+    let modalShown = false;
 </script>

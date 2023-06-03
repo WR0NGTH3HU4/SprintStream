@@ -13,6 +13,7 @@
 
     :global(body) {
         width: 100vw;
+        max-width: 100%;
         min-height: 100vh;
         box-sizing: border-box;
         font-family: 'Inter', sans-serif;

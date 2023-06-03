@@ -278,6 +278,7 @@
         font-size: 15rem;
     }
     .kor{
+        transition: .3s;
         align-self: center;
         display: flex;
         flex-direction: column;
@@ -464,7 +465,6 @@
         
     }
     .kor1{
-        
         background-color:var(--3) ;
         width: 30rem;
         height: 30rem;
@@ -640,7 +640,9 @@
     
     
     .kor:hover{
-        animation: kiemeles 4s infinite;
+        transition: .3s;
+        background-color: #292D32;            
+        color: var(--4);            
     }
     .ph:hover{
         animation: kiemeles 4s infinite;
@@ -655,16 +657,6 @@
         50%{
             stroke: #292D32;
         }
-    }
-    @keyframes kiemeles{
-
-
-        50%{             
-            background-color: #292D32;            
-             color: var(--4);            
-   
-        }
-
     }
 </style>
 
